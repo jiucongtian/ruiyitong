@@ -30,11 +30,6 @@ public class MainActivity extends BaseActivity {
     View popLayout;
 
     boolean openStatus = false;
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        ButterKnife.bind(this);
-    }
 
     @Override
     public void initPages() {
