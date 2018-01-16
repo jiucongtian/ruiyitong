@@ -1,0 +1,103 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="home_name">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="home_time">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="home_date">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <!-- 文字风格  -->
+    <style name="txt_12_gray">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/font_gray</item>
+    </style>
+
+    <style name="txt_14_gray">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/font_gray</item>
+    </style>
+
+    <style name="txt_14_dark">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/font_dark</item>
+    </style>
+
+    <style name="txt_14_white">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/font_white</item>
+    </style>
+
+    <style name="txt_18_gray">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/font_gray</item>
+    </style>
+
+    <style name="txt_20_dark">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/font_dark</item>
+    </style>
+
+    <style name="txt_22_dark">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/font_dark</item>
+    </style>
+
+    <style name="txt_24_dark">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/font_dark</item>
+    </style>
+
+    <style name="txt_24_white">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/font_white</item>
+    </style>
+
+    <style name="txt_30_dark">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/font_dark</item>
+    </style>
+
+    <style name="txt_48_dark">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">@color/font_dark</item>
+    </style>
+
+    <!-- 按钮风格  -->
+    <!--<style name="btn_light_blue">-->
+        <!--<item name="android:textSize">22sp</item>-->
+        <!--<item name="android:textColor">@color/light_blue</item>-->
+    <!--</style>-->
+
+    <!--<style name="btn_light_blue2">-->
+        <!--<item name="android:textSize">22sp</item>-->
+        <!--<item name="android:textColor">@color/light_blue_2</item>-->
+    <!--</style>-->
+
+    <!--<style name="btn_light_blue3">-->
+        <!--<item name="android:textSize">22sp</item>-->
+        <!--<item name="android:textColor">@color/light_blue_3</item>-->
+    <!--</style>-->
+
+    <!--<style name="btn_light_pink">-->
+        <!--<item name="android:textSize">22sp</item>-->
+        <!--<item name="android:textColor">@color/light_pink</item>-->
+    <!--</style>-->
+</resources>
