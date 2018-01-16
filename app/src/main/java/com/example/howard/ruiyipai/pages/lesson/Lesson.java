@@ -32,7 +32,6 @@ public class Lesson extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-//        return R.layout.activity_main;
-        return 0;
+        return R.layout.activity_lesson;
     }
 }

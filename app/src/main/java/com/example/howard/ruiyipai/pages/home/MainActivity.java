@@ -1,5 +1,6 @@
 package com.example.howard.ruiyipai.pages.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
@@ -12,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.example.howard.ruiyipai.pages.lesson.Lesson;
 import com.example.howard.ruiyipai.recyclerAdapter.ClassAdapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,7 +42,7 @@ public class MainActivity extends BaseActivity {
         classLv.setAdapter(test);
     }
 
-    @OnClick({R.id.iv_home_menu, R.id.iv_camera})
+    @OnClick({R.id.iv_home_menu, R.id.iv_camera, R.id.linearLayout2})
     public void onClick(View v) {
         int id = v.getId();
 
@@ -61,7 +63,10 @@ public class MainActivity extends BaseActivity {
                     popLayout.startAnimation(anim);
                     openStatus = true;
                 }
-
+                break;
+            case R.id.linearLayout2:
+                Intent intent = new Intent(this, Lesson.class);
+                startActivity(intent);
                 break;
         }
     }
