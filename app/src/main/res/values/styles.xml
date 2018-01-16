@@ -60,6 +60,11 @@
         <item name="android:textColor">@color/font_dark</item>
     </style>
 
+    <style name="txt_22_white">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/font_white</item>
+    </style>
+
     <style name="txt_24_dark">
         <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/font_dark</item>
