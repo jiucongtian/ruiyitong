@@ -2,6 +2,7 @@ package com.example.howard.ruiyipai.common;
 
 import android.content.Context;
 import android.os.Build;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -32,6 +33,13 @@ public class Utils {
             tv.setTextAppearance(context,resid);
         } else {
             tv.setTextAppearance(resid);
+        }
+    }
+    public static void setBTStyle(Context context, Button bt, int resid){
+        if (Build.VERSION.SDK_INT < 23) {
+            bt.setTextAppearance(context,resid);
+        } else {
+            bt.setTextAppearance(resid);
         }
     }
 }
