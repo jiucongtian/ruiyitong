@@ -1,6 +1,8 @@
 package com.example.howard.ruiyipai.common;
 
 import android.content.Context;
+import android.os.Build;
+import android.widget.TextView;
 
 /**
  * Created by howard on 2018/1/17.
@@ -24,4 +26,12 @@ public class Utils {
         return (int) (pxValue / scale + 0.5f);
     }
 
+
+    public static void setTVStyle(Context context, TextView tv, int resid){
+        if (Build.VERSION.SDK_INT < 23) {
+            tv.setTextAppearance(context,resid);
+        } else {
+            tv.setTextAppearance(resid);
+        }
+    }
 }

@@ -14,6 +14,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.example.howard.ruiyipai.common.Utils;
 import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
 
 import android.widget.LinearLayout;
@@ -95,13 +96,6 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.tv_course_en)
     TextView tvCourseEN;
 
-    public void setTVStyle(TextView tv,int resid){
-        if (Build.VERSION.SDK_INT < 23) {
-            tv.setTextAppearance(this,resid);
-        } else {
-            tv.setTextAppearance(resid);
-        }
-    }
     @OnClick({R.id.iv_home_menu, R.id.iv_camera,R.id.ll_course,R.id.ll_online,R.id.ll_resource,R.id.ll_work})
     public void onClick(View v) {
         int id = v.getId();
@@ -112,8 +106,8 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.ll_work:
                 llwork.setBackgroundResource(R.mipmap.shadow_blue);
-                setTVStyle(tvWorkCN,R.style.txt_22_white);
-                setTVStyle(tvWorkEN,R.style.txt_14_white);
+                Utils.setTVStyle(this, tvWorkCN,R.style.txt_22_white);
+                Utils.setTVStyle(this, tvWorkEN,R.style.txt_14_white);
                 IconicsDrawable tt =new IconicsDrawable(this).icon("fon_807")
                         .color(Color.WHITE);
                 ivWork.setImageDrawable(tt);
@@ -124,24 +118,24 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.ll_online:
                 llonline.setBackgroundResource(R.mipmap.shadow_green);
-                setTVStyle(tvOnlineCN,R.style.txt_22_white);
-                setTVStyle(tvOnlineEN,R.style.txt_14_white);
+                Utils.setTVStyle(this, tvOnlineCN,R.style.txt_22_white);
+                Utils.setTVStyle(this, tvOnlineEN,R.style.txt_14_white);
                 IconicsDrawable iOnline =new IconicsDrawable(this).icon("fon_805")
                         .color(Color.WHITE);
                 ivOnline.setImageDrawable(iOnline);
                 break;
             case R.id.ll_resource:
                 llresource.setBackgroundResource(R.mipmap.shadow_gray);
-                setTVStyle(tvResourceCN,R.style.txt_22_white);
-                setTVStyle(tvResourceEN,R.style.txt_14_white);
+                Utils.setTVStyle(this, tvResourceCN,R.style.txt_22_white);
+                Utils.setTVStyle(this, tvResourceEN,R.style.txt_14_white);
                 IconicsDrawable iResource =new IconicsDrawable(this).icon("fon_806")
                         .color(Color.WHITE);
                 ivResource.setImageDrawable(iResource);
                 break;
             case R.id.ll_course:
                 llcourse.setBackgroundResource(R.mipmap.shadow_yellow);
-                setTVStyle(tvCourseCN,R.style.txt_22_white);
-                setTVStyle(tvCourseEN,R.style.txt_14_white);
+                Utils.setTVStyle(this, tvCourseCN,R.style.txt_22_white);
+                Utils.setTVStyle(this, tvCourseEN,R.style.txt_14_white);
                 IconicsDrawable iCourse =new IconicsDrawable(this).icon("fon_802")
                         .color(Color.WHITE);
                 ivCourse.setImageDrawable(iCourse);
