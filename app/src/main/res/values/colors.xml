@@ -8,7 +8,8 @@
     <color name="red">#ff4081</color>
     <color name="red_1">#ff0000</color>
     <color name="white">#ffffff</color>
-
+    <color name="black_translucence">#73000000</color>
+    <color name="white_translucence">#B3FFFFFF</color>
 
 
     <color name="icon_blue_sky">#15cbc9</color>
@@ -28,6 +29,16 @@
     <color name="font_gray_1">#efefef</color>
     <color name="color_475361">#475361</color>
     <color name="font_white">#ffffff</color>
+
+
+
+
+    <color name="color_213636">#213636</color>
+
+
+
+
+
     
     <color name="transparent">#00000000</color>
 

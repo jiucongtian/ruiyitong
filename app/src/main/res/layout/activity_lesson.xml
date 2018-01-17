@@ -3,40 +3,154 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/color_213636">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/red"/>\
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@color/font_gray"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:background="@color/red"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:background="@color/font_gray"
             android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true">
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="46dp"
+                android:background="@mipmap/half_circle"/>
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                tools:src="@color/black"
+                app:ico_color="@color/white"
+                app:ico_icon="fon_81b"/>
+        </FrameLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:layout_alignParentTop="true"
-            android:background="@color/font_gray">
+            android:background="@color/black_translucence">
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="23dp"
-                app:srcCompat="@color/colorAccent" />
+                android:layout_marginLeft="36dp"
+                tools:src="@color/black"
+                app:ico_color="@color/white"
+                app:ico_icon="fon_816" />
+
+            <TextView
+                android:id="@+id/tv_lesson_time"
+                style="@style/txt_24_white"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="00:21:35"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@id/tv_lesson_time"
+                android:layout_marginRight="15dp">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:src="@color/black"
+                    app:ico_color="@color/white"
+                    app:ico_icon="fon_817"/>
+                <TextView
+                    style="@style/txt_12_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+
+                    android:text="静音"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/tv_lesson_time">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:src="@color/black"
+                    app:ico_color="@color/white"
+                    app:ico_icon="fon_81e"/>
+                <TextView
+                    style="@style/txt_12_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:text="打标签"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:src="@color/black"
+                    app:ico_color="@color/white"
+                    app:ico_icon="fon_815"/>
+                <TextView
+                    style="@style/txt_12_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:text="大屏幕"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="24dp"
+                    tools:src="@color/black"
+                    app:ico_color="@color/white"
+                    app:ico_icon="fon_81c"/>
+                <TextView
+                    style="@style/txt_12_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="36dp"
+                    android:text="学生座次"/>
+            </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/font_gray"
+            android:layout_height="72dp"
+            android:background="@color/white_translucence"
             android:layout_alignParentBottom="true">
         </RelativeLayout>
     </RelativeLayout>
