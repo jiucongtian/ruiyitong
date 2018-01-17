@@ -166,7 +166,20 @@ public class CustomFont implements ITypeface {
         fon_810('\ue810'),
         fon_811('\ue811'),
         fon_812('\ue812'),
-        fon_813('\ue813');
+        fon_813('\ue813'),
+        fon_814('\ue814'),
+        fon_815('\ue815'),
+        fon_816('\ue816'),
+        fon_817('\ue817'),
+        fon_818('\ue818'),
+        fon_819('\ue819'),
+        fon_81a('\ue81a'),
+        fon_81b('\ue81b'),
+        fon_81c('\ue81c'),
+        fon_81d('\ue81d'),
+        fon_81e('\ue81e'),
+        fon_81f('\ue81f');
+
 
 
         char character;
