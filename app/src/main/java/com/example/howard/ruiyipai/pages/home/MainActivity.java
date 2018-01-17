@@ -73,7 +73,40 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.tv_work_en)
     TextView tvWorkEN;
 
+    @BindView(R.id.iv_online)
+    ImageView ivOnline;
 
+    @BindView(R.id.tv_online_cn)
+    TextView tvOnlineCN;
+
+    @BindView(R.id.tv_online_en)
+    TextView tvOnlineEN;
+
+    @BindView(R.id.iv_resource)
+    ImageView ivResource;
+
+    @BindView(R.id.tv_resource_cn)
+    TextView tvResourceCN;
+
+    @BindView(R.id.tv_resource_en)
+    TextView tvResourceEN;
+
+    @BindView(R.id.iv_course)
+    ImageView ivCourse;
+
+    @BindView(R.id.tv_course_cn)
+    TextView tvCourseCN;
+
+    @BindView(R.id.tv_course_en)
+    TextView tvCourseEN;
+
+    public void setTVStyle(TextView tv,int resid){
+        if (Build.VERSION.SDK_INT < 23) {
+            tv.setTextAppearance(this,resid);
+        } else {
+            tv.setTextAppearance(resid);
+        }
+    }
     @OnClick({R.id.iv_home_menu, R.id.iv_camera,R.id.ll_course,R.id.ll_online,R.id.ll_resource,R.id.ll_work})
     public void onClick(View v) {
         int id = v.getId();
@@ -84,25 +117,11 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.ll_work:
                 llwork.setBackgroundResource(R.mipmap.shadow_blue);
-
-                //ivWork.setColorFilter(R.color.white);
-                if (Build.VERSION.SDK_INT < 23) {
-                    tvWorkCN.setTextAppearance(this,R.style.txt_22_white);
-                    tvWorkEN.setTextAppearance(this,R.style.txt_14_white);
-                } else {
-                    tvWorkCN.setTextAppearance(R.style.txt_22_white);
-                    tvWorkEN.setTextAppearance(R.style.txt_14_white);
-                }
-
-                //ivWork.setBackgroundColor(R.color.white);
-
+                setTVStyle(tvWorkCN,R.style.txt_22_white);
+                setTVStyle(tvWorkEN,R.style.txt_14_white);
                 IconicsDrawable tt =new IconicsDrawable(this).icon("fon_807")
                         .color(Color.WHITE);
-
                 ivWork.setImageDrawable(tt);
-                //setTheme(R.style.txt_22_white);
-
-
                 //test
                 Intent intent = new Intent(this, Lesson.class);
                 this.startActivity(intent);
@@ -110,12 +129,27 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.ll_online:
                 llonline.setBackgroundResource(R.mipmap.shadow_green);
+                setTVStyle(tvOnlineCN,R.style.txt_22_white);
+                setTVStyle(tvOnlineEN,R.style.txt_14_white);
+                IconicsDrawable iOnline =new IconicsDrawable(this).icon("fon_805")
+                        .color(Color.WHITE);
+                ivOnline.setImageDrawable(iOnline);
                 break;
             case R.id.ll_resource:
                 llresource.setBackgroundResource(R.mipmap.shadow_gray);
+                setTVStyle(tvResourceCN,R.style.txt_22_white);
+                setTVStyle(tvResourceEN,R.style.txt_14_white);
+                IconicsDrawable iResource =new IconicsDrawable(this).icon("fon_806")
+                        .color(Color.WHITE);
+                ivResource.setImageDrawable(iResource);
                 break;
             case R.id.ll_course:
                 llcourse.setBackgroundResource(R.mipmap.shadow_yellow);
+                setTVStyle(tvCourseCN,R.style.txt_22_white);
+                setTVStyle(tvCourseEN,R.style.txt_14_white);
+                IconicsDrawable iCourse =new IconicsDrawable(this).icon("fon_802")
+                        .color(Color.WHITE);
+                ivCourse.setImageDrawable(iCourse);
                 break;
             case R.id.iv_camera:
 
