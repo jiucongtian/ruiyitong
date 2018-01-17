@@ -116,38 +116,90 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_centerVertical="true"
                 android:gravity="center_vertical"
                 android:layout_alignParentRight="true">
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    tools:src="@color/black"
-                    app:ico_color="@color/white"
-                    app:ico_icon="fon_815"/>
-                <TextView
-                    style="@style/txt_12_white"
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="8dp"
-                    android:text="大屏幕"/>
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="24dp"
-                    tools:src="@color/black"
-                    app:ico_color="@color/white"
-                    app:ico_icon="fon_81c"/>
-                <TextView
-                    style="@style/txt_12_white"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/ll_big_screen_tab"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            tools:src="@color/black"
+                            app:ico_color="@color/white"
+                            app:ico_icon="fon_815"/>
+                        <TextView
+                            style="@style/txt_12_white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:text="大屏幕"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="9dp"
+                        android:background="@mipmap/lesson_line"/>
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="36dp"
-                    android:text="学生座次"/>
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="24dp"
+                            tools:src="@color/black"
+                            app:ico_color="@color/white"
+                            app:ico_icon="fon_81c"/>
+                        <TextView
+                            style="@style/txt_12_white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="36dp"
+                            android:text="学生座次"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="9dp"
+                        android:background="@mipmap/lesson_line"/>
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
             </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
