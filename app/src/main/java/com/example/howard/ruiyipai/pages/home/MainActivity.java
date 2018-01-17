@@ -97,8 +97,7 @@ public class MainActivity extends BaseActivity {
                 //ivWork.setBackgroundColor(R.color.white);
 
                 IconicsDrawable tt =new IconicsDrawable(this).icon("fon_807")
-                        .color(Color.WHITE)
-                        .sizeDp(24);
+                        .color(Color.WHITE);
 
                 ivWork.setImageDrawable(tt);
                 //setTheme(R.style.txt_22_white);
