@@ -3,6 +3,7 @@ package com.example.howard.ruiyipai.pages.home;
 import android.graphics.Color;
 import android.os.Build;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
@@ -15,6 +16,7 @@ import com.example.howard.ruiyipai.base.BaseActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 import com.example.howard.ruiyipai.pages.lesson.Lesson;
 import android.widget.ImageView;
@@ -100,6 +102,12 @@ public class MainActivity extends BaseActivity {
 
                 ivWork.setImageDrawable(tt);
                 //setTheme(R.style.txt_22_white);
+
+
+                //test
+                Intent intent = new Intent(this, Lesson.class);
+                this.startActivity(intent);
+                //test end
                 break;
             case R.id.ll_online:
                 llonline.setBackgroundResource(R.mipmap.shadow_green);
