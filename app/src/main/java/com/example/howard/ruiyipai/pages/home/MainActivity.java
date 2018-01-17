@@ -3,12 +3,8 @@ package com.example.howard.ruiyipai.pages.home;
 import android.graphics.Color;
 import android.os.Build;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.Gravity;
 import android.view.View;
 import com.example.howard.ruiyipai.R;
@@ -18,15 +14,14 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import com.example.howard.ruiyipai.pages.lesson.Lesson;
-import android.widget.ImageView;
+import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
+
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.example.howard.ruiyipai.recyclerAdapter.ClassAdapter;
 import com.mikepenz.iconics.IconicsDrawable;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
@@ -123,7 +118,7 @@ public class MainActivity extends BaseActivity {
                         .color(Color.WHITE);
                 ivWork.setImageDrawable(tt);
                 //test
-                Intent intent = new Intent(this, Lesson.class);
+                Intent intent = new Intent(this, LessonActivity.class);
                 this.startActivity(intent);
                 //test end
                 break;
