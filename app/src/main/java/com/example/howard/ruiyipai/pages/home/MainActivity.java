@@ -12,6 +12,7 @@ import com.example.howard.ruiyipai.base.BaseActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.howard.ruiyipai.common.Utils;
@@ -96,7 +97,16 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.tv_course_en)
     TextView tvCourseEN;
 
-    @OnClick({R.id.iv_home_menu, R.id.iv_camera,R.id.ll_course,R.id.ll_online,R.id.ll_resource,R.id.ll_work})
+    @BindView(R.id.bt_yunping)
+    Button btYunping;
+    @BindView(R.id.bt_zuoye)
+    Button btZuoye;
+    @BindView(R.id.bt_xiaoyuan)
+    Button btXiaoyuan;
+    @BindView(R.id.bt_duofen)
+    Button btDuofen;
+
+    @OnClick({R.id.iv_home_menu, R.id.iv_camera,R.id.ll_course,R.id.ll_online,R.id.ll_resource,R.id.ll_work,R.id.bt_yunping,R.id.bt_zuoye,R.id.bt_xiaoyuan,R.id.bt_duofen})
     public void onClick(View v) {
         int id = v.getId();
 
@@ -139,6 +149,22 @@ public class MainActivity extends BaseActivity {
                 IconicsDrawable iCourse =new IconicsDrawable(this).icon("fon_802")
                         .color(Color.WHITE);
                 ivCourse.setImageDrawable(iCourse);
+                break;
+            case R.id.bt_yunping:
+                btYunping.setBackground(getDrawable(R.drawable.home_btn1_click) );
+                Utils.setBTStyle(this,btYunping,R.style.txt_22_white);
+                break;
+            case R.id.bt_zuoye:
+                btZuoye.setBackground(getDrawable(R.drawable.home_btn3_click) );
+                Utils.setBTStyle(this,btZuoye,R.style.txt_22_white);
+                break;
+            case R.id.bt_xiaoyuan:
+                btXiaoyuan.setBackground(getDrawable(R.drawable.home_btn2_click) );
+                Utils.setBTStyle(this,btXiaoyuan,R.style.txt_22_white);
+                break;
+            case R.id.bt_duofen:
+                btDuofen.setBackground(getDrawable(R.drawable.home_btn4_click) );
+                Utils.setBTStyle(this,btDuofen,R.style.txt_22_white);
                 break;
             case R.id.iv_camera:
 
