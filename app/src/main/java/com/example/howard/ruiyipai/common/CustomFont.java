@@ -146,7 +146,6 @@ public class CustomFont implements ITypeface {
 
     public enum Icon implements IIcon {
 
-        //        fon_test1('\ue800'),
         fon_800('\ue800'),
         fon_801('\ue801'),
         fon_802('\ue802'),
@@ -184,9 +183,35 @@ public class CustomFont implements ITypeface {
         fon_822('\ue822'),
         fon_823('\ue823'),
         fon_824('\ue824'),
-        fon_825('\ue825');
-
-
+        fon_825('\ue825')，
+        fon_826('\ue826')，
+        fon_827('\ue827')，
+        fon_828('\ue828')，
+        fon_829('\ue829')，
+        fon_82a('\ue82a')，                
+        fon_82b('\ue82b')，
+        fon_82c('\ue82c')，
+        fon_82d('\ue82d')，
+        fon_82e('\ue82e')，
+        fon_82f('\ue82f')，
+        fon_830('\ue830')，
+        fon_831('\ue831')，                
+        fon_832('\ue832')，
+        fon_833('\ue833')，
+        fon_834('\ue834')，
+        fon_835('\ue835')，
+        fon_836('\ue836')，
+        fon_837('\ue837')，                
+        fon_838('\ue838')，                
+        fon_839('\ue839')，
+        fon_83a('\ue83a')，
+        fon_83b('\ue83b')，
+        fon_83c('\ue83c')，
+        fon_83d('\ue83d')，
+        fon_83e('\ue83e')，                
+        fon_83f('\ue83f')；                
+                
+                
 
         char character;
 
