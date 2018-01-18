@@ -18,7 +18,7 @@
             android:layout_height="12dp"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="80dp"
+            android:layout_marginLeft="60dp"
             tools:background="@color/red"
             app:ico_color="@color/icon_blue_sky"
             app:ico_icon="fon_808"/>
