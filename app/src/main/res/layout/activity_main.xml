@@ -256,14 +256,15 @@
                 android:paddingRight="1dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:ico_color="@color/red_1"
-                app:ico_icon="fon_808"/>
+                android:src="@mipmap/red_point"/>
+                <!--app:ico_color="@color/red_1"-->
+                <!--app:ico_icon="@mipmap/red_point"/>-->
             <TextView
                 style="@style/txt_14_white"
                 android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3"/>
+                android:text="3000"/>
         </RelativeLayout>
 
         <RelativeLayout
