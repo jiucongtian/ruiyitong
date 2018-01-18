@@ -243,29 +243,47 @@
         <!-- red point -->
 
         <RelativeLayout
-            android:layout_width="27dp"
-            android:layout_height="27dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="170dp"
             android:layout_marginLeft="170dp"
             app:layout_constraintBottom_toBottomOf="@+id/ll_work"
             app:layout_constraintLeft_toLeftOf="@+id/ll_work">
-            <ImageView
-                android:paddingTop="2dp"
-                android:paddingBottom="1dp"
-                android:paddingLeft="1dp"
-                android:paddingRight="1dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@mipmap/red_point"/>
-                <!--app:ico_color="@color/red_1"-->
-                <!--app:ico_icon="@mipmap/red_point"/>-->
+
             <TextView
                 style="@style/txt_14_white"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
                 android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/my_red_point"
                 android:text="3000"/>
         </RelativeLayout>
+        <!--<RelativeLayout-->
+            <!--android:layout_width="27dp"-->
+            <!--android:layout_height="27dp"-->
+            <!--android:layout_marginBottom="170dp"-->
+            <!--android:layout_marginLeft="170dp"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/ll_work"-->
+            <!--app:layout_constraintLeft_toLeftOf="@+id/ll_work">-->
+            <!--<ImageView-->
+                <!--android:paddingTop="2dp"-->
+                <!--android:paddingBottom="1dp"-->
+                <!--android:paddingLeft="1dp"-->
+                <!--android:paddingRight="1dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:src="@mipmap/red_point"/>-->
+                <!--&lt;!&ndash;app:ico_color="@color/red_1"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:ico_icon="@mipmap/red_point"/>&ndash;&gt;-->
+            <!--<TextView-->
+                <!--style="@style/txt_14_white"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="3000"/>-->
+        <!--</RelativeLayout>-->
 
         <RelativeLayout
             android:layout_width="27dp"

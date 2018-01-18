@@ -7,8 +7,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.Gravity;
 import android.view.View;
+
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
+
 import android.support.v7.widget.RecyclerView;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -20,6 +22,7 @@ import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
 
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.example.howard.ruiyipai.recyclerAdapter.ClassAdapter;
 import com.mikepenz.iconics.IconicsDrawable;
 
@@ -106,7 +109,7 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.bt_duofen)
     Button btDuofen;
 
-    @OnClick({R.id.iv_home_menu, R.id.iv_camera,R.id.ll_course,R.id.ll_online,R.id.ll_resource,R.id.ll_work,R.id.bt_yunping,R.id.bt_zuoye,R.id.bt_xiaoyuan,R.id.bt_duofen})
+    @OnClick({R.id.iv_home_menu, R.id.iv_camera, R.id.ll_course, R.id.ll_online, R.id.ll_resource, R.id.ll_work, R.id.bt_yunping, R.id.bt_zuoye, R.id.bt_xiaoyuan, R.id.bt_duofen})
     public void onClick(View v) {
         int id = v.getId();
 
@@ -116,9 +119,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.ll_work:
                 llwork.setBackgroundResource(R.mipmap.shadow_blue);
-                Utils.setTVStyle(this, tvWorkCN,R.style.txt_22_white);
-                Utils.setTVStyle(this, tvWorkEN,R.style.txt_14_white);
-                IconicsDrawable tt =new IconicsDrawable(this).icon("fon_807")
+                Utils.setTVStyle(this, tvWorkCN, R.style.txt_22_white);
+                Utils.setTVStyle(this, tvWorkEN, R.style.txt_14_white);
+                IconicsDrawable tt = new IconicsDrawable(this).icon("fon_807")
                         .color(Color.WHITE);
                 ivWork.setImageDrawable(tt);
                 //test
@@ -128,43 +131,43 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.ll_online:
                 llonline.setBackgroundResource(R.mipmap.shadow_green);
-                Utils.setTVStyle(this, tvOnlineCN,R.style.txt_22_white);
-                Utils.setTVStyle(this, tvOnlineEN,R.style.txt_14_white);
-                IconicsDrawable iOnline =new IconicsDrawable(this).icon("fon_805")
+                Utils.setTVStyle(this, tvOnlineCN, R.style.txt_22_white);
+                Utils.setTVStyle(this, tvOnlineEN, R.style.txt_14_white);
+                IconicsDrawable iOnline = new IconicsDrawable(this).icon("fon_805")
                         .color(Color.WHITE);
                 ivOnline.setImageDrawable(iOnline);
                 break;
             case R.id.ll_resource:
                 llresource.setBackgroundResource(R.mipmap.shadow_gray);
-                Utils.setTVStyle(this, tvResourceCN,R.style.txt_22_white);
-                Utils.setTVStyle(this, tvResourceEN,R.style.txt_14_white);
-                IconicsDrawable iResource =new IconicsDrawable(this).icon("fon_806")
+                Utils.setTVStyle(this, tvResourceCN, R.style.txt_22_white);
+                Utils.setTVStyle(this, tvResourceEN, R.style.txt_14_white);
+                IconicsDrawable iResource = new IconicsDrawable(this).icon("fon_806")
                         .color(Color.WHITE);
                 ivResource.setImageDrawable(iResource);
                 break;
             case R.id.ll_course:
                 llcourse.setBackgroundResource(R.mipmap.shadow_yellow);
-                Utils.setTVStyle(this, tvCourseCN,R.style.txt_22_white);
-                Utils.setTVStyle(this, tvCourseEN,R.style.txt_14_white);
-                IconicsDrawable iCourse =new IconicsDrawable(this).icon("fon_802")
+                Utils.setTVStyle(this, tvCourseCN, R.style.txt_22_white);
+                Utils.setTVStyle(this, tvCourseEN, R.style.txt_14_white);
+                IconicsDrawable iCourse = new IconicsDrawable(this).icon("fon_802")
                         .color(Color.WHITE);
                 ivCourse.setImageDrawable(iCourse);
                 break;
             case R.id.bt_yunping:
-                btYunping.setBackground(getDrawable(R.drawable.home_btn1_click) );
-                Utils.setBTStyle(this,btYunping,R.style.txt_22_white);
+                btYunping.setBackground(getDrawable(R.drawable.home_btn1_click));
+                Utils.setBTStyle(this, btYunping, R.style.txt_22_white);
                 break;
             case R.id.bt_zuoye:
-                btZuoye.setBackground(getDrawable(R.drawable.home_btn3_click) );
-                Utils.setBTStyle(this,btZuoye,R.style.txt_22_white);
+                btZuoye.setBackground(getDrawable(R.drawable.home_btn3_click));
+                Utils.setBTStyle(this, btZuoye, R.style.txt_22_white);
                 break;
             case R.id.bt_xiaoyuan:
-                btXiaoyuan.setBackground(getDrawable(R.drawable.home_btn2_click) );
-                Utils.setBTStyle(this,btXiaoyuan,R.style.txt_22_white);
+                btXiaoyuan.setBackground(getDrawable(R.drawable.home_btn2_click));
+                Utils.setBTStyle(this, btXiaoyuan, R.style.txt_22_white);
                 break;
             case R.id.bt_duofen:
-                btDuofen.setBackground(getDrawable(R.drawable.home_btn4_click) );
-                Utils.setBTStyle(this,btDuofen,R.style.txt_22_white);
+                btDuofen.setBackground(getDrawable(R.drawable.home_btn4_click));
+                Utils.setBTStyle(this, btDuofen, R.style.txt_22_white);
                 break;
             case R.id.iv_camera:
 

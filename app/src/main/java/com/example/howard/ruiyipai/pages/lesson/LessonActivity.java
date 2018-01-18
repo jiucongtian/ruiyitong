@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
 import com.example.howard.ruiyipai.common.Utils;
+import com.example.howard.ruiyipai.recyclerAdapter.ClassAdapter;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -47,6 +48,9 @@ public class LessonActivity extends BaseActivity {
     @BindView(R.id.iv_students_seats_line)
     ImageView studentsSeatsLine;
 
+    @BindView(R.id.rv_left_lessons)
+    RecyclerView selectLessonsList;
+
     MainPageFragment mainPageFragment;
     StudentsSeatsFragment studentsSeatsFragment;
 
@@ -69,7 +73,18 @@ public class LessonActivity extends BaseActivity {
         LessonToolsAdapter adapter = new LessonToolsAdapter(null);
         lessonTools.setAdapter(adapter);
 
+        //创建左侧选课列表
+        createSelectLessonList();
+
         showMainFragment();
+    }
+
+    private void createSelectLessonList() {
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        selectLessonsList.setLayoutManager(layoutManager);
+
+        SelectLessonsAdapter test = new SelectLessonsAdapter(null);
+        selectLessonsList.setAdapter(test);
     }
 
     private void showMainFragment() {

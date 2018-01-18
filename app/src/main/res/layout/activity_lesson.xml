@@ -251,7 +251,7 @@
         <RelativeLayout
             android:id="@+id/rl_footer"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="80dp"
             android:layout_alignParentBottom="true">
 
             <LinearLayout
@@ -348,6 +348,7 @@
             </RelativeLayout>
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_left_lessons"
+                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             </android.support.v7.widget.RecyclerView>
