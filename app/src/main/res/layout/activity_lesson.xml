@@ -209,8 +209,6 @@
             android:background="@mipmap/lesson_func_bg"
             android:layout_alignParentBottom="true">
 
-
-
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rlv_tools"
                 android:layout_width="match_parent"
@@ -236,6 +234,28 @@
                 app:ico_icon="fon_819" />
 
         </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_lesson_thumbnail_container"
+            android:layout_above="@id/rl_lesson_tools_container"
+            android:layout_marginBottom="-20dp"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:background="@color/black_translucence_20">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_lesson_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+
     </RelativeLayout>
 
 

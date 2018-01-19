@@ -16,13 +16,20 @@ import android.widget.RelativeLayout;
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
 import com.example.howard.ruiyipai.common.Utils;
-import com.example.howard.ruiyipai.recyclerAdapter.ClassAdapter;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
+import static com.example.howard.ruiyipai.pages.lesson.LessonThumbnailAdapter.ITEM_TYPE_PPT;
+import static com.example.howard.ruiyipai.pages.lesson.LessonThumbnailAdapter.ITEM_TYPE_WORD;
+
 
 public class LessonActivity extends BaseActivity {
+
+    public static enum THUMBNAIL_TYPE {
+        TYPE_PPT,
+        ITEM_WORD
+    }
 
     static final int ONE_LINE_NUMBER = 10;
     static final int LINE_HEIGHT_DP = 90;
@@ -32,6 +39,12 @@ public class LessonActivity extends BaseActivity {
 
     @BindView(R.id.rlv_tools)
     RecyclerView lessonTools;
+
+    @BindView(R.id.rv_lesson_thumbnail)
+    RecyclerView lessonThumbnail;
+
+    @BindView(R.id.rl_lesson_thumbnail_container)
+    RelativeLayout lessonThumbnailContainer;
 
     @BindView(R.id.rl_lesson_tools_container)
     RelativeLayout lessonToolsContainer;
@@ -56,8 +69,54 @@ public class LessonActivity extends BaseActivity {
 
     boolean isFold = true;
 
+    THUMBNAIL_TYPE thumbnailType = THUMBNAIL_TYPE.TYPE_PPT;
+
+
     @Override
     public void initPages() {
+        initLessonTools();
+
+        initLessonThumbnail();
+
+        //创建左侧选课列表
+        createSelectLessonList();
+
+        showMainFragment();
+
+        //必须放在最后
+//        setThumbnailType(THUMBNAIL_TYPE.TYPE_PPT);
+        setThumbnailType(THUMBNAIL_TYPE.ITEM_WORD);
+    }
+
+    private void initLessonThumbnail() {
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        lessonThumbnail.setLayoutManager(layoutManager);
+
+        LessonThumbnailAdapter adapter = new LessonThumbnailAdapter(null);
+        lessonThumbnail.setAdapter(adapter);
+    }
+
+    private void setThumbnailType(THUMBNAIL_TYPE type) {
+        thumbnailType = type;
+
+        if (thumbnailType == THUMBNAIL_TYPE.TYPE_PPT) {
+            ViewGroup.LayoutParams lp = lessonThumbnailContainer.getLayoutParams();
+            lp.height = Utils.dip2px(this, 128);
+            lessonThumbnailContainer.setLayoutParams(lp);
+
+            ((LessonThumbnailAdapter)lessonThumbnail.getAdapter()).setThumbnailType(ITEM_TYPE_PPT);
+        } else if (thumbnailType == THUMBNAIL_TYPE.ITEM_WORD) {
+            ViewGroup.LayoutParams lp = lessonThumbnailContainer.getLayoutParams();
+            lp.height = Utils.dip2px(this, 176);
+            lessonThumbnailContainer.setLayoutParams(lp);
+            ((LessonThumbnailAdapter)lessonThumbnail.getAdapter()).setThumbnailType(ITEM_TYPE_WORD);
+        }
+
+    }
+
+    private void initLessonTools() {
         ViewGroup.LayoutParams layoutParams = lessonTools.getLayoutParams();
         layoutParams.height = Utils.dip2px(this, LINE_HEIGHT_DP) * 2;
         lessonTools.setLayoutParams(layoutParams);
@@ -72,11 +131,6 @@ public class LessonActivity extends BaseActivity {
 
         LessonToolsAdapter adapter = new LessonToolsAdapter(null);
         lessonTools.setAdapter(adapter);
-
-        //创建左侧选课列表
-        createSelectLessonList();
-
-        showMainFragment();
     }
 
     private void createSelectLessonList() {
