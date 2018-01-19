@@ -205,8 +205,8 @@
         <RelativeLayout
             android:id="@+id/rl_lesson_tools_container"
             android:layout_width="match_parent"
-            android:layout_height="72dp"
-            android:background="@color/white_translucence"
+            android:layout_height="106dp"
+            android:background="@mipmap/lesson_func_bg"
             android:layout_alignParentBottom="true">
 
 
@@ -215,8 +215,8 @@
                 android:id="@+id/rlv_tools"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="130dp"
-                android:layout_marginRight="130dp"
+                android:layout_marginLeft="82dp"
+                android:layout_marginRight="46dp"
                 tools:background="@color/black">
 
             </android.support.v7.widget.RecyclerView>
@@ -227,8 +227,8 @@
                 android:layout_height="24dp"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="18dp"
-                android:layout_marginRight="56dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="36dp"
                 app:ico_color="@color/font_dark"
                 app:ico_icon="fon_819"/>
 

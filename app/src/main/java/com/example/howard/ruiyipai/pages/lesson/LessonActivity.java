@@ -25,7 +25,7 @@ import butterknife.OnClick;
 public class LessonActivity extends BaseActivity {
 
     static final int ONE_LINE_NUMBER = 10;
-    static final int LINE_HEIGHT_DP = 72;
+    static final int LINE_HEIGHT_DP = 90;
 
     @BindView(R.id.left_drawer)
     DrawerLayout leftDrawer;
@@ -142,13 +142,13 @@ public class LessonActivity extends BaseActivity {
                 if (isFold) {
                     isFold = false;
                     ViewGroup.LayoutParams lp = lessonToolsContainer.getLayoutParams();
-                    lp.height = LINE_HEIGHT_DP * 2;
+                    lp.height = LINE_HEIGHT_DP * 2 + 16;
                     lessonToolsContainer.setLayoutParams(lp);
                     setImageViewTtf(folderBtn, ContextCompat.getColor(this, R.color.font_dark), "fon_81a");
                 } else {
                     isFold = true;
                     ViewGroup.LayoutParams lp = lessonToolsContainer.getLayoutParams();
-                    lp.height = LINE_HEIGHT_DP;
+                    lp.height = LINE_HEIGHT_DP + 16;
                     lessonToolsContainer.setLayoutParams(lp);
                     setImageViewTtf(folderBtn, ContextCompat.getColor(this, R.color.font_dark), "fon_819");
 
