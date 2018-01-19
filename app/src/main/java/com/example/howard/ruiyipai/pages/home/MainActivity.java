@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.howard.ruiyipai.common.Utils;
+import com.example.howard.ruiyipai.pages.TestActivity;
 import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
 
 import android.widget.LinearLayout;
@@ -138,6 +139,12 @@ public class MainActivity extends BaseActivity {
                 ivOnline.setImageDrawable(iOnline);
                 break;
             case R.id.ll_resource:
+
+                //test
+                Intent testIntent = new Intent(this, TestActivity.class);
+                this.startActivity(testIntent);
+
+
                 llresource.setBackgroundResource(R.mipmap.shadow_gray);
                 Utils.setTVStyle(this, tvResourceCN, R.style.txt_22_white);
                 Utils.setTVStyle(this, tvResourceEN, R.style.txt_14_white);
