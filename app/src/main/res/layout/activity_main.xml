@@ -245,20 +245,20 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="170dp"
+            android:layout_marginBottom="175dp"
             android:layout_marginLeft="170dp"
             app:layout_constraintBottom_toBottomOf="@+id/ll_work"
             app:layout_constraintLeft_toLeftOf="@+id/ll_work">
 
             <TextView
-                style="@style/txt_14_white"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
+                style="@style/txt_18_white"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
                 android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/my_red_point"
-                android:text="3000"/>
+                android:text="3"/>
         </RelativeLayout>
         <!--<RelativeLayout-->
             <!--android:layout_width="27dp"-->
@@ -284,31 +284,48 @@
                 <!--android:layout_height="wrap_content"-->
                 <!--android:text="3000"/>-->
         <!--</RelativeLayout>-->
-
         <RelativeLayout
-            android:layout_width="27dp"
-            android:layout_height="27dp"
-            android:layout_marginBottom="170dp"
-            android:layout_marginLeft="170dp"
-            app:layout_constraintBottom_toBottomOf="@+id/ll_online"
-            app:layout_constraintLeft_toLeftOf="@+id/ll_online">
-            <ImageView
-                android:paddingTop="2dp"
-                android:paddingBottom="1dp"
-                android:paddingLeft="1dp"
-                android:paddingRight="1dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:ico_color="@color/red_1"
-                app:ico_icon="fon_808"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="175dp"
+            android:layout_marginLeft="390dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ll_work"
+            app:layout_constraintLeft_toLeftOf="@+id/ll_work">
+
             <TextView
-                style="@style/txt_14_white"
+                style="@style/txt_18_white"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
+                android:background="@drawable/my_red_point"
+                android:text="30"/>
         </RelativeLayout>
+        <!--<RelativeLayout-->
+            <!--android:layout_width="27dp"-->
+            <!--android:layout_height="27dp"-->
+            <!--android:layout_marginBottom="170dp"-->
+            <!--android:layout_marginLeft="170dp"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/ll_online"-->
+            <!--app:layout_constraintLeft_toLeftOf="@+id/ll_online">-->
+            <!--<ImageView-->
+                <!--android:paddingTop="2dp"-->
+                <!--android:paddingBottom="1dp"-->
+                <!--android:paddingLeft="1dp"-->
+                <!--android:paddingRight="1dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--app:ico_color="@color/red_1"-->
+                <!--app:ico_icon="fon_808"/>-->
+            <!--<TextView-->
+                <!--style="@style/txt_14_white"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="3"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_centerHorizontal="true" />-->
+        <!--</RelativeLayout>-->
 
         <RelativeLayout
             android:layout_width="27dp"
@@ -721,29 +738,37 @@
                     android:layout_marginBottom="3dp"
                     android:layout_marginLeft="29dp"
                     android:text="检查新版本" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="60dp">
 
+                    <TextView
+                        style="@style/txt_14_white"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/my_red_point"
+                        android:text="3"/>
+                </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="27dp"
                     android:layout_height="27dp"
                     android:layout_marginLeft="60dp"
                     app:layout_constraintBottom_toBottomOf="@+id/textView3"
                     app:layout_constraintLeft_toLeftOf="@+id/textView3">
-                    <ImageView
-                        android:paddingTop="2dp"
-                        android:paddingBottom="1dp"
-                        android:paddingLeft="1dp"
-                        android:paddingRight="1dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:ico_color="@color/red_1"
-                        app:ico_icon="fon_808"/>
                     <TextView
                         style="@style/txt_14_white"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_centerInParent="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="3"
-                        android:layout_centerVertical="true"
-                        android:layout_centerHorizontal="true" />
+                        android:background="@drawable/my_red_point"
+                        android:text="30"/>
                 </RelativeLayout>
 
             </LinearLayout>
