@@ -289,7 +289,7 @@
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     app:ico_color="@color/icon_blue_sky"
-                    app:ico_icon="fon_800"/>
+                    app:ico_icon="fon_813"/>
                 <TextView
                     style="@style/txt_12_gray"
                     android:layout_gravity="center_horizontal"
@@ -310,7 +310,7 @@
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     app:ico_color="@color/icon_blue_sky"
-                    app:ico_icon="fon_800"/>
+                    app:ico_icon="fon_822"/>
                 <TextView
                     style="@style/txt_12_gray"
                     android:layout_gravity="center_horizontal"
@@ -331,7 +331,7 @@
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     app:ico_color="@color/icon_blue_sky"
-                    app:ico_icon="fon_800"/>
+                    app:ico_icon="fon_821"/>
                 <TextView
                     style="@style/txt_12_gray"
                     android:layout_gravity="center_horizontal"
@@ -351,7 +351,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:background="@color/light_blue">
+                android:background="@color/light_blue_deep">
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_centerVertical="true"
@@ -362,10 +362,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/txt_24_white"
                         android:text="今天 第一节"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/txt_18_white"
+                        android:layout_marginTop="8dp"
                         android:text="高一年级1班 备课内容"/>
                 </LinearLayout>
             </RelativeLayout>
