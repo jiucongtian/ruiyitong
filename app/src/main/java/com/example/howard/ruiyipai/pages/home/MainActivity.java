@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 
 import com.example.howard.ruiyipai.R;
@@ -31,7 +32,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements ClassAdapter.OnItemClickListener {
 
     @BindView(R.id.rlv_class)
     RecyclerView classLv;
@@ -42,16 +43,6 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.ll_pop_ground)
     View popLayout;
 
-    boolean openStatus = false;
-
-    @Override
-    public void initPages() {
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        classLv.setLayoutManager(layoutManager);
-
-        ClassAdapter test = new ClassAdapter(null);
-        classLv.setAdapter(test);
-    }
 
     @BindView(R.id.ll_work)
     LinearLayout llwork;
@@ -110,6 +101,22 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.bt_duofen)
     Button btDuofen;
 
+    boolean openStatus = false;
+
+    ClassAdapter mClassAdapter = null;
+
+    @Override
+    public void initPages() {
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        classLv.setLayoutManager(layoutManager);
+
+        mClassAdapter = new ClassAdapter(null);
+        mClassAdapter.setOnItemClickListener(this);
+
+        classLv.setAdapter(mClassAdapter);
+    }
+
+
     @OnClick({R.id.iv_home_menu, R.id.iv_camera, R.id.ll_course, R.id.ll_online, R.id.ll_resource, R.id.ll_work, R.id.bt_yunping, R.id.bt_zuoye, R.id.bt_xiaoyuan, R.id.bt_duofen})
     public void onClick(View v) {
         int id = v.getId();
@@ -125,10 +132,6 @@ public class MainActivity extends BaseActivity {
                 IconicsDrawable tt = new IconicsDrawable(this).icon("fon_807")
                         .color(Color.WHITE);
                 ivWork.setImageDrawable(tt);
-                //test
-                Intent intent = new Intent(this, LessonActivity.class);
-                this.startActivity(intent);
-                //test end
                 break;
             case R.id.ll_online:
                 llonline.setBackgroundResource(R.mipmap.shadow_green);
@@ -197,5 +200,12 @@ public class MainActivity extends BaseActivity {
     @Override
     protected int getLayoutId() {
         return R.layout.activity_main;
+    }
+
+    @Override
+    public void onItemClick(View view, int position) {
+        //跳转到上课页面
+        Intent intent = new Intent(this, LessonActivity.class);
+        this.startActivity(intent);
     }
 }
