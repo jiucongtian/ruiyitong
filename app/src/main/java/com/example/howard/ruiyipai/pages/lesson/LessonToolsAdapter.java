@@ -17,10 +17,16 @@ import java.util.ArrayList;
 
 public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.ViewHolder>{
 
-    private ArrayList<String> mData;
+    public interface ToolsSelectListener {
+        void sendQuestions();
+    }
 
-    public LessonToolsAdapter(ArrayList<String> data) {
+    private ArrayList<String> mData;
+    ToolsSelectListener mToolsSelectListener;
+
+    public LessonToolsAdapter(ToolsSelectListener listener, ArrayList<String> data) {
         this.mData = data;
+        mToolsSelectListener = listener;
     }
 
     public void updateData(ArrayList<String> data) {
@@ -39,11 +45,25 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
 
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, int position) {
         // 绑定数据
 //        holder.mTv.setText(mData.get(position));
 //        holder.mLesson.setText("上午第一节");
 //        holder.mComments.setText("高中高一年级1班 外语备课内容");
+        View itemView = ((ViewGroup) holder.itemView).getChildAt(0);
+
+        if (mToolsSelectListener != null) {
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = holder.getLayoutPosition();
+
+                    if (0 == position) {
+                        mToolsSelectListener.sendQuestions();
+                    }
+                }
+            });
+        }
     }
 
     @Override

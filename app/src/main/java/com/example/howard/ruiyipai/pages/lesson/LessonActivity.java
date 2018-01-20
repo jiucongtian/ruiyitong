@@ -1,5 +1,6 @@
 package com.example.howard.ruiyipai.pages.lesson;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,6 +17,7 @@ import android.widget.RelativeLayout;
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
 import com.example.howard.ruiyipai.common.Utils;
+import com.example.howard.ruiyipai.pages.Questions.QuestionsActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -24,7 +26,9 @@ import static com.example.howard.ruiyipai.pages.lesson.LessonThumbnailAdapter.IT
 import static com.example.howard.ruiyipai.pages.lesson.LessonThumbnailAdapter.ITEM_TYPE_WORD;
 
 
-public class LessonActivity extends BaseActivity {
+public class LessonActivity extends BaseActivity implements LessonToolsAdapter.ToolsSelectListener {
+
+
 
     public static enum THUMBNAIL_TYPE {
         TYPE_PPT,
@@ -129,7 +133,7 @@ public class LessonActivity extends BaseActivity {
         };
         lessonTools.setLayoutManager(layoutManager);
 
-        LessonToolsAdapter adapter = new LessonToolsAdapter(null);
+        LessonToolsAdapter adapter = new LessonToolsAdapter(this, null);
         lessonTools.setAdapter(adapter);
     }
 
@@ -231,4 +235,12 @@ public class LessonActivity extends BaseActivity {
     protected int getLayoutId() {
         return R.layout.activity_lesson;
     }
+
+    @Override
+    public void sendQuestions() {
+
+        Intent intent = new Intent(this, QuestionsActivity.class);
+        startActivity(intent);
+    }
+
 }

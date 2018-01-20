@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/font_gray">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/light_blue_deep">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="36dp"
+            tools:src="@color/black"
+            app:ico_color="@color/white"
+            app:ico_icon="fon_816" />
+        <TextView
+            style="@style/txt_24_white"
+            android:layout_toRightOf="@id/iv_back"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="课堂发题"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="212dp"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="26dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@color/red"/>
+                <TextView
+                    style="@style/txt_20_dark"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="单选题"/>
+
+                <TextView
+                    style="@style/txt_12_gray"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择要发送的题数"/>
+
+                <com.weigan.loopview.LoopView
+                    android:id="@+id/lv_single_questions_number"
+                    android:layout_marginTop="7dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="136dp"
+                    android:layout_height="190dp"
+                    android:background="@color/red"/>
+
+                <TextView
+                    style="@style/txt_20_dark"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选项数"/>
+
+                <TextView
+                    style="@style/txt_12_gray"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择题目的选项个数"/>
+
+                <com.weigan.loopview.LoopView
+                    android:id="@+id/lv_single_selection_number"
+                    android:layout_marginTop="7dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="136dp"
+                    android:layout_height="190dp"
+                    android:background="@color/red"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="12dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="26dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@color/red"/>
+                <TextView
+                    style="@style/txt_20_dark"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="多选题"/>
+
+                <TextView
+                    style="@style/txt_12_gray"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择要发送的题数"/>
+
+                <com.weigan.loopview.LoopView
+                    android:id="@+id/lv_multi_questions_number"
+                    android:layout_marginTop="7dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="136dp"
+                    android:layout_height="190dp"
+                    android:background="@color/red"/>
+
+                <TextView
+                    style="@style/txt_20_dark"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选项数"/>
+
+                <TextView
+                    style="@style/txt_12_gray"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择题目的选项个数"/>
+
+                <com.weigan.loopview.LoopView
+                    android:id="@+id/lv_multi_selection_number"
+                    android:layout_marginTop="7dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="136dp"
+                    android:layout_height="190dp"
+                    android:background="@color/red"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="12dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="26dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@color/red"/>
+                <TextView
+                    style="@style/txt_20_dark"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="判断题"/>
+
+                <TextView
+                    style="@style/txt_12_gray"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择要发送的题数"/>
+
+                <com.weigan.loopview.LoopView
+                    android:id="@+id/lv_judge_questions_number"
+                    android:layout_marginTop="7dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="136dp"
+                    android:layout_height="190dp"
+                    android:background="@color/red"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="12dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="26dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@color/red"/>
+                <TextView
+                    style="@style/txt_20_dark"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="主观题"/>
+
+                <TextView
+                    style="@style/txt_12_gray"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择要发送的题数"/>
+
+                <com.weigan.loopview.LoopView
+                    android:id="@+id/lv_subject_questions_number"
+                    android:layout_marginTop="7dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="136dp"
+                    android:layout_height="190dp"
+                    android:background="@color/red"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:layout_marginLeft="12dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="26dp"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@color/red"/>
+                    <TextView
+                        style="@style/txt_20_dark"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="18dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="答题时间"/>
+
+                    <TextView
+                        style="@style/txt_12_gray"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请选择要发送的题数"/>
+
+                    <com.weigan.loopview.LoopView
+                        android:id="@+id/lv_questions_duration"
+                        android:layout_marginTop="7dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="136dp"
+                        android:layout_height="190dp"
+                        android:background="@color/red"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="66dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@color/red"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
