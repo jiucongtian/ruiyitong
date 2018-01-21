@@ -33,7 +33,21 @@ public class QuestionsActivity extends BaseActivity {
     LoopView mSingleSelectionNumber;
 
     @BindView(R.id.lv_multi_questions_number)
+    LoopView mMultiQuestionNumber;
+
+    @BindView(R.id.lv_multi_selection_number)
     LoopView mMultiSelectionNumber;
+
+    @BindView(R.id.lv_judge_questions_number)
+    LoopView mJudgeNumber;
+
+    @BindView(R.id.lv_subject_questions_number)
+    LoopView mSubjectNumber;
+
+    @BindView(R.id.lv_questions_duration)
+    LoopView mQuestionDuration;
+
+
 
     @BindView(R.id.rv_student_selector)
     RecyclerView mStudentSelector;
@@ -45,7 +59,75 @@ public class QuestionsActivity extends BaseActivity {
         initSingleQuestionsNumber();
         initSingleSelectionNumber();
         initMultiQuestionsNumber();
+        initMultiSelectionNumber();
+        initJudgeQuestionsNumber();
+        initSubjectQuestionsNumber();
+        initQuestionDuration();
 
+    }
+
+    private void initQuestionDuration() {
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add("item " + i);
+        }
+
+        //设置是否循环播放，加这句为不循环，注释掉为循环
+        mQuestionDuration.setNotLoop();
+        //设置原始数据
+        mQuestionDuration.setItems(list);
+        //设置初始位置
+        mQuestionDuration.setInitPosition(5);
+        //设置字体大小
+        mQuestionDuration.setTextSize(20);
+    }
+
+    private void initSubjectQuestionsNumber() {
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add("item " + i);
+        }
+
+        //设置是否循环播放，加这句为不循环，注释掉为循环
+        mSubjectNumber.setNotLoop();
+        //设置原始数据
+        mSubjectNumber.setItems(list);
+        //设置初始位置
+        mSubjectNumber.setInitPosition(5);
+        //设置字体大小
+        mSubjectNumber.setTextSize(20);
+    }
+
+    private void initJudgeQuestionsNumber() {
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add("item " + i);
+        }
+
+        //设置是否循环播放，加这句为不循环，注释掉为循环
+        mJudgeNumber.setNotLoop();
+        //设置原始数据
+        mJudgeNumber.setItems(list);
+        //设置初始位置
+        mJudgeNumber.setInitPosition(5);
+        //设置字体大小
+        mJudgeNumber.setTextSize(20);
+    }
+
+    private void initMultiSelectionNumber() {
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add("item " + i);
+        }
+
+        //设置是否循环播放，加这句为不循环，注释掉为循环
+        mMultiSelectionNumber.setNotLoop();
+        //设置原始数据
+        mMultiSelectionNumber.setItems(list);
+        //设置初始位置
+        mMultiSelectionNumber.setInitPosition(5);
+        //设置字体大小
+        mMultiSelectionNumber.setTextSize(20);
     }
 
     private void initStudentsList() {
@@ -76,13 +158,13 @@ public class QuestionsActivity extends BaseActivity {
         }
 
         //设置是否循环播放，加这句为不循环，注释掉为循环
-        mMultiSelectionNumber.setNotLoop();
+        mMultiQuestionNumber.setNotLoop();
         //设置原始数据
-        mMultiSelectionNumber.setItems(list);
+        mMultiQuestionNumber.setItems(list);
         //设置初始位置
-        mMultiSelectionNumber.setInitPosition(5);
+        mMultiQuestionNumber.setInitPosition(5);
         //设置字体大小
-        mMultiSelectionNumber.setTextSize(20);
+        mMultiQuestionNumber.setTextSize(20);
     }
 
     private void initSingleSelectionNumber() {
