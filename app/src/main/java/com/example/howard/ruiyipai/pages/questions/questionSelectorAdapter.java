@@ -8,9 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.howard.ruiyipai.R;
-import com.example.howard.ruiyipai.bean.StudentSelectionBean;
+import com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean;
 import com.example.howard.ruiyipai.bean.StudentsGroupNode;
-import com.example.howard.ruiyipai.bean.StudentsNode;
 
 import java.util.List;
 

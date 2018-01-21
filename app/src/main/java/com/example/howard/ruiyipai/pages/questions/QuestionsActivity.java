@@ -5,9 +5,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
-import com.example.howard.ruiyipai.bean.StudentSelectionBean;
-import com.example.howard.ruiyipai.bean.StudentsGroupNode;
-import com.example.howard.ruiyipai.bean.StudentsNode;
+import com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean;
 import com.weigan.loopview.LoopView;
 
 import java.util.ArrayList;
@@ -15,9 +13,9 @@ import java.util.List;
 
 import butterknife.BindView;
 
-import static com.example.howard.ruiyipai.bean.StudentSelectionBean.SELECTION_TYPE.TYPE_CLASS;
-import static com.example.howard.ruiyipai.bean.StudentSelectionBean.SELECTION_TYPE.TYPE_STUDENT;
-import static com.example.howard.ruiyipai.bean.StudentSelectionBean.SELECTION_TYPE.TYPE_TEAM;
+import static com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean.SELECTION_TYPE.TYPE_CLASS;
+import static com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean.SELECTION_TYPE.TYPE_STUDENT;
+import static com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean.SELECTION_TYPE.TYPE_TEAM;
 
 /**
  * Created by howard on 2018/1/20.

@@ -1,4 +1,4 @@
-package com.example.howard.ruiyipai.bean;
+package com.example.howard.ruiyipai.pages.questions.bean;
 
 /**
  * Created by howard on 2018/1/20.
