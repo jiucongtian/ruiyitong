@@ -139,12 +139,12 @@ public class QuestionsActivity extends BaseActivity {
         selections.add(new StudentSelectionBean("第一组", TYPE_TEAM));
         selections.add(new StudentSelectionBean("第二组", TYPE_TEAM));
         selections.add(new StudentSelectionBean("张三", TYPE_STUDENT));
-        selections.add(new StudentSelectionBean("张三", TYPE_STUDENT));
-        selections.add(new StudentSelectionBean("第一组", TYPE_TEAM));
-        selections.add(new StudentSelectionBean("张三", TYPE_STUDENT));
-        selections.add(new StudentSelectionBean("张三", TYPE_STUDENT));
-        selections.add(new StudentSelectionBean("张三", TYPE_STUDENT));
-        selections.add(new StudentSelectionBean("张三", TYPE_STUDENT));
+        selections.add(new StudentSelectionBean("张四", TYPE_STUDENT));
+        selections.add(new StudentSelectionBean("第三组", TYPE_TEAM));
+        selections.add(new StudentSelectionBean("李四", TYPE_STUDENT));
+        selections.add(new StudentSelectionBean("李五", TYPE_STUDENT));
+        selections.add(new StudentSelectionBean("张哈", TYPE_STUDENT));
+        selections.add(new StudentSelectionBean("张八", TYPE_STUDENT));
 
         questionSelectorAdapter adapter = new questionSelectorAdapter(selections);
         mStudentSelector.setAdapter(adapter);
