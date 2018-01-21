@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/iv_mark"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="76dp"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        app:ico_color="@color/red"
+        app:ico_icon="fon_818"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/txt_18_gray"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="张三" />
+
+</LinearLayout>

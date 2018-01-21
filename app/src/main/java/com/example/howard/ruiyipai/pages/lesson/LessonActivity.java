@@ -17,7 +17,7 @@ import android.widget.RelativeLayout;
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
 import com.example.howard.ruiyipai.common.Utils;
-import com.example.howard.ruiyipai.pages.Questions.QuestionsActivity;
+import com.example.howard.ruiyipai.pages.questions.QuestionsActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;

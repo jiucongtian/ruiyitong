@@ -11,6 +11,8 @@ import com.example.howard.ruiyipai.R;
 
 import java.util.ArrayList;
 
+import butterknife.ButterKnife;
+
 /**
  * Created by howard on 2018/1/14.
  * Email zh@longhuapuxin.com
@@ -78,6 +80,7 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder> 
 
         public ViewHolder(View itemView) {
             super(itemView);
+
             mLesson = (TextView) itemView.findViewById(R.id.tv_home_lesson);
             mComments = (TextView) itemView.findViewById(R.id.tv_home_lesson_comments);
         }

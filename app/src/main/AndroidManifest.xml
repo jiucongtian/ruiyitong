@@ -21,7 +21,7 @@
         <activity android:name=".pages.lesson.LessonActivity"
             android:screenOrientation="landscape"/>
 
-        <activity android:name=".pages.Questions.QuestionsActivity"
+        <activity android:name=".pages.questions.QuestionsActivity"
             android:screenOrientation="landscape"/>
 
         <activity android:name=".pages.TestActivity"
