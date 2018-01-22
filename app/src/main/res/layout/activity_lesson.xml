@@ -43,8 +43,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="64dp"
+            android:background="@color/black_translucence"
             android:layout_alignParentTop="true"
-            android:background="@color/black_translucence">
+            android:layout_alignParentStart="true">
 
             <ImageView
                 android:id="@+id/iv_back"
@@ -86,7 +87,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="8dp"
 
-                    android:text="静音"/>
+                    android:text="@string/mute"/>
             </LinearLayout>
 
             <LinearLayout
@@ -109,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="8dp"
-                    android:text="打标签"/>
+                    android:text="@string/tag"/>
 
             </LinearLayout>
 
@@ -143,7 +144,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="8dp"
-                            android:text="大屏幕"/>
+                            android:text="@string/screen"/>
                     </LinearLayout>
                     <ImageView
                         android:id="@+id/iv_main_page_line"
@@ -180,7 +181,7 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="8dp"
                             android:layout_marginRight="36dp"
-                            android:text="学生座次"/>
+                            android:text="@string/seat_order"/>
                     </LinearLayout>
                     <ImageView
                         android:id="@+id/iv_students_seats_line"
@@ -275,7 +276,8 @@
             android:id="@+id/rl_footer"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_alignParentBottom="true">
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -295,7 +297,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="照相机"/>
+                    android:text="@string/camera"/>
             </LinearLayout>
 
             <LinearLayout
@@ -316,7 +318,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="添加资源"/>
+                    android:text="@string/add_resource"/>
             </LinearLayout>
 
             <LinearLayout
@@ -337,7 +339,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="黑白板"/>
+                    android:text="@string/blackboard"/>
             </LinearLayout>
 
         </RelativeLayout>

@@ -90,14 +90,16 @@
                 tools:background="@color/icon_green"
                 app:ico_color="@color/icon_green"
                 app:ico_icon="fon_805"/>
+
             <TextView
                 android:id="@+id/tv_online_cn"
+                style="@style/txt_22_dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                style="@style/txt_22_dark"
-                android:text="在线答疑"/>
+                android:text="@string/online_answer_cn" />
+
             <TextView
                 android:id="@+id/tv_online_en"
                 android:layout_width="wrap_content"
@@ -105,7 +107,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="3dp"
                 style="@style/txt_14_dark"
-                android:text="Online answer"/>
+                android:text="@string/online_answer_en"/>
         </LinearLayout>
 
         <LinearLayout
@@ -134,7 +136,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
                 style="@style/txt_22_dark"
-                android:text="课程表"/>
+                android:text="@string/course_list_cn"/>
             <TextView
                 android:id="@+id/tv_course_en"
                 android:layout_width="wrap_content"
@@ -142,7 +144,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="3dp"
                 style="@style/txt_14_dark"
-                android:text="Course list"/>
+                android:text="@string/course_list_en"/>
         </LinearLayout>
 
         <LinearLayout
@@ -169,15 +171,15 @@
                 tools:background="@color/icon_blue" />
 
 
-
             <TextView
                 android:id="@+id/tv_work_cn"
+                style="@style/txt_22_dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                style="@style/txt_22_dark"
-                android:text="作业批改"/>
+                android:text="@string/work_correction_cn" />
+
             <TextView
                 android:id="@+id/tv_work_en"
                 android:layout_width="wrap_content"
@@ -185,7 +187,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="3dp"
                 style="@style/txt_14_dark"
-                android:text="Work correction"/>
+                android:text="@string/work_correction_en"/>
         </LinearLayout>
 
         <LinearLayout
@@ -207,7 +209,7 @@
                 android:layout_height="80dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/home_btn1"
-                android:text="睿易云评" />
+                android:text="@string/ruiyi_comment" />
 
             <Button
                 android:id="@+id/bt_zuoye"
@@ -217,7 +219,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="43dp"
                 android:background="@drawable/home_btn3"
-                android:text="睿易作业" />
+                android:text="@string/ruiyi_work" />
 
             <Button
                 android:id="@+id/bt_xiaoyuan"
@@ -227,7 +229,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="43dp"
                 android:background="@drawable/home_btn2"
-                android:text="数字校园" />
+                android:text="@string/digital_campus" />
 
             <Button
                 android:id="@+id/bt_duofen"
@@ -237,7 +239,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="43dp"
                 android:background="@drawable/home_btn4"
-                android:text="多分系统" />
+                android:text="@string/good_marks" />
         </LinearLayout>
 
         <!-- red point -->
@@ -505,7 +507,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:text="资源库" />
+                android:text="@string/resource_library_cn" />
 
             <TextView
                 android:id="@+id/tv_resource_en"
@@ -514,7 +516,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="3dp"
-                android:text="Resource library" />
+                android:text="@string/resource_library_en" />
         </LinearLayout>
 
         <LinearLayout
@@ -554,21 +556,22 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
                     android:layout_marginLeft="18dp"
-                    android:layout_toRightOf="@id/iv_class"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_class"
+                    android:layout_marginStart="18dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="上课"
+                        android:text="@string/conduct_class_cn"
                         android:textColor="@color/black" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Conduct a class"
+                        android:text="@string/conduct_class_en"
                         android:textColor="@color/black" />
 
                 </LinearLayout>
@@ -669,7 +672,7 @@
                     android:layout_marginLeft="29dp"
                     android:layout_marginBottom="3dp"
                     android:layout_gravity="center_vertical"
-                    android:text="WiFi信息（已连接）"/>
+                    android:text="@string/wifi_info"/>
 
             </LinearLayout>
 
@@ -691,7 +694,7 @@
                     android:layout_marginLeft="29dp"
                     android:layout_marginBottom="3dp"
                     android:layout_gravity="center_vertical"
-                    android:text="基础设置"/>
+                    android:text="@string/setting"/>
 
             </LinearLayout>
 
@@ -713,7 +716,7 @@
                     android:layout_marginLeft="29dp"
                     android:layout_marginBottom="3dp"
                     android:layout_gravity="center_vertical"
-                    android:text="上课设置"/>
+                    android:text="@string/class_setting"/>
 
             </LinearLayout>
 
@@ -737,7 +740,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginBottom="3dp"
                     android:layout_marginLeft="29dp"
-                    android:text="检查新版本" />
+                    android:text="@string/check_updates" />
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -791,7 +794,7 @@
                     android:layout_marginLeft="29dp"
                     android:layout_marginBottom="3dp"
                     android:layout_gravity="center_vertical"
-                    android:text="退出"/>
+                    android:text="@string/exit"/>
 
             </LinearLayout>
 
