@@ -1,4 +1,4 @@
-package com.example.howard.ruiyipai.pages.lesson;
+package com.example.howard.ruiyipai.pages.lesson.adapter;
 
 import android.content.Context;
 import android.graphics.Color;

@@ -19,13 +19,16 @@ import android.widget.TextView;
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
 import com.example.howard.ruiyipai.common.Utils;
+import com.example.howard.ruiyipai.pages.lesson.adapter.LessonThumbnailAdapter;
+import com.example.howard.ruiyipai.pages.lesson.adapter.LessonToolsAdapter;
+import com.example.howard.ruiyipai.pages.lesson.adapter.SelectLessonsAdapter;
 import com.example.howard.ruiyipai.pages.questions.QuestionsActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
-import static com.example.howard.ruiyipai.pages.lesson.LessonThumbnailAdapter.ITEM_TYPE_PPT;
-import static com.example.howard.ruiyipai.pages.lesson.LessonThumbnailAdapter.ITEM_TYPE_WORD;
+import static com.example.howard.ruiyipai.pages.lesson.adapter.LessonThumbnailAdapter.ITEM_TYPE_PPT;
+import static com.example.howard.ruiyipai.pages.lesson.adapter.LessonThumbnailAdapter.ITEM_TYPE_WORD;
 
 
 public class LessonActivity extends BaseActivity implements LessonToolsAdapter.ToolsSelectListener {

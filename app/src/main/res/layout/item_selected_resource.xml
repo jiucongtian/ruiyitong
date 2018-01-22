@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="149dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:src="@color/red"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp">
+        <TextView
+            android:id="@+id/tv_selected_resource_name"
+            style="@style/txt_16_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="高中物理备课" />
+        <TextView
+            style="@style/txt_14_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在显示（1/20）"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.howard.ruiyipai.pages.lesson;
+package com.example.howard.ruiyipai.pages.lesson.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
