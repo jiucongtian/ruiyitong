@@ -49,7 +49,6 @@ public class SplideListMainAdapter extends RecyclerView.Adapter<SplideListMainAd
 
         List<String> resourceOfScreen = mData.get(position);
 
-
         RecyclerView selectedListView = holder.selectedResourceContainer;
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
@@ -57,7 +56,6 @@ public class SplideListMainAdapter extends RecyclerView.Adapter<SplideListMainAd
 
         SelectedResourceAdapter adapter = new SelectedResourceAdapter(resourceOfScreen);
         selectedListView.setAdapter(adapter);
-
 
 
         //设置选中资源列表固定高度
