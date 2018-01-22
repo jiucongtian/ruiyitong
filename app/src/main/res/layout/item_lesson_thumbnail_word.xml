@@ -7,13 +7,14 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@color/red"/>
+        android:src="@mipmap/word232320"/>
     <TextView
         android:gravity="center"
         android:layout_marginLeft="6dp"
         android:layout_marginTop="6dp"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:background="@color/icon_blue_sky"
+        android:background="@color/light_blue_4"
+        android:textColor="@color/font_dark"
         android:text="01"/>
 </FrameLayout>

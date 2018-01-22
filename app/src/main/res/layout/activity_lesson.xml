@@ -227,10 +227,10 @@
                 android:layout_alignParentTop="true"
 
 
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:paddingLeft="23dp"
                 android:paddingRight="23dp"
-                app:ico_color="@color/font_dark"
+                app:ico_color="@color/font_white"
                 app:ico_icon="fon_819" />
 
         </RelativeLayout>

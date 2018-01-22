@@ -88,8 +88,8 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         showMainFragment();
 
         //必须放在最后
-//        setThumbnailType(THUMBNAIL_TYPE.TYPE_PPT);
-        setThumbnailType(THUMBNAIL_TYPE.ITEM_WORD);
+        setThumbnailType(THUMBNAIL_TYPE.TYPE_PPT);
+//        setThumbnailType(THUMBNAIL_TYPE.ITEM_WORD);
     }
 
     private void initLessonThumbnail() {
@@ -202,13 +202,13 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
                     ViewGroup.LayoutParams lp = lessonToolsContainer.getLayoutParams();
                     lp.height = LINE_HEIGHT_DP * 2 + 16;
                     lessonToolsContainer.setLayoutParams(lp);
-                    setImageViewTtf(folderBtn, ContextCompat.getColor(this, R.color.font_dark), "fon_81a");
+                    setImageViewTtf(folderBtn, ContextCompat.getColor(this, R.color.font_white), "fon_81a");
                 } else {
                     isFold = true;
                     ViewGroup.LayoutParams lp = lessonToolsContainer.getLayoutParams();
                     lp.height = LINE_HEIGHT_DP + 16;
                     lessonToolsContainer.setLayoutParams(lp);
-                    setImageViewTtf(folderBtn, ContextCompat.getColor(this, R.color.font_dark), "fon_819");
+                    setImageViewTtf(folderBtn, ContextCompat.getColor(this, R.color.font_white), "fon_819");
 
                 }
                 break;
