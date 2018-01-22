@@ -66,8 +66,8 @@ public class QuestionsActivity extends BaseActivity {
 
     private void initQuestionDuration() {
         ArrayList<String> list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            list.add("item " + i);
+        for (int i = 0; i < 100; i++) {
+            list.add(String.valueOf(i));
         }
 
         //设置是否循环播放，加这句为不循环，注释掉为循环
@@ -75,15 +75,15 @@ public class QuestionsActivity extends BaseActivity {
         //设置原始数据
         mQuestionDuration.setItems(list);
         //设置初始位置
-        mQuestionDuration.setInitPosition(5);
+        mQuestionDuration.setInitPosition(0);
         //设置字体大小
         mQuestionDuration.setTextSize(20);
     }
 
     private void initSubjectQuestionsNumber() {
         ArrayList<String> list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            list.add("item " + i);
+        for (int i = 0; i < 100; i++) {
+            list.add(String.valueOf(i));
         }
 
         //设置是否循环播放，加这句为不循环，注释掉为循环
@@ -91,15 +91,15 @@ public class QuestionsActivity extends BaseActivity {
         //设置原始数据
         mSubjectNumber.setItems(list);
         //设置初始位置
-        mSubjectNumber.setInitPosition(5);
+        mSubjectNumber.setInitPosition(0);
         //设置字体大小
         mSubjectNumber.setTextSize(20);
     }
 
     private void initJudgeQuestionsNumber() {
         ArrayList<String> list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            list.add("item " + i);
+        for (int i = 0; i < 100; i++) {
+            list.add(String.valueOf(i));
         }
 
         //设置是否循环播放，加这句为不循环，注释掉为循环
@@ -107,7 +107,7 @@ public class QuestionsActivity extends BaseActivity {
         //设置原始数据
         mJudgeNumber.setItems(list);
         //设置初始位置
-        mJudgeNumber.setInitPosition(5);
+        mJudgeNumber.setInitPosition(0);
         //设置字体大小
         mJudgeNumber.setTextSize(20);
     }
@@ -115,7 +115,7 @@ public class QuestionsActivity extends BaseActivity {
     private void initMultiSelectionNumber() {
         ArrayList<String> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            list.add("item " + i);
+            list.add(String.valueOf(i));
         }
 
         //设置是否循环播放，加这句为不循环，注释掉为循环
@@ -123,7 +123,7 @@ public class QuestionsActivity extends BaseActivity {
         //设置原始数据
         mMultiSelectionNumber.setItems(list);
         //设置初始位置
-        mMultiSelectionNumber.setInitPosition(5);
+        mMultiSelectionNumber.setInitPosition(4);
         //设置字体大小
         mMultiSelectionNumber.setTextSize(20);
     }
@@ -151,8 +151,8 @@ public class QuestionsActivity extends BaseActivity {
 
     private void initMultiQuestionsNumber() {
         ArrayList<String> list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            list.add("item " + i);
+        for (int i = 0; i < 100; i++) {
+            list.add(String.valueOf(i));
         }
 
         //设置是否循环播放，加这句为不循环，注释掉为循环
@@ -160,7 +160,7 @@ public class QuestionsActivity extends BaseActivity {
         //设置原始数据
         mMultiQuestionNumber.setItems(list);
         //设置初始位置
-        mMultiQuestionNumber.setInitPosition(5);
+        mMultiQuestionNumber.setInitPosition(0);
         //设置字体大小
         mMultiQuestionNumber.setTextSize(20);
     }
@@ -168,7 +168,7 @@ public class QuestionsActivity extends BaseActivity {
     private void initSingleSelectionNumber() {
         ArrayList<String> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            list.add("item " + i);
+            list.add(String.valueOf(i));
         }
 
         //设置是否循环播放，加这句为不循环，注释掉为循环
@@ -176,15 +176,15 @@ public class QuestionsActivity extends BaseActivity {
         //设置原始数据
         mSingleSelectionNumber.setItems(list);
         //设置初始位置
-        mSingleSelectionNumber.setInitPosition(5);
+        mSingleSelectionNumber.setInitPosition(4);
         //设置字体大小
         mSingleSelectionNumber.setTextSize(20);
     }
 
     private void initSingleQuestionsNumber() {
         ArrayList<String> list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            list.add("item " + i);
+        for (int i = 0; i < 100; i++) {
+            list.add(String.valueOf(i));
         }
 
         //设置是否循环播放，加这句为不循环，注释掉为循环
@@ -192,7 +192,7 @@ public class QuestionsActivity extends BaseActivity {
         //设置原始数据
         mSingleQuestionNumber.setItems(list);
         //设置初始位置
-        mSingleQuestionNumber.setInitPosition(5);
+        mSingleQuestionNumber.setInitPosition(0);
         //设置字体大小
         mSingleQuestionNumber.setTextSize(20);
     }

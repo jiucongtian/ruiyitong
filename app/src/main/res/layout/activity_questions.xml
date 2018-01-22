@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/font_gray">
+    android:background="@color/font_gray_1">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="64dp"
@@ -45,8 +45,8 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -85,7 +85,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_width="136dp"
                     android:layout_height="190dp"
-                    android:background="@color/red"/>
+                    android:background="@color/white"/>
 
                 <TextView
                     style="@style/txt_20_dark"
@@ -109,7 +109,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_width="136dp"
                     android:layout_height="190dp"
-                    android:background="@color/red"/>
+                    android:background="@color/white"/>
 
             </LinearLayout>
 
@@ -118,7 +118,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginLeft="12dp"
+                android:layout_marginLeft="4dp"
                 android:background="@color/white">
 
                 <ImageView
@@ -149,7 +149,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_width="136dp"
                     android:layout_height="190dp"
-                    android:background="@color/red"/>
+                    android:background="@color/white"/>
 
                 <TextView
                     style="@style/txt_20_dark"
@@ -173,7 +173,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_width="136dp"
                     android:layout_height="190dp"
-                    android:background="@color/red"/>
+                    android:background="@color/white"/>
             </LinearLayout>
 
             <LinearLayout
@@ -181,7 +181,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginLeft="12dp"
+                android:layout_marginLeft="4dp"
                 android:background="@color/white">
 
                 <ImageView
@@ -212,7 +212,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_width="136dp"
                     android:layout_height="190dp"
-                    android:background="@color/red"/>
+                    android:background="@color/white"/>
             </LinearLayout>
 
             <LinearLayout
@@ -220,7 +220,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginLeft="12dp"
+                android:layout_marginLeft="4dp"
                 android:background="@color/white">
 
                 <ImageView
@@ -251,7 +251,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_width="136dp"
                     android:layout_height="190dp"
-                    android:background="@color/red"/>
+                    android:background="@color/white"/>
             </LinearLayout>
 
             <RelativeLayout
@@ -259,7 +259,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/white"
-                android:layout_marginLeft="12dp">
+                android:layout_marginLeft="4dp">
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -294,7 +294,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="136dp"
                         android:layout_height="190dp"
-                        android:background="@color/red"/>
+                        android:background="@color/white"/>
                 </LinearLayout>
 
                 <ImageView
