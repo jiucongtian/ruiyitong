@@ -8,6 +8,8 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingPrefix">
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -344,7 +346,71 @@
 
         </RelativeLayout>
 
+
         <LinearLayout
+            android:id="@+id/ll_splite_page"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_footer"
+            android:layout_alignParentTop="true"
+            android:background="@color/icon_blue_sky">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="66dp">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="24dp"
+                    android:src="@color/red"/>
+                <TextView
+                    style="@style/txt_16_white"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="切换分屏模式"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="34dp">
+                <TextView
+                    android:id="@+id/tv_splide_list"
+                    style="@style/txt_16_black_tab"
+                    android:background="@color/color_bdfbfa"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="分屏列表"/>
+                <TextView
+                    android:id="@+id/tv_resource_list"
+                    style="@style/txt_16_white_tab"
+                    android:background="@color/light_blue_deep"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="资源列表"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_splide_mode_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_lesson_page"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

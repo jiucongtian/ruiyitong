@@ -12,7 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
@@ -37,6 +39,7 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
 
     static final int ONE_LINE_NUMBER = 10;
     static final int LINE_HEIGHT_DP = 90;
+
 
     @BindView(R.id.left_drawer)
     DrawerLayout leftDrawer;
@@ -68,13 +71,33 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
     @BindView(R.id.rv_left_lessons)
     RecyclerView selectLessonsList;
 
+    @BindView(R.id.ll_lesson_page)
+    LinearLayout leftLessonContainer;
+
+    @BindView(R.id.ll_splite_page)
+    LinearLayout leftSpliteContainer;
+
+    @BindView(R.id.fl_splide_mode_container)
+    FrameLayout splide_mode_container;
+
+    @BindView(R.id.tv_splide_list)
+    TextView splideTab;
+
+    @BindView(R.id.tv_resource_list)
+    TextView resourceTab;
+
     MainPageFragment mainPageFragment;
     StudentsSeatsFragment studentsSeatsFragment;
+
+    SplideListFragment splideListFragment;
+    ResourceListFragment resourceListFragment;
 
     boolean isFold = true;
 
     THUMBNAIL_TYPE thumbnailType = THUMBNAIL_TYPE.TYPE_PPT;
 
+
+    boolean splideMode = true;
 
     @Override
     public void initPages() {
@@ -133,16 +156,55 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         };
         lessonTools.setLayoutManager(layoutManager);
 
-        LessonToolsAdapter adapter = new LessonToolsAdapter(this, null);
+        LessonToolsAdapter adapter = new LessonToolsAdapter(this, this, null);
         lessonTools.setAdapter(adapter);
     }
 
     private void createSelectLessonList() {
+
+        leftLessonContainer.setVisibility(View.VISIBLE);
+        leftSpliteContainer.setVisibility(View.GONE);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         selectLessonsList.setLayoutManager(layoutManager);
 
         SelectLessonsAdapter test = new SelectLessonsAdapter(null);
         selectLessonsList.setAdapter(test);
+        updateDrawerLayoutMode();
+
+    }
+
+    private void showSplideListFragment() {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+        //第一种方式（add），初始化fragment并添加到事务中，如果为null就new一个
+        if(splideListFragment == null){
+            splideListFragment = new SplideListFragment();
+            transaction.add(R.id.fl_splide_mode_container, splideListFragment);
+        }
+        //隐藏资源fragment
+        if(resourceListFragment != null){
+            transaction.hide(resourceListFragment);
+        }
+        //显示需要显示的fragment
+        transaction.show(splideListFragment);
+        transaction.commit();
+    }
+
+    private void showResourceListFragment() {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+        //第一种方式（add），初始化fragment并添加到事务中，如果为null就new一个
+        if(resourceListFragment == null){
+            resourceListFragment = new ResourceListFragment();
+            transaction.add(R.id.fl_splide_mode_container, resourceListFragment);
+        }
+        //隐藏资源fragment
+        if(splideListFragment != null){
+            transaction.hide(splideListFragment);
+        }
+        //显示需要显示的fragment
+        transaction.show(resourceListFragment);
+        transaction.commit();
     }
 
     private void showMainFragment() {
@@ -191,7 +253,8 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         }
     }
 
-    @OnClick({R.id.iv_unfold, R.id.fl_select_file, R.id.rl_main_page_tab, R.id.rl_students_seats_tab, R.id.iv_back})
+    @OnClick({R.id.iv_unfold, R.id.fl_select_file, R.id.rl_main_page_tab, R.id.rl_students_seats_tab,
+            R.id.iv_back, R.id.tv_splide_list, R.id.tv_resource_list})
     public void onClick(View v) {
         int id = v.getId();
         switch (id){
@@ -228,6 +291,20 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
             case R.id.iv_back:
                 this.finish();
                 break;
+            case R.id.tv_splide_list:
+                Utils.setTVStyle(this, splideTab, R.style.txt_16_black_tab);
+                splideTab.setBackgroundResource(R.color.color_bdfbfa);
+                Utils.setTVStyle(this, resourceTab, R.style.txt_16_white_tab);
+                resourceTab.setBackgroundResource(R.color.light_blue_deep);
+                showSplideListFragment();
+                break;
+            case R.id.tv_resource_list:
+                Utils.setTVStyle(this, splideTab, R.style.txt_16_white_tab);
+                splideTab.setBackgroundResource(R.color.light_blue_deep);
+                Utils.setTVStyle(this, resourceTab, R.style.txt_16_black_tab);
+                resourceTab.setBackgroundResource(R.color.color_bdfbfa);
+                showResourceListFragment();
+                break;
         }
     }
 
@@ -241,6 +318,23 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
 
         Intent intent = new Intent(this, QuestionsActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void switchSplideMode() {
+        splideMode = !splideMode;
+        updateDrawerLayoutMode();
+    }
+
+    private void updateDrawerLayoutMode() {
+        if (splideMode) {
+            showSplideListFragment();
+            leftLessonContainer.setVisibility(View.GONE);
+            leftSpliteContainer.setVisibility(View.VISIBLE);
+        } else {
+            leftLessonContainer.setVisibility(View.VISIBLE);
+            leftSpliteContainer.setVisibility(View.GONE);
+        }
     }
 
 }
