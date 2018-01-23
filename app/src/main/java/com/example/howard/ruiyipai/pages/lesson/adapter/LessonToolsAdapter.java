@@ -10,12 +10,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.howard.ruiyipai.R;
+import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
 import com.mikepenz.iconics.IconicsDrawable;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static com.example.howard.ruiyipai.pages.lesson.LessonActivity.TOOL_TYPE.TOOL_EXAM;
 
 /**
  * Created by howard on 2018/1/14.
@@ -24,12 +28,12 @@ import butterknife.ButterKnife;
 
 public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.ViewHolder>{
 
-    public enum TOOL_TYPE {
-        THUMBNAIL,
-        EXAM,
-        PENCLE,
-        SPLIDE
-    }
+//    public enum TOOL_TYPE {
+//        THUMBNAIL,
+//        EXAM,
+//        PENCLE,
+//        SPLIDE
+//    }
 
 
     public interface ToolsSelectListener {
@@ -37,17 +41,17 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
         void switchSplideMode();
     }
 
-    private ArrayList<String> mData;
+    private List<LessonActivity.TOOL_TYPE> mData;
     ToolsSelectListener mToolsSelectListener;
     Context mContext;
 
-    public LessonToolsAdapter(Context context, ToolsSelectListener listener, ArrayList<String> data) {
+    public LessonToolsAdapter(Context context, ToolsSelectListener listener, List<LessonActivity.TOOL_TYPE> data) {
         this.mData = data;
         mToolsSelectListener = listener;
         mContext = context;
     }
 
-    public void updateData(ArrayList<String> data) {
+    public void updateData(List<LessonActivity.TOOL_TYPE> data) {
         this.mData = data;
         notifyDataSetChanged();
     }
@@ -65,34 +69,42 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
 
+        LessonActivity.TOOL_TYPE type = mData.get(position);
+        holder.itemView.setTag(type);
 
-        //临时假数据
-        if (position == 0) {
-            TOOL_TYPE type = TOOL_TYPE.THUMBNAIL;
-            holder.itemView.setTag(type);
-            IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_810")
-                    .color(Color.BLACK);
-            holder.toolImg.setImageDrawable(iCourse);
-            holder.toolName.setText("缩略图");
-        } else if (position == 1) {
-            TOOL_TYPE type = TOOL_TYPE.EXAM;
-            holder.itemView.setTag(type);
-            IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_81d")
-                    .color(Color.BLACK);
-            holder.toolImg.setImageDrawable(iCourse);
-            holder.toolName.setText("发题");
-        } else if (position == 2) {
-            TOOL_TYPE type = TOOL_TYPE.SPLIDE;
-            holder.itemView.setTag(type);
-            IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_81d")
-                    .color(Color.BLACK);
-            holder.toolImg.setImageDrawable(iCourse);
-            holder.toolName.setText("分屏");
+        switch (type) {
+            case TOOL_THUMBNAIL: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_810")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("缩略图");
+                break;
+            }
+            case TOOL_PROJECT:
+                break;
+
+            case TOOL_SPLIDE: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_81d")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("分屏");
+                break;
+            }
+            case TOOL_EXAM: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_81d")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("发题");
+                break;
+            }
+            case TOOL_STASTIC: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_81d")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("统计");
+                break;
+            }
         }
-        //临时假数据 end
-
-
-
 
         // 绑定点击事件
         View itemView = ((ViewGroup) holder.itemView).getChildAt(0);
@@ -102,12 +114,19 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
                 @Override
                 public void onClick(View v) {
 
-                    TOOL_TYPE type = (TOOL_TYPE) holder.itemView.getTag();
-                    if (type == TOOL_TYPE.EXAM) {
-                        mToolsSelectListener.sendQuestions();
-                    } else if (type == TOOL_TYPE.SPLIDE) {
-                        mToolsSelectListener.switchSplideMode();
+                    LessonActivity.TOOL_TYPE type = (LessonActivity.TOOL_TYPE) holder.itemView.getTag();
+
+                    switch (type) {
+                        case TOOL_EXAM:
+                            mToolsSelectListener.sendQuestions();
+                            break;
+                        case TOOL_SPLIDE:
+                            mToolsSelectListener.switchSplideMode();
+                            break;
+                        case TOOL_STASTIC:
+                            break;
                     }
+
                 }
             });
         }
@@ -115,8 +134,8 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
 
     @Override
     public int getItemCount() {
-//        return mData == null ? 0 : mData.size();
-        return 15;
+        return mData == null ? 0 : mData.size();
+//        return 15;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

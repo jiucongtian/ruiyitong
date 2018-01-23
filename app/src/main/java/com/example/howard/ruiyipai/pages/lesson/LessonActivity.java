@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -24,6 +25,9 @@ import com.example.howard.ruiyipai.pages.lesson.adapter.LessonToolsAdapter;
 import com.example.howard.ruiyipai.pages.lesson.adapter.SelectLessonsAdapter;
 import com.example.howard.ruiyipai.pages.questions.QuestionsActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.OnClick;
 
@@ -35,10 +39,20 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
 
 
 
-    public static enum THUMBNAIL_TYPE {
+    public enum THUMBNAIL_TYPE {
         TYPE_PPT,
         ITEM_WORD
     }
+
+    public enum TOOL_TYPE {
+        TOOL_THUMBNAIL,
+        TOOL_PROJECT,
+        TOOL_SPLIDE,
+        TOOL_EXAM,
+        TOOL_STASTIC
+    }
+
+    List<TOOL_TYPE> tools = new ArrayList();
 
     static final int ONE_LINE_NUMBER = 10;
     static final int LINE_HEIGHT_DP = 90;
@@ -104,6 +118,25 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
 
     @Override
     public void initPages() {
+        //TODO: 临时添加工具数据
+        tools.add(TOOL_TYPE.TOOL_THUMBNAIL);
+        tools.add(TOOL_TYPE.TOOL_EXAM);
+        tools.add(TOOL_TYPE.TOOL_SPLIDE);
+        tools.add(TOOL_TYPE.TOOL_PROJECT);
+        tools.add(TOOL_TYPE.TOOL_STASTIC);
+        tools.add(TOOL_TYPE.TOOL_STASTIC);
+        tools.add(TOOL_TYPE.TOOL_STASTIC);
+        tools.add(TOOL_TYPE.TOOL_STASTIC);
+        tools.add(TOOL_TYPE.TOOL_STASTIC);
+        tools.add(TOOL_TYPE.TOOL_STASTIC);
+        tools.add(TOOL_TYPE.TOOL_STASTIC);
+        tools.add(TOOL_TYPE.TOOL_STASTIC);
+        tools.add(TOOL_TYPE.TOOL_STASTIC);
+        tools.add(TOOL_TYPE.TOOL_STASTIC);
+        tools.add(TOOL_TYPE.TOOL_STASTIC);
+        tools.add(TOOL_TYPE.TOOL_STASTIC);
+        tools.add(TOOL_TYPE.TOOL_STASTIC);
+
         initLessonTools();
 
         initLessonThumbnail();
@@ -159,7 +192,7 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         };
         lessonTools.setLayoutManager(layoutManager);
 
-        LessonToolsAdapter adapter = new LessonToolsAdapter(this, this, null);
+        LessonToolsAdapter adapter = new LessonToolsAdapter(this, this, tools);
         lessonTools.setAdapter(adapter);
     }
 
@@ -325,6 +358,20 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
 
     @Override
     public void switchSplideMode() {
+
+//        //背景变暗
+//        WindowManager.LayoutParams lp = getWindow().getAttributes();
+//        lp.alpha = 0.6f;
+//        getWindow().setAttributes(lp);
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+
+//        //恢复背景
+//        WindowManager.LayoutParams lp = getWindow().getAttributes();
+//        lp.alpha = 1.0f;
+//        getWindow().setAttributes(lp);
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+
+
         splideMode = !splideMode;
         updateDrawerLayoutMode();
     }
