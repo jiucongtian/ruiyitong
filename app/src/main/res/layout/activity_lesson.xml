@@ -205,6 +205,8 @@
 
             </LinearLayout>
         </RelativeLayout>
+
+        <!-- 工具条 -->
         <RelativeLayout
             android:id="@+id/rl_lesson_tools_container"
             android:layout_width="match_parent"
@@ -238,6 +240,7 @@
 
         </RelativeLayout>
 
+        <!-- 缩略图 -->
         <RelativeLayout
             android:id="@+id/rl_lesson_thumbnail_container"
             android:layout_above="@id/rl_lesson_tools_container"

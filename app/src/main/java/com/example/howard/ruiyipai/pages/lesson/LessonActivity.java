@@ -24,6 +24,7 @@ import com.example.howard.ruiyipai.pages.lesson.adapter.LessonThumbnailAdapter;
 import com.example.howard.ruiyipai.pages.lesson.adapter.LessonToolsAdapter;
 import com.example.howard.ruiyipai.pages.lesson.adapter.SelectLessonsAdapter;
 import com.example.howard.ruiyipai.pages.questions.QuestionsActivity;
+import com.example.howard.ruiyipai.pages.stastic.StasticActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -374,6 +375,12 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
 
         splideMode = !splideMode;
         updateDrawerLayoutMode();
+    }
+
+    @Override
+    public void stastic() {
+        Intent intent = new Intent(this, StasticActivity.class);
+        startActivity(intent);
     }
 
     private void updateDrawerLayoutMode() {

@@ -23,6 +23,8 @@
 
         <activity android:name=".pages.questions.QuestionsActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".pages.stastic.StasticActivity"
+            android:screenOrientation="landscape"/>
 
         <activity android:name=".pages.TestActivity"
             android:screenOrientation="landscape"/>
