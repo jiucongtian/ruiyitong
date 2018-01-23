@@ -20,14 +20,21 @@ public class ResourceListFragment extends BaseFragment {
     @BindView(R.id.rv_resource_list)
     RecyclerView resourceList;
 
+    ResourceListAdapter mAdapter;
+
+    //TODO: 临时设置屏幕数为9,后期根据程序计算
+    private int screenCount = 9;
+
     @Override
     protected void initPages() {
+
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this.getContext());
         resourceList.setLayoutManager(layoutManager);
 
-        ResourceListAdapter adapter = new ResourceListAdapter();
-        resourceList.setAdapter(adapter);
+        mAdapter = new ResourceListAdapter(this.getContext());
+        mAdapter.setScreenCount(screenCount);
+        resourceList.setAdapter(mAdapter);
     }
 
     @Override

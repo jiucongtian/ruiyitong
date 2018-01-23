@@ -29,6 +29,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         initPages();
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+//        super.onSaveInstanceState(outState);
+    }
+
     public abstract void initPages();
     protected abstract int getLayoutId();
 
