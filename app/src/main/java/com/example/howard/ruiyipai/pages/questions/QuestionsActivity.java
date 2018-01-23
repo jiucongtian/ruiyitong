@@ -1,14 +1,23 @@
 package com.example.howard.ruiyipai.pages.questions;
 
+import android.media.AudioAttributes;
+import android.media.AudioManager;
+import android.media.SoundPool;
+import android.os.Build;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.DragEvent;
+import android.view.View;
 
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
 import com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean;
 import com.weigan.loopview.LoopView;
+import com.weigan.loopview.OnItemSelectedListener;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
@@ -50,8 +59,18 @@ public class QuestionsActivity extends BaseActivity {
     @BindView(R.id.rv_student_selector)
     RecyclerView mStudentSelector;
 
+
+    SoundPool mSoundPool;
+
+    private HashMap<Integer, Integer> soundID = new HashMap<Integer, Integer>();
+
     @Override
     public void initPages() {
+        try {
+            initSoundPool();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         initStudentsList();
 
         initSingleQuestionsNumber();
@@ -63,6 +82,8 @@ public class QuestionsActivity extends BaseActivity {
         initQuestionDuration();
 
     }
+
+
 
     private void initQuestionDuration() {
         ArrayList<String> list = new ArrayList<>();
@@ -78,6 +99,12 @@ public class QuestionsActivity extends BaseActivity {
         mQuestionDuration.setInitPosition(0);
         //设置字体大小
         mQuestionDuration.setTextSize(20);
+        mQuestionDuration.setListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int index) {
+                playSound();
+            }
+        });
     }
 
     private void initSubjectQuestionsNumber() {
@@ -94,6 +121,12 @@ public class QuestionsActivity extends BaseActivity {
         mSubjectNumber.setInitPosition(0);
         //设置字体大小
         mSubjectNumber.setTextSize(20);
+        mSubjectNumber.setListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int index) {
+                playSound();
+            }
+        });
     }
 
     private void initJudgeQuestionsNumber() {
@@ -110,6 +143,12 @@ public class QuestionsActivity extends BaseActivity {
         mJudgeNumber.setInitPosition(0);
         //设置字体大小
         mJudgeNumber.setTextSize(20);
+        mJudgeNumber.setListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int index) {
+                playSound();
+            }
+        });
     }
 
     private void initMultiSelectionNumber() {
@@ -126,6 +165,12 @@ public class QuestionsActivity extends BaseActivity {
         mMultiSelectionNumber.setInitPosition(4);
         //设置字体大小
         mMultiSelectionNumber.setTextSize(20);
+        mMultiSelectionNumber.setListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int index) {
+                playSound();
+            }
+        });
     }
 
     private void initStudentsList() {
@@ -163,6 +208,13 @@ public class QuestionsActivity extends BaseActivity {
         mMultiQuestionNumber.setInitPosition(0);
         //设置字体大小
         mMultiQuestionNumber.setTextSize(20);
+
+        mMultiSelectionNumber.setListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int index) {
+                playSound();
+            }
+        });
     }
 
     private void initSingleSelectionNumber() {
@@ -179,6 +231,12 @@ public class QuestionsActivity extends BaseActivity {
         mSingleSelectionNumber.setInitPosition(4);
         //设置字体大小
         mSingleSelectionNumber.setTextSize(20);
+        mSingleSelectionNumber.setListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int index) {
+                playSound();
+            }
+        });
     }
 
     private void initSingleQuestionsNumber() {
@@ -195,10 +253,43 @@ public class QuestionsActivity extends BaseActivity {
         mSingleQuestionNumber.setInitPosition(0);
         //设置字体大小
         mSingleQuestionNumber.setTextSize(20);
+        mSingleQuestionNumber.setListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int index) {
+                playSound();
+            }
+        });
     }
 
     @Override
     protected int getLayoutId() {
         return R.layout.activity_questions;
+    }
+
+
+    private void initSoundPool() throws IOException {
+        //当前系统的SDK版本大于等于21(Android 5.0)时
+        if (Build.VERSION.SDK_INT >= 21) {
+            SoundPool.Builder builder = new SoundPool.Builder();
+            //传入音频数量
+            builder.setMaxStreams(2);
+            //AudioAttributes是一个封装音频各种属性的方法
+            AudioAttributes.Builder attrBuilder = new AudioAttributes.Builder();
+            //设置音频流的合适的属性
+            attrBuilder.setLegacyStreamType(AudioManager.STREAM_MUSIC);
+            //加载一个AudioAttributes
+            builder.setAudioAttributes(attrBuilder.build());
+            mSoundPool = builder.build();
+        }
+        //当系统的SDK版本小于21时
+        else {//设置最多可容纳2个音频流，音频的品质为5
+            mSoundPool = new SoundPool(2, AudioManager.STREAM_SYSTEM, 5);
+        }
+
+        soundID.put(1, mSoundPool.load(this, R.raw.sound, 1));
+    }
+
+    protected void playSound() {
+        mSoundPool.play(soundID.get(1), 1, 1, 0, 0, 1);
     }
 }
