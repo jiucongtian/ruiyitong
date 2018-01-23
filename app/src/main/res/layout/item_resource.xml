@@ -11,10 +11,10 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="34dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_width="68dp"
             android:layout_height="68dp"
-            android:src="@color/red"/>
+            android:src="@mipmap/ppt232320"/>
 
         <TextView
             style="@style/txt_14_dark"
@@ -34,8 +34,10 @@
 
     </android.support.v7.widget.RecyclerView>
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="262dp"
         android:layout_height="2dp"
-        android:src="@color/red"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:src="@color/font_gray_2"/>
 
 </LinearLayout>
