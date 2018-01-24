@@ -116,6 +116,7 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
 
 
     boolean splideMode = true;
+    boolean thumbnail = true;
 
     @Override
     public void initPages() {
@@ -383,6 +384,18 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         startActivity(intent);
     }
 
+    @Override
+    public void switchThumbnail() {
+        thumbnail = !thumbnail;
+        updatethumbnail();
+    }
+
+    private void updatethumbnail(){
+        if(thumbnail)
+            lessonThumbnailContainer.setVisibility(View.VISIBLE);
+        else
+            lessonThumbnailContainer.setVisibility(View.GONE);
+    }
     private void updateDrawerLayoutMode() {
         if (splideMode) {
             showSplideListFragment();

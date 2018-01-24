@@ -40,6 +40,7 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
         void sendQuestions();
         void switchSplideMode();
         void stastic();
+        void switchThumbnail();
     }
 
     private List<LessonActivity.TOOL_TYPE> mData;
@@ -126,6 +127,9 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
                             break;
                         case TOOL_STASTIC:
                             mToolsSelectListener.stastic();
+                            break;
+                        case TOOL_THUMBNAIL:
+                            mToolsSelectListener.switchThumbnail();
                             break;
                     }
 
