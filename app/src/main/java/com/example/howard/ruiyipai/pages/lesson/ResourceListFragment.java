@@ -39,6 +39,6 @@ public class ResourceListFragment extends BaseFragment {
 
     @Override
     public int getLayoutId() {
-        return R.layout.fragment_students_seats;
+        return R.layout.fragment_resource_list;
     }
 }

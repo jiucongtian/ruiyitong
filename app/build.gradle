@@ -33,6 +33,7 @@ dependencies {
     compile "com.android.support:recyclerview-v7:26.0.0-alpha1"
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.3'
     compile 'com.weigan:loopView:0.1.2'
+    compile "com.android.support:design:24.1.1+"
 
 
 

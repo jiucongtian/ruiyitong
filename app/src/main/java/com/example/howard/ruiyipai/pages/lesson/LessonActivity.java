@@ -1,12 +1,17 @@
 package com.example.howard.ruiyipai.pages.lesson;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,11 +25,13 @@ import android.widget.TextView;
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
 import com.example.howard.ruiyipai.common.Utils;
+import com.example.howard.ruiyipai.pages.lesson.adapter.FragmentAdapter;
 import com.example.howard.ruiyipai.pages.lesson.adapter.LessonThumbnailAdapter;
 import com.example.howard.ruiyipai.pages.lesson.adapter.LessonToolsAdapter;
 import com.example.howard.ruiyipai.pages.lesson.adapter.SelectLessonsAdapter;
 import com.example.howard.ruiyipai.pages.questions.QuestionsActivity;
 import com.example.howard.ruiyipai.pages.stastic.StasticActivity;
+import com.mikepenz.iconics.IconicsDrawable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,15 +99,6 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
     @BindView(R.id.iv_unfold)
     ImageView folderBtn;
 
-    @BindView(R.id.fl_main_area)
-    FrameLayout mainArea;
-
-    @BindView(R.id.iv_main_page_line)
-    ImageView mainPageLine;
-
-    @BindView(R.id.iv_students_seats_line)
-    ImageView studentsSeatsLine;
-
     @BindView(R.id.rv_left_lessons)
     RecyclerView selectLessonsList;
 
@@ -119,11 +117,19 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
     @BindView(R.id.tv_resource_list)
     TextView resourceTab;
 
-    MainPageFragment mainPageFragment;
-    StudentsSeatsFragment studentsSeatsFragment;
+    @BindView(R.id.tb_header)
+    Toolbar mToolbar;
+
+    @BindView(R.id.tl_switch_work_area)
+    TabLayout mTabLayout;
+
+    @BindView(R.id.vp_main)
+    ViewPager mMain;
 
     SplideListFragment splideListFragment;
     ResourceListFragment resourceListFragment;
+
+    List<Fragment> mFragments = new ArrayList<>();
 
     boolean isFold = true;
 
@@ -157,6 +163,9 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         tools.add(TOOL_TYPE.TOOL_COLLECTION);
         tools.add(TOOL_TYPE.TOOL_DESKTOP);
 
+        initToolBar();
+
+        initViewPages();
 
         initLessonTools();
 
@@ -165,11 +174,46 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         //创建左侧选课列表
         createSelectLessonList();
 
-        showMainFragment();
-
         //必须放在最后
         setThumbnailType(THUMBNAIL_TYPE.TYPE_PPT);
 //        setThumbnailType(THUMBNAIL_TYPE.ITEM_WORD);
+    }
+
+    private void initViewPages() {
+
+        mFragments.add(new MainPageFragment());
+        mFragments.add(new StudentsSeatsFragment());
+
+        FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager(),mFragments);
+        mMain.setAdapter(adapter);
+        mTabLayout.setupWithViewPager(mMain);
+
+
+        for (int i = 0; i < adapter.getCount(); i++) {
+            TabLayout.Tab tab = mTabLayout.getTabAt(i);//获得每一个tab
+            tab.setCustomView(R.layout.tab_item_lesson);//给每一个tab设置view
+            TextView textView = tab.getCustomView().findViewById(R.id.tv_tab_name);
+            textView.setText("大屏幕");//设置tab上的文字
+
+            ImageView imageView = tab.getCustomView().findViewById(R.id.iv_tab_img);
+            IconicsDrawable iResource = new IconicsDrawable(this).icon("fon_806")
+                    .color(Color.WHITE);
+            imageView.setImageDrawable(iResource);
+        }
+
+    }
+
+    private void initToolBar() {
+        IconicsDrawable iResource = new IconicsDrawable(this).icon("fon_816").sizeDp(30)
+                .color(Color.WHITE);
+
+        mToolbar.setNavigationIcon(iResource);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void initLessonThumbnail() {
@@ -264,54 +308,9 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         transaction.commit();
     }
 
-    private void showMainFragment() {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-        //第一种方式（add），初始化fragment并添加到事务中，如果为null就new一个
-        if(mainPageFragment == null){
-            mainPageFragment = new MainPageFragment();
-            transaction.add(R.id.fl_main_area, mainPageFragment);
-        }
-        //隐藏所有fragment
-        hideFragment(transaction);
-        //显示需要显示的fragment
-        transaction.show(mainPageFragment);
-        transaction.commit();
-        mainPageLine.setVisibility(View.VISIBLE);
-    }
-
-    private void showStudentsSeatsFragment() {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-        //第一种方式（add），初始化fragment并添加到事务中，如果为null就new一个
-        if(studentsSeatsFragment == null){
-            studentsSeatsFragment = new StudentsSeatsFragment();
-            transaction.add(R.id.fl_main_area, studentsSeatsFragment);
-        }
-        //隐藏所有fragment
-        hideFragment(transaction);
-        //显示需要显示的fragment
-        transaction.show(studentsSeatsFragment);
-        transaction.commit();
-        studentsSeatsLine.setVisibility(View.VISIBLE);
-    }
-
-    //隐藏所有的fragment
-    private void hideFragment(FragmentTransaction transaction){
-
-        mainPageLine.setVisibility(View.INVISIBLE);
-        studentsSeatsLine.setVisibility(View.INVISIBLE);
-
-        if(mainPageFragment != null){
-            transaction.hide(mainPageFragment);
-        }
-        if(studentsSeatsFragment != null){
-            transaction.hide(studentsSeatsFragment);
-        }
-    }
-
-    @OnClick({R.id.iv_unfold, R.id.fl_select_file, R.id.rl_main_page_tab, R.id.rl_students_seats_tab,
-            R.id.iv_back, R.id.tv_splide_list, R.id.tv_resource_list})
+    @OnClick({R.id.iv_unfold, R.id.fl_select_file, /*R.id.rl_main_page_tab, R.id.rl_students_seats_tab,*/
+            /*R.id.iv_back,*/ R.id.tv_splide_list, R.id.tv_resource_list})
     public void onClick(View v) {
         int id = v.getId();
         switch (id){
@@ -335,14 +334,6 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
 
             case R.id.fl_select_file:
                 leftDrawer.openDrawer(Gravity.LEFT);
-                break;
-
-            case R.id.rl_main_page_tab:
-                showMainFragment();
-                break;
-
-            case R.id.rl_students_seats_tab:
-                showStudentsSeatsFragment();
                 break;
 
             case R.id.iv_back:

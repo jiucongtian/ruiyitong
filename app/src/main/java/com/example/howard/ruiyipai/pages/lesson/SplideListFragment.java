@@ -52,6 +52,6 @@ public class SplideListFragment extends BaseFragment {
 
     @Override
     public int getLayoutId() {
-        return R.layout.fragment_main_page;
+        return R.layout.fragment_splide_list;
     }
 }

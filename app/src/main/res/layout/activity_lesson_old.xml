@@ -14,26 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/color_213636">
-
-
-
-
-        <!--<FrameLayout-->
-            <!--android:id="@+id/fl_main_area"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_marginLeft="36dp"-->
-            <!--android:layout_marginRight="36dp"-->
-            <!--tools:background="@color/red"/>-->
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/vp_main"
+        <FrameLayout
+            android:id="@+id/fl_main_area"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="36dp"
-            android:layout_marginRight="36dp">
-
-        </android.support.v4.view.ViewPager>
+            android:layout_marginRight="36dp"
+            tools:background="@color/red"/>
 
         <FrameLayout
             android:id="@+id/fl_select_file"
@@ -55,93 +42,169 @@
                 app:ico_icon="fon_81b"/>
         </FrameLayout>
 
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/tb_header"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:background="@color/black_translucence"
-            android:layout_alignParentTop="true">
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
 
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="36dp"
+                tools:src="@color/black"
+                app:ico_color="@color/white"
+                app:ico_icon="fon_816" />
 
-            <RelativeLayout
+            <TextView
+                android:id="@+id/tv_lesson_time"
+                style="@style/txt_24_white"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                android:gravity="center"
+                android:text="00:21:35"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@id/tv_lesson_time"
+                android:layout_marginRight="15dp">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:src="@color/black"
+                    app:ico_color="@color/white"
+                    app:ico_icon="fon_817"/>
                 <TextView
-                    android:id="@+id/tv_lesson_time"
-                    style="@style/txt_24_white"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:text="00:21:35"/>
-
-                <LinearLayout
-                    android:orientation="horizontal"
+                    style="@style/txt_12_white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
-                    android:layout_toLeftOf="@id/tv_lesson_time"
-                    android:layout_marginRight="15dp">
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        tools:src="@color/black"
-                        app:ico_color="@color/white"
-                        app:ico_icon="fon_817"/>
-                    <TextView
-                        style="@style/txt_12_white"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="8dp"
+                    android:layout_marginLeft="8dp"
 
-                        android:text="@string/mute"/>
-                </LinearLayout>
+                    android:text="@string/mute"/>
+            </LinearLayout>
 
-                <LinearLayout
-                    android:orientation="horizontal"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/tv_lesson_time">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:src="@color/black"
+                    app:ico_color="@color/white"
+                    app:ico_icon="fon_81e"/>
+                <TextView
+                    style="@style/txt_12_white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@id/tv_lesson_time">
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        tools:src="@color/black"
-                        app:ico_color="@color/white"
-                        app:ico_icon="fon_81e"/>
-                    <TextView
-                        style="@style/txt_12_white"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="8dp"
-                        android:text="@string/tag"/>
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/tag"/>
 
-                </LinearLayout>
+            </LinearLayout>
 
 
-
-                <android.support.design.widget.TabLayout
-                    android:layout_centerVertical="true"
-                    android:id="@+id/tl_switch_work_area"
-                    android:layout_alignParentRight="true"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true">
+                <RelativeLayout
+                    android:id="@+id/rl_main_page_tab"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    app:tabIndicatorColor="@color/light_blue_deep"/>
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/ll_big_screen_tab"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            tools:src="@color/black"
+                            app:ico_color="@color/white"
+                            app:ico_icon="fon_815"/>
+                        <TextView
+                            style="@style/txt_12_white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/screen"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/iv_main_page_line"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="9dp"
+                        android:background="@mipmap/lesson_line"/>
 
-            </RelativeLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_students_seats_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="24dp"
+                            tools:src="@color/black"
+                            app:ico_color="@color/white"
+                            app:ico_icon="fon_81c"/>
+                        <TextView
+                            style="@style/txt_12_white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="36dp"
+                            android:text="@string/seat_order"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/iv_students_seats_line"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="9dp"
+                        android:background="@mipmap/lesson_line"/>
+
+                </RelativeLayout>
 
 
 
-        </android.support.v7.widget.Toolbar>
+
+
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
 
         <!-- 工具条 -->
         <RelativeLayout
