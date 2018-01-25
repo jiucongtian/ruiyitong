@@ -50,7 +50,22 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         TOOL_PROJECT,
         TOOL_SPLIDE,
         TOOL_EXAM,
-        TOOL_STASTIC
+        TOOL_STASTIC,
+        TOOL_BROADCAST,
+        TOOL_PEN,
+        TOOL_LOCK,
+        TOOL_ERASER,
+        TOOL_RETURN,
+        TOOL_ENLARGED,
+        TOOL_SHRINK,
+        TOOL_CLEAN,
+        TOOL_RIGHT,
+        TOOL_COLOR,
+        TOOL_MUTE,
+        TOOL_CLOSE,
+        TOOL_REWARD,
+        TOOL_COLLECTION,
+        TOOL_DESKTOP
     }
 
     List<TOOL_TYPE> tools = new ArrayList();
@@ -126,18 +141,22 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         tools.add(TOOL_TYPE.TOOL_SPLIDE);
         tools.add(TOOL_TYPE.TOOL_PROJECT);
         tools.add(TOOL_TYPE.TOOL_STASTIC);
-        tools.add(TOOL_TYPE.TOOL_STASTIC);
-        tools.add(TOOL_TYPE.TOOL_STASTIC);
-        tools.add(TOOL_TYPE.TOOL_STASTIC);
-        tools.add(TOOL_TYPE.TOOL_STASTIC);
-        tools.add(TOOL_TYPE.TOOL_STASTIC);
-        tools.add(TOOL_TYPE.TOOL_STASTIC);
-        tools.add(TOOL_TYPE.TOOL_STASTIC);
-        tools.add(TOOL_TYPE.TOOL_STASTIC);
-        tools.add(TOOL_TYPE.TOOL_STASTIC);
-        tools.add(TOOL_TYPE.TOOL_STASTIC);
-        tools.add(TOOL_TYPE.TOOL_STASTIC);
-        tools.add(TOOL_TYPE.TOOL_STASTIC);
+        tools.add(TOOL_TYPE.TOOL_BROADCAST);
+        tools.add(TOOL_TYPE.TOOL_PEN);
+        tools.add(TOOL_TYPE.TOOL_LOCK);
+        tools.add(TOOL_TYPE.TOOL_ERASER);
+        tools.add(TOOL_TYPE.TOOL_RETURN);
+        tools.add(TOOL_TYPE.TOOL_ENLARGED);
+        tools.add(TOOL_TYPE.TOOL_SHRINK);
+        tools.add(TOOL_TYPE.TOOL_CLEAN);
+        tools.add(TOOL_TYPE.TOOL_RIGHT);
+        tools.add(TOOL_TYPE.TOOL_COLOR);
+        tools.add(TOOL_TYPE.TOOL_MUTE);
+        tools.add(TOOL_TYPE.TOOL_CLOSE);
+        tools.add(TOOL_TYPE.TOOL_REWARD);
+        tools.add(TOOL_TYPE.TOOL_COLLECTION);
+        tools.add(TOOL_TYPE.TOOL_DESKTOP);
+
 
         initLessonTools();
 

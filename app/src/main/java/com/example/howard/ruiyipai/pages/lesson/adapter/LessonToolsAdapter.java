@@ -76,17 +76,22 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
 
         switch (type) {
             case TOOL_THUMBNAIL: {
-                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_810")
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_82f")
                         .color(Color.BLACK);
                 holder.toolImg.setImageDrawable(iCourse);
                 holder.toolName.setText("缩略图");
                 break;
             }
-            case TOOL_PROJECT:
+            case TOOL_PROJECT:{
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_833")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("投屏");
                 break;
+            }
 
             case TOOL_SPLIDE: {
-                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_81d")
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_825")
                         .color(Color.BLACK);
                 holder.toolImg.setImageDrawable(iCourse);
                 holder.toolName.setText("分屏");
@@ -100,10 +105,115 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
                 break;
             }
             case TOOL_STASTIC: {
-                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_81d")
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_832")
                         .color(Color.BLACK);
                 holder.toolImg.setImageDrawable(iCourse);
                 holder.toolName.setText("统计");
+                break;
+            }
+            case TOOL_BROADCAST: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_827")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("广播");
+                break;
+            }
+            case TOOL_PEN: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_839")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("笔");
+                break;
+            }
+            case TOOL_LOCK: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_830")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("锁定");
+                break;
+            }
+            case TOOL_ERASER: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_834")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("橡皮");
+                break;
+            }
+            case TOOL_RETURN: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_83b")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("返回");
+                break;
+            }
+            case TOOL_ENLARGED: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_83c")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("放大");
+                break;
+            }
+            case TOOL_SHRINK: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_831")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("缩小");
+                break;
+            }
+            case TOOL_CLEAN: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_82b")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("清空");
+                break;
+            }
+            case TOOL_RIGHT: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_82c")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("适屏");
+                break;
+            }
+            case TOOL_COLOR: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_835")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("颜色");
+                break;
+            }
+            case TOOL_MUTE: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_82a")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("静音");
+                break;
+            }
+            case TOOL_CLOSE: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_826")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("关闭");
+                break;
+            }
+            case TOOL_REWARD: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_828")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("奖励");
+                break;
+            }
+            case TOOL_COLLECTION: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_82d")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("收藏");
+                break;
+            }
+            case TOOL_DESKTOP: {
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_836")
+                        .color(Color.BLACK);
+                holder.toolImg.setImageDrawable(iCourse);
+                holder.toolName.setText("桌面");
                 break;
             }
         }

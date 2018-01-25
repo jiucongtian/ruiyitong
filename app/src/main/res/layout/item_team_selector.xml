@@ -12,8 +12,8 @@
         android:layout_marginLeft="56dp"
         android:layout_width="26dp"
         android:layout_height="26dp"
-        app:ico_color="@color/red"
-        app:ico_icon="fon_818"/>
+        app:ico_color="@color/font_dark"
+        app:ico_icon="fon_845"/>
 
     <TextView
         android:id="@+id/tv_name"
