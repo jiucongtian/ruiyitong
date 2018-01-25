@@ -32,22 +32,23 @@
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                app:tabTextAppearance="@style/txt_16_dark"
                 app:tabMode="scrollable"
                 app:tabMaxWidth="66dp"
-                app:tabSelectedTextColor="@color/black"
-                app:tabTextColor="@color/black">
+                app:tabSelectedTextColor="@color/font_dark"
+                app:tabTextColor="@color/font_dark">
                 <android.support.design.widget.TabItem
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="第一题"/>
+                    android:text="第1题"/>
                 <android.support.design.widget.TabItem
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="第一题"/>
+                    android:text="第2题"/>
                 <android.support.design.widget.TabItem
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="第一题"/>
+                    android:text="第3题"/>
 
             </android.support.design.widget.TabLayout>
             
