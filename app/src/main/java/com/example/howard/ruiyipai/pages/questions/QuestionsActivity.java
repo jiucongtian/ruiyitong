@@ -4,14 +4,18 @@ import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.DragEvent;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 
 
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
+import com.example.howard.ruiyipai.common.Utils;
 import com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean;
 import com.weigan.loopview.LoopView;
 import com.weigan.loopview.OnItemSelectedListener;
@@ -22,6 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 import static com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean.SELECTION_TYPE.TYPE_CLASS;
 import static com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean.SELECTION_TYPE.TYPE_STUDENT;
@@ -59,6 +64,7 @@ public class QuestionsActivity extends BaseActivity {
 
     @BindView(R.id.rv_student_selector)
     RecyclerView mStudentSelector;
+
 
 
 //    SoundPool mSoundPool;
@@ -294,5 +300,15 @@ public class QuestionsActivity extends BaseActivity {
 //        mSoundPool.play(soundID.get(1), 0.5f, 0.5f, 0, 0, 1);
         AudioManager am = (AudioManager)getSystemService(AUDIO_SERVICE);
         am.playSoundEffect(AudioManager.FX_KEYPRESS_STANDARD,1);
+    }
+
+    @OnClick({R.id.iv_back})
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id){
+            case R.id.iv_back:
+                this.finish();
+                break;
+        }
     }
 }
