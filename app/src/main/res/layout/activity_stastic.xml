@@ -12,11 +12,13 @@
         android:layout_height="64dp"
         android:background="@color/white">
         <ImageView
+            android:id="@+id/iv_back"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="36dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@color/red"/>
+            app:ico_color="@color/light_blue_deep"
+            app:ico_icon="fon_816"/>
         <TextView
             style="@style/txt_24_dark"
             android:layout_gravity="center_vertical"
