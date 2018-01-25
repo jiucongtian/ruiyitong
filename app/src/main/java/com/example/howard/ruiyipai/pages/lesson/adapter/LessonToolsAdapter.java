@@ -23,7 +23,7 @@ import static com.example.howard.ruiyipai.pages.lesson.LessonActivity.TOOL_TYPE.
 
 /**
  * Created by howard on 2018/1/14.
- * Email zh@longhuapuxin.com
+ * Email 158988127@qq.com
  */
 
 public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.ViewHolder>{

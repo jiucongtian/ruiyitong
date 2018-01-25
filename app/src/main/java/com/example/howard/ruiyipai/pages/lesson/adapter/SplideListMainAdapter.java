@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
 
 /**
  * Created by howard on 2018/1/14.
- * Email zh@longhuapuxin.com
+ * Email 158988127@qq.com
  */
 
 public class SplideListMainAdapter extends RecyclerView.Adapter<SplideListMainAdapter.ViewHolder> {

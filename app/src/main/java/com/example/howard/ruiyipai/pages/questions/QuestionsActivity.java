@@ -1,5 +1,6 @@
 package com.example.howard.ruiyipai.pages.questions;
 
+import android.graphics.Color;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -7,6 +8,7 @@ import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.DragEvent;
 import android.view.Gravity;
 import android.view.View;
@@ -17,6 +19,7 @@ import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
 import com.example.howard.ruiyipai.common.Utils;
 import com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean;
+import com.mikepenz.iconics.IconicsDrawable;
 import com.weigan.loopview.LoopView;
 import com.weigan.loopview.OnItemSelectedListener;
 
@@ -65,6 +68,8 @@ public class QuestionsActivity extends BaseActivity {
     @BindView(R.id.rv_student_selector)
     RecyclerView mStudentSelector;
 
+    @BindView(R.id.tb_header)
+    Toolbar mToolBar;
 
 
 //    SoundPool mSoundPool;
@@ -78,6 +83,7 @@ public class QuestionsActivity extends BaseActivity {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
+        initToolBar();
         initStudentsList();
 
         initSingleQuestionsNumber();
@@ -268,6 +274,19 @@ public class QuestionsActivity extends BaseActivity {
         });
     }
 
+    private void initToolBar() {
+        IconicsDrawable iResource = new IconicsDrawable(this).icon("fon_816").sizeDp(30)
+                .color(Color.WHITE);
+
+        mToolBar.setNavigationIcon(iResource);
+        mToolBar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_questions;
@@ -302,13 +321,4 @@ public class QuestionsActivity extends BaseActivity {
         am.playSoundEffect(AudioManager.FX_KEYPRESS_STANDARD,1);
     }
 
-    @OnClick({R.id.iv_back})
-    public void onClick(View v) {
-        int id = v.getId();
-        switch (id){
-            case R.id.iv_back:
-                this.finish();
-                break;
-        }
-    }
 }

@@ -7,7 +7,7 @@ import com.mikepenz.iconics.Iconics;
 
 /**
  * Created by howard on 2018/1/13.
- * Email zh@longhuapuxin.com
+ * Email 158988127@qq.com
  */
 
 public class RuiYiPaiApplication extends Application {

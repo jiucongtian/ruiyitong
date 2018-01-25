@@ -7,30 +7,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/font_gray_1">
-    <RelativeLayout
+
+    <android.support.v7.widget.Toolbar
+        style="@style/txt_24_white"
+        android:id="@+id/tb_header"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="@color/light_blue_deep">
-        <ImageView
-            android:id="@+id/iv_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="36dp"
-            tools:src="@color/black"
-            app:ico_color="@color/white"
-            app:ico_icon="fon_816" />
-        <TextView
-            style="@style/txt_24_white"
-            android:layout_toRightOf="@id/iv_back"
-            android:layout_marginLeft="10dp"
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="课堂发题"/>
+        android:background="@color/light_blue_deep"
+        android:layout_alignParentTop="true"
+        app:titleTextAppearance="@style/txt_24_white"
+        app:title="课堂发题">
 
-    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"

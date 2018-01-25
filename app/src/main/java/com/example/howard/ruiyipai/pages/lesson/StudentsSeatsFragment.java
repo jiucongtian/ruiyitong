@@ -5,7 +5,7 @@ import com.example.howard.ruiyipai.base.BaseFragment;
 
 /**
  * Created by howard on 2018/1/18.
- * Email zh@longhuapuxin.com
+ * Email 158988127@qq.com
  */
 
 public class StudentsSeatsFragment extends BaseFragment {

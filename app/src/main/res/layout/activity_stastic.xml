@@ -5,44 +5,59 @@
     tools:ignore="MissingPrefix"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
-        android:id="@+id/ll_header"
-        android:orientation="horizontal"
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_header"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="@color/white">
-        <ImageView
-            android:id="@+id/iv_back"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="36dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            app:ico_color="@color/light_blue_deep"
-            app:ico_icon="fon_816"/>
-        <TextView
-            style="@style/txt_24_dark"
-            android:layout_gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="作答统计"/>
-        <TextView
-            style="@style/txt_16_dark"
-            android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        app:titleTextAppearance="@style/txt_24_dark"
+        app:title="作答统计">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="left"
             android:layout_marginLeft="50dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="全 部"/>
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_question_no"
-            android:layout_width="match_parent"
+            android:layout_width="700dp"
             android:layout_height="match_parent">
+            <TextView
+                style="@style/txt_16_dark"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全 部"/>
+            
+            <android.support.design.widget.TabLayout
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:tabMode="scrollable"
+                app:tabMaxWidth="66dp"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextColor="@color/black">
+                <android.support.design.widget.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="第一题"/>
+                <android.support.design.widget.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="第一题"/>
+                <android.support.design.widget.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="第一题"/>
 
-        </android.support.v7.widget.RecyclerView>
-    </LinearLayout>
+            </android.support.design.widget.TabLayout>
+            
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
 
     <android.support.v4.view.ViewPager
-        android:layout_below="@id/ll_header"
+        android:layout_below="@id/tb_header"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -63,6 +78,7 @@
             android:id="@+id/rlv_tools"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:layout_marginLeft="82dp"
             android:layout_marginRight="46dp"
             tools:background="@color/black">

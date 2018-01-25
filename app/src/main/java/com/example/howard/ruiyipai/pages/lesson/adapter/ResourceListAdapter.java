@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 
 /**
  * Created by howard on 2018/1/14.
- * Email zh@longhuapuxin.com
+ * Email 158988127@qq.com
  */
 
 public class ResourceListAdapter extends RecyclerView.Adapter<ResourceListAdapter.ViewHolder> {
