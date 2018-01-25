@@ -209,7 +209,23 @@ public class CustomFont implements ITypeface {
         fon_83c('\ue83c'),
         fon_83d('\ue83d'),
         fon_83e('\ue83e'),
-        fon_83f('\ue83f');
+        fon_83f('\ue83f'),
+        fon_830('\ue840'),
+        fon_831('\ue841'),
+        fon_832('\ue842'),
+        fon_833('\ue843'),
+        fon_834('\ue844'),
+        fon_835('\ue845'),
+        fon_836('\ue846'),
+        fon_837('\ue847'),
+        fon_838('\ue848'),
+        fon_839('\ue849'),
+        fon_83a('\ue84a'),
+        fon_83b('\ue84b'),
+        fon_83c('\ue84c'),
+        fon_83d('\ue84d'),
+        fon_83e('\ue84e'),
+        fon_83f('\ue84f');
                 
                 
 
