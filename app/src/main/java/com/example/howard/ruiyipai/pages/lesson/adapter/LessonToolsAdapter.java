@@ -93,7 +93,7 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
                 break;
             }
             case TOOL_EXAM: {
-                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_81d")
+                IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_83a")
                         .color(Color.BLACK);
                 holder.toolImg.setImageDrawable(iCourse);
                 holder.toolName.setText("发题");
