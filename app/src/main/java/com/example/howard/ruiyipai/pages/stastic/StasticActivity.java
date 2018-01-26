@@ -47,8 +47,11 @@ public class StasticActivity extends BaseActivity {
 
     private void initFragments() {
 
-        fragments.add(new ObjectFragment(getSupportFragmentManager()));
-        fragments.add(new SubjectFragment(getSupportFragmentManager()));
+        fragments.add(new ObjectFragment());
+        fragments.add(new ObjectFragment());
+        fragments.add(new SubjectFragment());
+        fragments.add(new SubjectFragment());
+        fragments.add(new SubjectFragment());
 
         StasticFragmentAdapter adapter = new StasticFragmentAdapter(getSupportFragmentManager(), fragments);
         mMainArea.setAdapter(adapter);

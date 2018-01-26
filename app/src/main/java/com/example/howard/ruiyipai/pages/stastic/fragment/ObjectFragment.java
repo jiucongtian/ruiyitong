@@ -23,19 +23,17 @@ public class ObjectFragment extends BaseFragment {
     @BindView(R.id.vp_object_container)
     ViewPager mContainer;
 
-    FragmentManager fm;
-    public ObjectFragment(FragmentManager fragmentManager ) {
-        fm = fragmentManager;
+    public ObjectFragment() {
     }
 
     @Override
     protected void initPages() {
 
         List<Fragment> fragmentList = new ArrayList<>();
-        fragmentList.add(new AnswerChartFragment(fm));
-        fragmentList.add(new AnswerDurationFragment(fm));
+        fragmentList.add(new AnswerChartFragment(getChildFragmentManager()));
+        fragmentList.add(new AnswerDurationFragment(getChildFragmentManager()));
 
-        StasticFragmentAdapter adapter = new StasticFragmentAdapter(fm, fragmentList);
+        StasticFragmentAdapter adapter = new StasticFragmentAdapter(getChildFragmentManager(), fragmentList);
         mContainer.setAdapter(adapter);
 
     }

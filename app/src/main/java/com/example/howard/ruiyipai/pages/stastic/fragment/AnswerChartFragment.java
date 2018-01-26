@@ -62,10 +62,6 @@ public class AnswerChartFragment extends BaseFragment {
         initRecyclerView(dRv);
         initRecyclerView(eRv);
         initRecyclerView(fRv);
-
-
-
-
     }
 
     private void initRecyclerView(RecyclerView view) {

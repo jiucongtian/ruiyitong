@@ -1,15 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/black">
+    android:background="@color/white">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/inner"
+    <LinearLayout
+        android:id="@+id/ll_all_answer"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </android.support.v4.view.ViewPager>
+        <TextView
+            style="@style/txt_18_dark"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主观题作答情况"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_answer_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
 
-</LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ll_answer_detail"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp">
+            <LinearLayout
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    style="@style/txt_24_dark"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="学生01"/>
+                <TextView
+                    style="@style/txt_18_dark"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时间00:00:30"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="18dp"
+                    android:src="@color/red"/>
+                <TextView
+                    style="@style/txt_18_dark"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="投屏"/>
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="18dp"
+                    android:src="@color/red"/>
+                <TextView
+                    style="@style/txt_18_dark"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发还"/>
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="18dp"
+                    android:src="@color/red"/>
+                <TextView
+                    style="@style/txt_18_dark"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点赞"/>
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="18dp"
+                    android:src="@color/red"/>
+                <TextView
+                    style="@style/txt_18_dark"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收藏"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:background="@color/icon_blue_sky"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                style="@style/txt_20_dark"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="01"/>
+
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>
