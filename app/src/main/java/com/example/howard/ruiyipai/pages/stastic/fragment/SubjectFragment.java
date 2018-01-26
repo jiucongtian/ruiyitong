@@ -4,6 +4,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.howard.ruiyipai.R;
@@ -19,7 +20,13 @@ import butterknife.BindView;
  * Email 158988127@qq.com
  */
 
-public class SubjectFragment extends BaseFragment {
+public class SubjectFragment extends BaseFragment implements SubjectAdapter.SubjectListener {
+
+    @BindView(R.id.ll_all_answer)
+    View allAnswerView;
+
+    @BindView(R.id.ll_answer_detail)
+    View answerDetailView;
 
     @BindView(R.id.rv_answer_list)
     RecyclerView answerList;
@@ -33,7 +40,7 @@ public class SubjectFragment extends BaseFragment {
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 3, LinearLayoutManager.VERTICAL, false);
 
         answerList.setLayoutManager(layoutManager);
-        SubjectAdapter adapter = new SubjectAdapter();
+        SubjectAdapter adapter = new SubjectAdapter(this);
         answerList.setAdapter(adapter);
     }
 
@@ -41,5 +48,11 @@ public class SubjectFragment extends BaseFragment {
     @Override
     public int getLayoutId() {
         return R.layout.fragment_subject;
+    }
+
+    @Override
+    public void showAnswerDetail() {
+        allAnswerView.setVisibility(View.GONE);
+        answerDetailView.setVisibility(View.VISIBLE);
     }
 }

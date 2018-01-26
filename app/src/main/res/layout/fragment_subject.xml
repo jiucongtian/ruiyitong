@@ -6,7 +6,6 @@
 
     <LinearLayout
         android:id="@+id/ll_all_answer"
-        android:visibility="gone"
         android:orientation="vertical"
         android:layout_marginLeft="36dp"
         android:layout_marginRight="36dp"
@@ -28,8 +27,9 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:id="@+id/ll_answer_detail"
+        android:visibility="gone"
+        android:orientation="vertical"
         android:layout_marginLeft="36dp"
         android:layout_marginRight="36dp"
         android:layout_width="match_parent"

@@ -14,8 +14,14 @@ import com.example.howard.ruiyipai.R;
 
 public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.ViewHolder>{
 
+    public interface SubjectListener {
+        void showAnswerDetail();
+    }
 
-    public SubjectAdapter() {
+    SubjectListener listener;
+
+    public SubjectAdapter(SubjectListener listener) {
+        this.listener = listener;
     }
 
 
@@ -30,11 +36,13 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.ViewHold
 
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        // 绑定数据
-//        holder.mTv.setText(mData.get(position));
-//        holder.mLesson.setText("上午第一节");
-//        holder.mComments.setText("高中高一年级1班 外语备课内容");
+    public void onBindViewHolder(final ViewHolder holder, int position) {
+        holder.container.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.showAnswerDetail();
+            }
+        });
     }
 
     @Override
@@ -44,8 +52,11 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.ViewHold
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
+        View container;
+
         public ViewHolder(View itemView) {
             super(itemView);
+            container = itemView.findViewById(R.id.rl_container);
         }
     }
 }
