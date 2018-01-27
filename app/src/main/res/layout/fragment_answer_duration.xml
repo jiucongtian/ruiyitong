@@ -23,8 +23,13 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="230dp"
-                android:background="@color/icon_blue_sky">
+                android:layout_height="230dp">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
 
             </RelativeLayout>
 

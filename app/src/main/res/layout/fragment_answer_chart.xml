@@ -22,8 +22,83 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="230dp"
-                android:background="@color/icon_blue_sky">
+                android:layout_height="230dp">
+
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="800dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/ll_index"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+                        <TextView
+                            android:layout_marginLeft="87dp"
+                            android:background="@color/font_gray"
+                            style="@style/txt_16_dark"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="未作答"/>
+                        <TextView
+                            android:layout_marginLeft="35dp"
+                            android:background="@color/font_gray"
+                            style="@style/txt_16_dark"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="A"/>
+                        <TextView
+                            android:layout_marginLeft="35dp"
+                            android:background="@color/font_gray"
+                            style="@style/txt_16_dark"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="B"/>
+                        <TextView
+                            android:layout_marginLeft="35dp"
+                            android:background="@color/font_gray"
+                            style="@style/txt_16_dark"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="C"/>
+                        <TextView
+                            android:layout_marginLeft="35dp"
+                            android:background="@color/font_gray"
+                            style="@style/txt_16_dark"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="D"/>
+                        <TextView
+                            android:layout_marginLeft="35dp"
+                            android:background="@color/font_gray"
+                            style="@style/txt_16_dark"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="E"/>
+                        <TextView
+                            android:layout_marginLeft="35dp"
+                            android:background="@color/font_gray"
+                            style="@style/txt_16_dark"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:text="F"/>
+                    </LinearLayout>
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/bc_answer_statistic"
+                        android:layout_above="@id/ll_index"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </RelativeLayout>
+
 
             </RelativeLayout>
 

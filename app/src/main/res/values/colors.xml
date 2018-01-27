@@ -38,14 +38,22 @@
     <color name="color_475361">#475361</color>
     <color name="font_white">#ffffff</color>
 
-
-
-
     <color name="color_213636">#213636</color>
     <color name="color_bdfbfa">#bdfbfa</color>
 
 
+    <color name="line_chart_fill_red">#ffd4d4</color>
+    <color name="line_chart_point_red">#ff6666</color>
+    <color name="line_chart_fill_blue">#bcf3f3</color>
+    <color name="line_chart_point_blue">#15cbc9</color>
+    <color name="line_chart_fill_yellow">#ffe0b1</color>
+    <color name="line_chart_point_yellow">#ff9a00</color>
+    <color name="line_chart_grid_line">#dadada</color>
 
+
+
+    <color name="bar_chart_red">#e06659</color>
+    <color name="bar_chart_blue">#15cbc9</color>
 
 
     
