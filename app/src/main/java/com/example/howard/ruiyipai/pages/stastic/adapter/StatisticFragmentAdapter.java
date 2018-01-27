@@ -11,11 +11,11 @@ import java.util.List;
  * Email 158988127@qq.com
  */
 
-public class StasticFragmentAdapter extends FragmentPagerAdapter {
+public class StatisticFragmentAdapter extends FragmentPagerAdapter {
 
     private String [] title = {"第1题","第2题","第3题","第4题","第5题","第5题","第5题","第5题","第5题","第5题","第5题","第5题","第5题","第5题","第5题"};
     private List<Fragment> fragmentList;
-    public StasticFragmentAdapter(FragmentManager fm, List<Fragment> fragmentList) {
+    public StatisticFragmentAdapter(FragmentManager fm, List<Fragment> fragmentList) {
         super(fm);
         this.fragmentList = fragmentList;
     }

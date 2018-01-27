@@ -9,7 +9,7 @@ import android.view.View;
 
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
-import com.example.howard.ruiyipai.pages.stastic.adapter.StasticFragmentAdapter;
+import com.example.howard.ruiyipai.pages.stastic.adapter.StatisticFragmentAdapter;
 import com.example.howard.ruiyipai.pages.stastic.fragment.ObjectFragment;
 import com.example.howard.ruiyipai.pages.stastic.fragment.SubjectFragment;
 import com.mikepenz.iconics.IconicsDrawable;
@@ -24,7 +24,7 @@ import butterknife.BindView;
  * Email 158988127@qq.com
  */
 
-public class StasticActivity extends BaseActivity {
+public class StatisticActivity extends BaseActivity {
 
     @BindView(R.id.tb_header)
     Toolbar mToolBar;
@@ -53,7 +53,7 @@ public class StasticActivity extends BaseActivity {
         fragments.add(new SubjectFragment());
         fragments.add(new SubjectFragment());
 
-        StasticFragmentAdapter adapter = new StasticFragmentAdapter(getSupportFragmentManager(), fragments);
+        StatisticFragmentAdapter adapter = new StatisticFragmentAdapter(getSupportFragmentManager(), fragments);
         mMainArea.setAdapter(adapter);
         mQuestionIndex.setupWithViewPager(mMainArea);
 
@@ -61,7 +61,7 @@ public class StasticActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_stastic;
+        return R.layout.activity_statistic;
     }
 
     private void initToolBar() {

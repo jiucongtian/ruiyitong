@@ -1,12 +1,11 @@
 package com.example.howard.ruiyipai.pages.stastic.fragment;
 
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseFragment;
-import com.example.howard.ruiyipai.pages.stastic.adapter.StasticFragmentAdapter;
+import com.example.howard.ruiyipai.pages.stastic.adapter.StatisticFragmentAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +32,7 @@ public class ObjectFragment extends BaseFragment {
         fragmentList.add(new AnswerChartFragment(getChildFragmentManager()));
         fragmentList.add(new AnswerDurationFragment(getChildFragmentManager()));
 
-        StasticFragmentAdapter adapter = new StasticFragmentAdapter(getChildFragmentManager(), fragmentList);
+        StatisticFragmentAdapter adapter = new StatisticFragmentAdapter(getChildFragmentManager(), fragmentList);
         mContainer.setAdapter(adapter);
 
     }

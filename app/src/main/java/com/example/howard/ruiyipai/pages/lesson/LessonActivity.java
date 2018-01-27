@@ -15,7 +15,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -30,7 +29,7 @@ import com.example.howard.ruiyipai.pages.lesson.adapter.LessonThumbnailAdapter;
 import com.example.howard.ruiyipai.pages.lesson.adapter.LessonToolsAdapter;
 import com.example.howard.ruiyipai.pages.lesson.adapter.SelectLessonsAdapter;
 import com.example.howard.ruiyipai.pages.questions.QuestionsActivity;
-import com.example.howard.ruiyipai.pages.stastic.StasticActivity;
+import com.example.howard.ruiyipai.pages.stastic.StatisticActivity;
 import com.mikepenz.iconics.IconicsDrawable;
 
 import java.util.ArrayList;
@@ -390,7 +389,7 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
 
     @Override
     public void stastic() {
-        Intent intent = new Intent(this, StasticActivity.class);
+        Intent intent = new Intent(this, StatisticActivity.class);
         startActivity(intent);
     }
 
