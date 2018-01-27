@@ -72,6 +72,7 @@ public class StatisticActivity extends BaseActivity {
         mToolBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 finish();
             }
         });

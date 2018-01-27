@@ -22,6 +22,11 @@ import butterknife.BindView;
 
 public class SubjectFragment extends BaseFragment implements SubjectAdapter.SubjectListener {
 
+    public enum MODE {
+        MODE_GRID,
+        MODE_DETAIL
+    }
+
     @BindView(R.id.ll_all_answer)
     View allAnswerView;
 
@@ -31,7 +36,11 @@ public class SubjectFragment extends BaseFragment implements SubjectAdapter.Subj
     @BindView(R.id.rv_answer_list)
     RecyclerView answerList;
 
+    private MODE mode;
+
+
     public SubjectFragment() {
+        mode = MODE.MODE_GRID;
     }
 
     @Override
@@ -52,6 +61,7 @@ public class SubjectFragment extends BaseFragment implements SubjectAdapter.Subj
 
     @Override
     public void showAnswerDetail() {
+        mode = MODE.MODE_DETAIL;
         allAnswerView.setVisibility(View.GONE);
         answerDetailView.setVisibility(View.VISIBLE);
     }

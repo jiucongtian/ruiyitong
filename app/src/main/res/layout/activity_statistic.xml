@@ -59,19 +59,19 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <!--<com.example.howard.ruiyipai.view.NoScrollViewPager-->
-        <!--android:id="@+id/vp_main_area"-->
-        <!--android:layout_below="@id/tb_header"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"/>-->
-
-    <android.support.v4.view.ViewPager
+    <com.example.howard.ruiyipai.view.NoScrollViewPager
         android:id="@+id/vp_main_area"
         android:layout_below="@id/tb_header"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/vp_main_area"-->
+        <!--android:layout_below="@id/tb_header"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
 
 
 
