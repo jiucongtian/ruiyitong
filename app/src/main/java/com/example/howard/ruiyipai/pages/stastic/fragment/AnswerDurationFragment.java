@@ -218,6 +218,7 @@ public class AnswerDurationFragment extends BaseFragment {
         legend.setEnabled(false);
         mAnswerDuration.getAxisRight().setEnabled(false);        //右侧坐标轴
         mAnswerDuration.setDrawBorders(false);                   //隐藏最外层方框
+        mAnswerDuration.setTouchEnabled(false);
         Description desc = new Description();
         desc.setText("");
 

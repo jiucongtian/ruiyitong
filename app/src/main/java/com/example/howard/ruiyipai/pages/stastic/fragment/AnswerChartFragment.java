@@ -134,10 +134,10 @@ public class AnswerChartFragment extends BaseFragment {
 
         barDataSet.setColors(colors);
 
-
         barDataSet.setValueTextSize(9f);
         barDataSet.setFormLineWidth(1f);
         barDataSet.setFormSize(15.f);
+
         barDataSet.setValueFormatter(new IValueFormatter() {
             @Override
             public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
