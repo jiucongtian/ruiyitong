@@ -15,25 +15,21 @@
         android:layout_height="match_parent"
         android:background="@color/color_213636">
 
-
-
-
-        <!--<FrameLayout-->
-            <!--android:id="@+id/fl_main_area"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_marginLeft="36dp"-->
-            <!--android:layout_marginRight="36dp"-->
-            <!--tools:background="@color/red"/>-->
-
-        <android.support.v4.view.ViewPager
+        <com.example.howard.ruiyipai.view.NoScrollViewPager
             android:id="@+id/vp_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="36dp"
             android:layout_marginRight="36dp">
+        </com.example.howard.ruiyipai.view.NoScrollViewPager>
 
-        </android.support.v4.view.ViewPager>
+        <!--<android.support.v4.view.ViewPager-->
+            <!--android:id="@+id/vp_main"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="36dp"-->
+            <!--android:layout_marginRight="36dp">-->
+        <!--</android.support.v4.view.ViewPager>-->
 
         <FrameLayout
             android:id="@+id/fl_select_file"
@@ -151,6 +147,16 @@
             android:background="@mipmap/lesson_func_bg"
             android:layout_alignParentBottom="true">
 
+            <ImageView
+                android:id="@+id/iv_full_screen"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="36dp"
+                android:layout_marginBottom="33dp"
+                android:src="@color/red"/>
+
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rlv_tools"
                 android:layout_width="match_parent"
@@ -198,6 +204,17 @@
 
         </RelativeLayout>
 
+
+        <ImageView
+            android:id="@+id/iv_show_all_tools"
+            android:visibility="gone"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="21dp"
+            android:src="@color/red"/>
 
     </RelativeLayout>
 

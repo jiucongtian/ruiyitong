@@ -125,6 +125,12 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
     @BindView(R.id.vp_main)
     ViewPager mMain;
 
+    @BindView(R.id.fl_select_file)
+    View mLeftBtn;
+
+    @BindView(R.id.iv_show_all_tools)
+    View mShowAllBtn;
+
     SplideListFragment splideListFragment;
     ResourceListFragment resourceListFragment;
 
@@ -309,8 +315,8 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
     }
 
 
-    @OnClick({R.id.iv_unfold, R.id.fl_select_file, /*R.id.rl_main_page_tab, R.id.rl_students_seats_tab,*/
-            /*R.id.iv_back,*/ R.id.tv_splide_list, R.id.tv_resource_list})
+    @OnClick({R.id.iv_unfold, R.id.fl_select_file, R.id.iv_full_screen, R.id.tv_splide_list,
+            R.id.tv_resource_list, R.id.iv_show_all_tools})
     public void onClick(View v) {
         int id = v.getId();
         switch (id){
@@ -353,6 +359,28 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
                 resourceTab.setBackgroundResource(R.color.color_bdfbfa);
                 showResourceListFragment();
                 break;
+            case R.id.iv_full_screen:
+                hidenTools(true);
+                break;
+            case R.id.iv_show_all_tools:
+                hidenTools(false);
+                break;
+        }
+    }
+
+    private void hidenTools(boolean hiden) {
+        if (hiden) {
+            mToolbar.setVisibility(View.GONE);
+            mLeftBtn.setVisibility(View.GONE);
+            lessonThumbnailContainer.setVisibility(View.GONE);
+            lessonToolsContainer.setVisibility(View.GONE);
+            mShowAllBtn.setVisibility(View.VISIBLE);
+        } else {
+            mToolbar.setVisibility(View.VISIBLE);
+            mLeftBtn.setVisibility(View.VISIBLE);
+            updatethumbnail();
+            lessonToolsContainer.setVisibility(View.VISIBLE);
+            mShowAllBtn.setVisibility(View.GONE);
         }
     }
 
