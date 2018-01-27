@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="78dp"
+    android:layout_height="110dp"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="78dp"
+        android:layout_height="58dp"
+        android:src="@color/red"/>
+    <TextView
+        style="@style/txt_16_dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学生01"/>
+    <TextView
+        style="@style/txt_12_dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正常运行"/>
+
+</LinearLayout>

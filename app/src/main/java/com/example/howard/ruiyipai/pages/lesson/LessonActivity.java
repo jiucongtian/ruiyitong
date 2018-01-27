@@ -189,6 +189,7 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
 
 
         for (int i = 0; i < adapter.getCount(); i++) {
+
             TabLayout.Tab tab = mTabLayout.getTabAt(i);//获得每一个tab
             tab.setCustomView(R.layout.tab_item_lesson);//给每一个tab设置view
             TextView textView = tab.getCustomView().findViewById(R.id.tv_tab_name);
