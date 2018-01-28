@@ -13,13 +13,10 @@ import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
 import com.mikepenz.iconics.IconicsDrawable;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
-import static com.example.howard.ruiyipai.pages.lesson.LessonActivity.TOOL_TYPE.TOOL_EXAM;
 
 /**
  * Created by howard on 2018/1/14.
@@ -90,7 +87,7 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
                 break;
             }
 
-            case TOOL_SPLIDE: {
+            case TOOL_SPLIT: {
                 IconicsDrawable iCourse = new IconicsDrawable(mContext).icon("fon_825")
                         .color(Color.BLACK);
                 holder.toolImg.setImageDrawable(iCourse);
@@ -232,7 +229,7 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
                         case TOOL_EXAM:
                             mToolsSelectListener.sendQuestions();
                             break;
-                        case TOOL_SPLIDE:
+                        case TOOL_SPLIT:
                             mToolsSelectListener.switchSplideMode();
                             break;
                         case TOOL_STASTIC:

@@ -8,11 +8,13 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -54,7 +56,7 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
     public enum TOOL_TYPE {
         TOOL_THUMBNAIL,
         TOOL_PROJECT,
-        TOOL_SPLIDE,
+        TOOL_SPLIT,
         TOOL_EXAM,
         TOOL_STASTIC,
         TOOL_BROADCAST,
@@ -149,7 +151,7 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         //TODO: 临时添加工具数据
         tools.add(TOOL_TYPE.TOOL_THUMBNAIL);
         tools.add(TOOL_TYPE.TOOL_EXAM);
-        tools.add(TOOL_TYPE.TOOL_SPLIDE);
+        tools.add(TOOL_TYPE.TOOL_SPLIT);
         tools.add(TOOL_TYPE.TOOL_PROJECT);
         tools.add(TOOL_TYPE.TOOL_STASTIC);
         tools.add(TOOL_TYPE.TOOL_BROADCAST);
@@ -399,18 +401,9 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
     @Override
     public void switchSplideMode() {
 
-//        //背景变暗
-//        WindowManager.LayoutParams lp = getWindow().getAttributes();
-//        lp.alpha = 0.6f;
-//        getWindow().setAttributes(lp);
-//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-
-//        //恢复背景
-//        WindowManager.LayoutParams lp = getWindow().getAttributes();
-//        lp.alpha = 1.0f;
-//        getWindow().setAttributes(lp);
-//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-
+        AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
+        dlg.show();
+        dlg.getWindow().setContentView(R.layout.popup_split_screen);
 
         splideMode = !splideMode;
         updateDrawerLayoutMode();

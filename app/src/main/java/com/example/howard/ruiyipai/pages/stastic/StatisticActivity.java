@@ -116,7 +116,7 @@ public class StatisticActivity extends BaseActivity implements LessonToolsAdapte
         //TODO: 临时添加工具数据
         tools.add(LessonActivity.TOOL_TYPE.TOOL_THUMBNAIL);
         tools.add(LessonActivity.TOOL_TYPE.TOOL_EXAM);
-        tools.add(LessonActivity.TOOL_TYPE.TOOL_SPLIDE);
+        tools.add(LessonActivity.TOOL_TYPE.TOOL_SPLIT);
         tools.add(LessonActivity.TOOL_TYPE.TOOL_PROJECT);
         tools.add(LessonActivity.TOOL_TYPE.TOOL_STASTIC);
         tools.add(LessonActivity.TOOL_TYPE.TOOL_BROADCAST);
