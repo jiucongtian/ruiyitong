@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/left_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/header_container"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tb_header"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@color/white"
+                android:layout_alignParentTop="true"
+                android:title="作业批改"
+                app:titleTextAppearance="@style/txt_24_dark"
+                app:title="作业批改">
+
+                <RelativeLayout
+                    android:background="@color/light_blue"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="30dp"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:src="@color/red"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" />
+
+                    <EditText
+                        android:background="@color/transparent"
+                        android:layout_toRightOf="@id/iv_search"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+
+                        android:hint="搜索内容"
+                        android:textAppearance="@style/txt_16_dark"
+                        android:textColorHint="@color/font_gray"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/font_gray"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_homework_list"
+            android:layout_below="@id/header_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <FrameLayout
+            android:id="@+id/fl_select_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:background="@color/font_gray"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="46dp"
+                android:background="@mipmap/half_circle"/>
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                tools:src="@color/black"
+                app:ico_color="@color/white"
+                app:ico_icon="fon_81b"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+    <!-- 左侧侧滑 -->
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:layout_gravity="left">
+    <!--<RelativeLayout-->
+        <!--android:layout_width="320dp"-->
+        <!--android:layout_height="match_parent">-->
+
+        <LinearLayout
+            android:id="@+id/ll_lesson_page"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_footer"
+            android:layout_alignParentTop="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/light_blue_deep">
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/txt_24_white"
+                        android:text="请选择批改作业的班级"/>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/txt_20_dark"
+                android:paddingLeft="48dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="全部"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_classes"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>
+
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/iv_homework_mark"
+        style="@style/txt_20_dark"
+        android:layout_marginLeft="74dp"
+        android:layout_centerVertical="true"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@color/red"/>
+    <TextView
+        style="@style/txt_18_dark"
+        android:layout_toRightOf="@id/iv_homework_mark"
+        android:layout_marginLeft="12dp"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="高一年级（1）班 英语课后作业"/>
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="74dp"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/txt_15_deep_blue"
+            android:gravity="center"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="37/40"/>
+        <TextView
+            style="@style/txt_15_deep_blue"
+            android:gravity="center"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="00/37"/>
+        <ImageView
+            android:layout_marginLeft="14dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@color/red"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="74dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/font_gray"/>
+
+</RelativeLayout>

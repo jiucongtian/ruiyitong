@@ -20,6 +20,7 @@ import android.widget.ImageView;
 
 import com.example.howard.ruiyipai.common.Utils;
 import com.example.howard.ruiyipai.pages.TestActivity;
+import com.example.howard.ruiyipai.pages.homework.CheckHomeworkActivity;
 import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
 
 import android.widget.LinearLayout;
@@ -132,6 +133,8 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
                 IconicsDrawable tt = new IconicsDrawable(this).icon("fon_807")
                         .color(Color.WHITE);
                 ivWork.setImageDrawable(tt);
+                Intent intent = new Intent(this, CheckHomeworkActivity.class);
+                startActivity(intent);
                 break;
             case R.id.ll_online:
                 llonline.setBackgroundResource(R.mipmap.shadow_green);

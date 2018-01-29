@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
 import com.example.howard.ruiyipai.common.Utils;
@@ -34,6 +35,7 @@ import butterknife.OnClick;
 import static com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean.SELECTION_TYPE.TYPE_CLASS;
 import static com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean.SELECTION_TYPE.TYPE_STUDENT;
 import static com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean.SELECTION_TYPE.TYPE_TEAM;
+
 
 /**
  * Created by howard on 2018/1/20.

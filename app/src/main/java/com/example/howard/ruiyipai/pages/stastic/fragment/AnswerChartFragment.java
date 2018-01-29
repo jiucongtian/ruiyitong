@@ -1,6 +1,7 @@
 package com.example.howard.ruiyipai.pages.stastic.fragment;
 
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
@@ -188,6 +189,16 @@ public class AnswerChartFragment extends BaseFragment {
         desc.setText("");
 
         answerBarChart.setDescription(desc);
+
+
+
+//        Matrix matrix = new Matrix();
+//        matrix.postScale(1.5f, 1f);
+//        answerBarChart.getViewPortHandler().refresh(matrix, answerBarChart, false);
+
+
+
+
     }
 
 

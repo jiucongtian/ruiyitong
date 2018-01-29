@@ -276,8 +276,8 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         selectLessonsList.setLayoutManager(layoutManager);
 
-        SelectLessonsAdapter test = new SelectLessonsAdapter(null);
-        selectLessonsList.setAdapter(test);
+        SelectLessonsAdapter adapter = new SelectLessonsAdapter(null);
+        selectLessonsList.setAdapter(adapter);
         updateDrawerLayoutMode();
 
     }

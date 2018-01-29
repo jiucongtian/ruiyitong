@@ -28,6 +28,9 @@
 
         <activity android:name=".pages.TestActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".pages.homework.CheckHomeworkActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape"/>
 
 
     </application>

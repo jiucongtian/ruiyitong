@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/tv_homework_date"
+        style="@style/txt_20_dark"
+        android:layout_marginLeft="74dp"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12月28日"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_homework_status"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100dp"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/txt_15_deep_blue"
+            android:gravity="center"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="作业提交人数"/>
+        <TextView
+            style="@style/txt_15_deep_blue"
+            android:gravity="center"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="老师批改状态"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="74dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/font_gray"/>
+
+</RelativeLayout>
