@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/header_container"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_header"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/white"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_gravity="center"
+                style="@style/txt_24_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="高一年级（1）班 英语课后试题"/>
+
+            <LinearLayout
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@color/red"/>
+                    <TextView
+                        style="@style/txt_12_dark"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="投屏"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="45dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@color/red"/>
+                    <TextView
+                        style="@style/txt_12_dark"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="强制提交"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/font_gray"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/header_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            style="@style/txt_18_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="作答统计表"/>
+        <RelativeLayout
+            android:background="@color/icon_blue_sky"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_width="match_parent"
+            android:layout_height="118dp">
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="19dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--<LinearLayout-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent">-->
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_student_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                    </android.support.v7.widget.RecyclerView>
+                <!--</LinearLayout>-->
+            </HorizontalScrollView>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
+

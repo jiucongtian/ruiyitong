@@ -1,5 +1,6 @@
 package com.example.howard.ruiyipai.pages.homework;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -23,7 +24,7 @@ import butterknife.OnClick;
  * Email 158988127@qq.com
  */
 
-public class CheckHomeworkActivity extends BaseActivity {
+public class CheckHomeworkActivity extends BaseActivity implements HomeworkAdapter.OnItemClickListener {
 
     @BindView(R.id.tb_header)
     Toolbar mToolbar;
@@ -57,7 +58,7 @@ public class CheckHomeworkActivity extends BaseActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mHomeworkList.setLayoutManager(layoutManager);
 
-        HomeworkAdapter adapter = new HomeworkAdapter();
+        HomeworkAdapter adapter = new HomeworkAdapter(this);
         mHomeworkList.setAdapter(adapter);
     }
 
@@ -87,5 +88,11 @@ public class CheckHomeworkActivity extends BaseActivity {
                 leftDrawer.openDrawer(Gravity.LEFT);
                 break;
         }
+    }
+
+    @Override
+    public void itemSelected() {
+        Intent intent = new Intent(this, HomeworkDetailActivity.class);
+        startActivity(intent);
     }
 }

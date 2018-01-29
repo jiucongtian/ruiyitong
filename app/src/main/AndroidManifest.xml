@@ -31,6 +31,8 @@
         <activity android:name=".pages.homework.CheckHomeworkActivity"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape"/>
+        <activity android:name=".pages.homework.HomeworkDetailActivity"
+            android:screenOrientation="landscape"/>
 
 
     </application>

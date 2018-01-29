@@ -21,8 +21,14 @@ public class HomeworkAdapter extends RecyclerView.Adapter<ViewHolder> {
     static final int TYPE_DATE = 0x00;
     static final int TYPE_HOMEWORK = 0x01;
 
+    public interface OnItemClickListener {
+        void itemSelected();
+    }
 
-    public HomeworkAdapter() {
+    private OnItemClickListener mListener;
+
+    public HomeworkAdapter(OnItemClickListener listener) {
+        this.mListener = listener;
     }
 
 
@@ -59,12 +65,21 @@ public class HomeworkAdapter extends RecyclerView.Adapter<ViewHolder> {
 
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, int position) {
 
         if (position == 0) {
             DateHolder dateHolder = (DateHolder) holder;
             dateHolder.mHomeworkDateTv.setText("今天");
             dateHolder.mSstatusContainer.setVisibility(View.VISIBLE);
+        }
+
+        if (holder instanceof HomeworkHolder) {
+            ((HomeworkHolder) holder).mRoot.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mListener.itemSelected();
+                }
+            });
         }
     }
 
@@ -95,8 +110,11 @@ public class HomeworkAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
     public static class HomeworkHolder extends RecyclerView.ViewHolder {
 
+        View mRoot;
+
         public HomeworkHolder(View itemView) {
             super(itemView);
+            mRoot = itemView.findViewById(R.id.rl_root_container);
         }
     }
 }
