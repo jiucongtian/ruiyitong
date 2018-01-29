@@ -155,7 +155,8 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="36dp"
                 android:layout_marginBottom="33dp"
-                android:src="@color/red"/>
+                app:ico_color="@color/font_white"
+                app:ico_icon="fon_823"/>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rlv_tools"
@@ -214,7 +215,10 @@
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="24dp"
             android:layout_marginBottom="21dp"
-            android:src="@color/red"/>
+            android:background="@drawable/shape"
+            android:padding="12dp"
+            app:ico_color="@color/white"
+            app:ico_icon="fon_824"/>
 
     </RelativeLayout>
 

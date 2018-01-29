@@ -143,8 +143,8 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
     THUMBNAIL_TYPE thumbnailType = THUMBNAIL_TYPE.TYPE_PPT;
 
 
-    boolean splideMode = true;
-    boolean thumbnail = true;
+    boolean splideMode = false;
+    boolean thumbnail = false;
 
     @Override
     public void initPages() {
@@ -201,12 +201,24 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
             TabLayout.Tab tab = mTabLayout.getTabAt(i);//获得每一个tab
             tab.setCustomView(R.layout.tab_item_lesson);//给每一个tab设置view
             TextView textView = tab.getCustomView().findViewById(R.id.tv_tab_name);
-            textView.setText("大屏幕");//设置tab上的文字
+
 
             ImageView imageView = tab.getCustomView().findViewById(R.id.iv_tab_img);
-            IconicsDrawable iResource = new IconicsDrawable(this).icon("fon_806")
-                    .color(Color.WHITE);
-            imageView.setImageDrawable(iResource);
+
+            IconicsDrawable iResource;
+            switch (i){
+                case 0:
+                    textView.setText("大屏幕");//设置tab上的文字
+                    iResource = new IconicsDrawable(this).icon("fon_833")
+                            .color(Color.WHITE);
+                    imageView.setImageDrawable(iResource);
+                    break;
+                case 1:
+                    textView.setText("学生座次");//设置tab上的文字
+                    iResource = new IconicsDrawable(this).icon("fon_81c")
+                            .color(Color.WHITE);
+                    imageView.setImageDrawable(iResource);
+            }
         }
 
     }
@@ -232,6 +244,7 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
 
         LessonThumbnailAdapter adapter = new LessonThumbnailAdapter(null);
         lessonThumbnail.setAdapter(adapter);
+        updatethumbnail();
     }
 
     private void setThumbnailType(THUMBNAIL_TYPE type) {
