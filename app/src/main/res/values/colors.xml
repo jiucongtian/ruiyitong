@@ -11,6 +11,7 @@
     <color name="black_translucence">#73000000</color>
     <color name="black_translucence_20">#33000000</color>
     <color name="white_translucence">#B3FFFFFF</color>
+    <color name="white_translucence_90">#E6FFFFFF</color>
 
 
     <color name="icon_blue_sky">#15cbc9</color>
@@ -23,11 +24,13 @@
     <color name="light_blue">#b8efef</color>
 
     <color name="light_blue_deep">#15cbc9</color>
+    <color name="light_blue_deep1">#00ede8</color>
     <color name="light_blue_2">#bef4c3</color>
     <color name="light_blue_2_deep">#27d939</color>
     <color name="light_blue_3">#d3daf8</color>
     <color name="light_blue_3_deep">#6d84e9</color>
     <color name="light_blue_4">#ddfcfc</color>
+    <color name="light_blue_5">#c8f4f4</color>
     <color name="light_pink">#ffeac6</color>
     <color name="light_pink_deep">#ffba41</color>
 
@@ -35,6 +38,7 @@
     <color name="font_gray">#808183</color>
     <color name="font_gray_1">#efefef</color>
     <color name="font_gray_2">#cccccc</color>
+    <color name="font_gray_3">#dadada</color>
     <color name="color_475361">#475361</color>
     <color name="font_white">#ffffff</color>
 

@@ -67,6 +67,15 @@ public class StatisticActivity extends BaseActivity implements LessonToolsAdapte
         fragments.add(new SubjectFragment());
         fragments.add(new SubjectFragment());
         fragments.add(new SubjectFragment());
+        fragments.add(new SubjectFragment());
+        fragments.add(new SubjectFragment());
+        fragments.add(new SubjectFragment());
+        fragments.add(new SubjectFragment());
+        fragments.add(new SubjectFragment());
+        fragments.add(new SubjectFragment());
+        fragments.add(new SubjectFragment());
+        fragments.add(new SubjectFragment());
+        fragments.add(new SubjectFragment());
 
         StatisticFragmentAdapter adapter = new StatisticFragmentAdapter(getSupportFragmentManager(), fragments);
         mMainArea.setAdapter(adapter);

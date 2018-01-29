@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/rl_container"
-    android:layout_width="300dp"
-    android:layout_height="200dp"
-    android:layout_marginBottom="20dp"
-    android:background="@color/icon_blue_sky">
-
+    android:layout_width="320dp"
+    android:layout_height="240dp"
+    android:layout_marginBottom="0dp"
+    android:background="@mipmap/shadow4px">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/light_blue_deep"/>
     <FrameLayout
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:background="@color/red">
+        android:background="@color/light_blue_4">
         <TextView
             style="@style/txt_20_dark"
             android:layout_gravity="center"
@@ -22,7 +26,7 @@
 
     <RelativeLayout
         android:layout_alignParentBottom="true"
-        android:background="@color/white_translucence"
+        android:background="@color/white_translucence_90"
         android:layout_width="match_parent"
         android:layout_height="42dp">
 
@@ -54,12 +58,16 @@
                 android:orientation="vertical"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="5dp"
+                >
                 <ImageView
                     android:layout_gravity="center_horizontal"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
-                    android:src="@color/red"/>
+                    app:ico_color="@color/font_dark"
+                    app:ico_icon="fon_833"/>
                 <TextView
                     style="@style/txt_12_dark"
                     android:layout_gravity="center_horizontal"
@@ -71,12 +79,15 @@
                 android:orientation="vertical"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="5dp">
                 <ImageView
                     android:layout_gravity="center_horizontal"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
-                    android:src="@color/red"/>
+                    app:ico_color="@color/font_dark"
+                    app:ico_icon="fon_847"/>
                 <TextView
                     style="@style/txt_12_dark"
                     android:layout_gravity="center_horizontal"
@@ -88,12 +99,15 @@
                 android:orientation="vertical"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="5dp">
                 <ImageView
                     android:layout_gravity="center_horizontal"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
-                    android:src="@color/red"/>
+                    app:ico_color="@color/font_dark"
+                    app:ico_icon="fon_846"/>
                 <TextView
                     style="@style/txt_12_dark"
                     android:layout_gravity="center_horizontal"
@@ -105,12 +119,15 @@
                 android:orientation="vertical"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp">
                 <ImageView
                     android:layout_gravity="center_horizontal"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
-                    android:src="@color/red"/>
+                    app:ico_color="@color/font_dark"
+                    app:ico_icon="fon_82d"/>
                 <TextView
                     style="@style/txt_12_dark"
                     android:layout_gravity="center_horizontal"
