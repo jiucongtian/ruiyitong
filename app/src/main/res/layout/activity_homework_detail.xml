@@ -44,7 +44,8 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/icon_blue_sky"
+                        app:ico_icon="fon_833"/>
                     <TextView
                         style="@style/txt_12_dark"
                         android:layout_gravity="center_horizontal"
@@ -62,7 +63,8 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/icon_blue_sky"
+                        app:ico_icon="fon_848"/>
                     <TextView
                         style="@style/txt_12_dark"
                         android:layout_gravity="center_horizontal"

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="50dp">
 
@@ -17,7 +18,9 @@
                 android:layout_marginRight="10dp"
                 android:layout_width="22dp"
                 android:layout_height="22dp"
-                android:src="@color/red"/>
+                android:background="@color/light_blue_5"
+                app:ico_color="@color/icon_blue_sky"
+                app:ico_icon="fon_844"/>
 
             <TextView
                 style="@style/txt_16_dark"
@@ -25,7 +28,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="学生A"/>
+                android:text="学生姓名"/>
         </LinearLayout>
 
         <LinearLayout
@@ -94,49 +97,49 @@
                 android:layout_height="match_parent"
                 android:text="A"/>
             <TextView
-                style="@style/txt_14_dark"
+                style="@style/txt_14_red"
                 android:gravity="center"
                 android:layout_width="63dp"
                 android:layout_height="match_parent"
                 android:text="未批改"/>
             <TextView
-                style="@style/txt_14_dark"
+                style="@style/txt_14_red"
                 android:gravity="center"
                 android:layout_width="63dp"
                 android:layout_height="match_parent"
                 android:text="未批改"/>
             <TextView
-                style="@style/txt_14_dark"
+                style="@style/txt_14_red"
                 android:gravity="center"
                 android:layout_width="63dp"
                 android:layout_height="match_parent"
                 android:text="未批改"/>
             <TextView
-                style="@style/txt_14_dark"
+                style="@style/txt_14_red"
                 android:gravity="center"
                 android:layout_width="63dp"
                 android:layout_height="match_parent"
                 android:text="未批改"/>
             <TextView
-                style="@style/txt_14_dark"
+                style="@style/txt_14_red"
                 android:gravity="center"
                 android:layout_width="63dp"
                 android:layout_height="match_parent"
                 android:text="未批改"/>
             <TextView
-                style="@style/txt_14_dark"
+                style="@style/txt_14_red"
                 android:gravity="center"
                 android:layout_width="63dp"
                 android:layout_height="match_parent"
                 android:text="未批改"/>
             <TextView
-                style="@style/txt_14_dark"
+                style="@style/txt_14_red"
                 android:gravity="center"
                 android:layout_width="63dp"
                 android:layout_height="match_parent"
                 android:text="未批改"/>
             <TextView
-                style="@style/txt_14_dark"
+                style="@style/txt_14_red"
                 android:gravity="center"
                 android:layout_width="63dp"
                 android:layout_height="match_parent"
@@ -152,5 +155,5 @@
         android:layout_alignLeft="@id/ll_answers"
         android:layout_alignRight="@id/ll_answers"
         android:layout_marginLeft="22dp"
-        android:src="@color/font_gray"/>
+        android:src="@color/font_gray_2"/>
 </RelativeLayout>

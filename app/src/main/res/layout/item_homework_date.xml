@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:text="作业提交人数"/>
         <TextView
-            style="@style/txt_15_deep_blue"
+            style="@style/txt_15_status_green"
             android:gravity="center"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
@@ -39,6 +39,6 @@
         android:layout_marginRight="74dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:src="@color/font_gray"/>
+        android:src="@color/font_gray_2"/>
 
 </RelativeLayout>

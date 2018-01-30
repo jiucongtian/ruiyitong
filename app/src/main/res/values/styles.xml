@@ -61,6 +61,11 @@
         <item name="android:textColor">@color/font_dark</item>
     </style>
 
+    <style name="txt_14_red">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/line_chart_point_red</item>
+    </style>
+
     <style name="txt_14_white">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/font_white</item>
@@ -69,6 +74,16 @@
     <style name="txt_15_deep_blue">
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/light_blue_deep</item>
+    </style>
+
+    <style name="txt_15_status_green">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/status_green</item>
+    </style>
+
+    <style name="txt_15_status_red">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/status_red</item>
     </style>
 
     <style name="txt_16_dark">
