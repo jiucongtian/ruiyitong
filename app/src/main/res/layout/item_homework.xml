@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/rl_root_container"
     android:layout_width="match_parent"
     android:layout_height="50dp">
@@ -11,7 +12,8 @@
         android:layout_centerVertical="true"
         android:layout_width="14dp"
         android:layout_height="14dp"
-        android:src="@color/red"/>
+        app:ico_color="@color/bar_chart_red"
+        app:ico_icon="fon_849"/>
     <TextView
         style="@style/txt_18_dark"
         android:layout_toRightOf="@id/iv_homework_mark"
@@ -27,23 +29,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <TextView
-            style="@style/txt_15_deep_blue"
-            android:gravity="center"
-            android:layout_width="130dp"
+            style="@style/txt_15_status_red"
+            android:gravity="right"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
-            android:text="37/40"/>
+            android:text="37"/>
         <TextView
             style="@style/txt_15_deep_blue"
-            android:gravity="center"
-            android:layout_width="130dp"
+            android:gravity="left"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
-            android:text="00/37"/>
+            android:text="/40"/>
+        <TextView
+            style="@style/txt_15_status_red"
+            android:gravity="right"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="00"/>
+        <TextView
+            style="@style/txt_15_status_green"
+            android:gravity="left"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="/37"/>
         <ImageView
             android:layout_marginLeft="14dp"
             android:layout_gravity="center_vertical"
             android:layout_width="12dp"
             android:layout_height="12dp"
-            android:src="@color/red"/>
+            app:ico_color="@color/light_blue_deep"
+            app:ico_icon="fon_81b"/>
     </LinearLayout>
 
 
@@ -53,6 +68,6 @@
         android:layout_marginRight="74dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:src="@color/font_gray"/>
+        android:src="@color/font_gray_2"/>
 
 </RelativeLayout>

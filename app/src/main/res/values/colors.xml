@@ -62,6 +62,8 @@
 
 
     <color name="answer_green">#00a655</color>
+    <color name="status_green">#65b907</color>
+    <color name="status_red">#e06659</color>
 
 
     
