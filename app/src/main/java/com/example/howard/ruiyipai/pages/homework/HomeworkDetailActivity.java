@@ -1,5 +1,6 @@
 package com.example.howard.ruiyipai.pages.homework;
 
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -18,7 +19,7 @@ import butterknife.BindView;
  * Email 158988127@qq.com
  */
 
-public class HomeworkDetailActivity extends BaseActivity {
+public class HomeworkDetailActivity extends BaseActivity implements HomeworkStudentsAdapter.HomeworkOnClickListner {
 
     @BindView(R.id.tb_header)
     Toolbar mToolbar;
@@ -39,7 +40,7 @@ public class HomeworkDetailActivity extends BaseActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mStudentListRv.setLayoutManager(layoutManager);
 
-        HomeworkStudentsAdapter adapter = new HomeworkStudentsAdapter();
+        HomeworkStudentsAdapter adapter = new HomeworkStudentsAdapter(this);
         mStudentListRv.setAdapter(adapter);
     }
 
@@ -59,5 +60,11 @@ public class HomeworkDetailActivity extends BaseActivity {
     @Override
     protected int getLayoutId() {
         return R.layout.activity_homework_detail;
+    }
+
+    @Override
+    public void onSubjectClicked() {
+        Intent intent = new Intent(this, HomeworkSubjectActivity.class);
+        startActivity(intent);
     }
 }
