@@ -130,6 +130,11 @@
         <item name="android:textColor">@color/font_dark</item>
     </style>
 
+    <style name="txt_20_sky">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/icon_blue_sky</item>
+    </style>
+
     <style name="txt_22_dark">
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/font_dark</item>
