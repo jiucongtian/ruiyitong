@@ -98,11 +98,16 @@
             android:layout_height="wrap_content"
             android:text="作答统计表"/>
         <RelativeLayout
-            android:background="@color/icon_blue_sky"
+            android:background="@color/font_gray"
             android:layout_marginLeft="36dp"
             android:layout_marginRight="36dp"
             android:layout_width="match_parent"
             android:layout_height="118dp">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bc_homework_statistics"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
         </RelativeLayout>
 
         <FrameLayout
