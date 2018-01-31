@@ -35,6 +35,8 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".pages.homework.HomeworkSubjectActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".pages.resource.ResourceListActivity"
+            android:screenOrientation="landscape"/>
 
 
     </application>

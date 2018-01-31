@@ -26,6 +26,7 @@ import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.howard.ruiyipai.pages.resource.ResourceListActivity;
 import com.example.howard.ruiyipai.recyclerAdapter.ClassAdapter;
 import com.mikepenz.iconics.IconicsDrawable;
 
@@ -153,9 +154,10 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
             case R.id.ll_resource:
 
                 //test
-                Intent testIntent = new Intent(this, TestActivity.class);
-                this.startActivity(testIntent);
-
+//                Intent testIntent = new Intent(this, TestActivity.class);
+//                this.startActivity(testIntent);
+                Intent resourceIntent = new Intent(this, ResourceListActivity.class);
+                startActivity(resourceIntent);
 
                 llresource.setBackgroundResource(R.mipmap.shadow_gray);
                 Utils.setTVStyle(this, tvResourceCN, R.style.txt_22_white);
