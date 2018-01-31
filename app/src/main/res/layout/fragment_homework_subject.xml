@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -34,19 +35,22 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="40dp"
-                    android:src="@color/red"/>
+                    app:ico_color="@color/status_green"
+                    app:ico_icon="fon_852"/>
 
                 <ImageView
                     android:layout_marginLeft="30dp"
                     android:layout_width="50dp"
                     android:layout_height="40dp"
-                    android:src="@color/red"/>
+                    app:ico_color="@color/status_red"
+                    app:ico_icon="fon_853"/>
 
                 <ImageView
                     android:layout_marginLeft="30dp"
                     android:layout_width="50dp"
                     android:layout_height="40dp"
-                    android:src="@color/red"/>
+                    app:ico_color="@color/status_green"
+                    app:ico_icon="fon_854"/>
             </LinearLayout>
 
             <LinearLayout
@@ -61,53 +65,60 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <TextView
+                        style="@style/txt_14_dark"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
+                        android:background="@drawable/pointbluebg"
                         android:text="+3.0分"/>
                     <TextView
+                        style="@style/txt_14_dark"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:text="+3.0分"/>
+                        android:background="@drawable/pointbluebg"
+                        android:text="+2.5分"/>
                     <TextView
+                        style="@style/txt_14_dark"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:text="+3.0分"/>
+                        android:background="@drawable/pointbluebg"
+                        android:text="+2.0分"/>
                     <TextView
+                        style="@style/txt_14_dark"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:text="+3.0分"/>
+                        android:background="@drawable/pointbluebg"
+                        android:text="+1.5分"/>
                     <TextView
+                        style="@style/txt_14_dark"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:text="+3.0分"/>
+                        android:background="@drawable/pointbluebg"
+                        android:text="+1.0分"/>
                     <TextView
+                        style="@style/txt_14_dark"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:text="+3.0分"/>
+                        android:background="@drawable/pointbluebg"
+                        android:text="+0.5分"/>
                     <TextView
+                        style="@style/txt_14_dark"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:text="+3.0分"/>
+                        android:background="@drawable/pointbluebg"
+                        android:text="+0分"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginTop="10dp"
@@ -115,59 +126,67 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <TextView
+                        style="@style/txt_14_dark"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:text="+3.0分"/>
+                        android:background="@drawable/pointpinkbg"
+                        android:text="-0分"/>
                     <TextView
+                        style="@style/txt_14_dark"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:text="+3.0分"/>
+                        android:background="@drawable/pointpinkbg"
+                        android:text="-0.5分"/>
                     <TextView
+                        style="@style/txt_14_dark"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:text="+3.0分"/>
+                        android:background="@drawable/pointpinkbg"
+                        android:text="-1.0分"/>
                     <TextView
+                        style="@style/txt_14_dark"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:text="+3.0分"/>
+                        android:background="@drawable/pointpinkbg"
+                        android:text="-1.5分"/>
                     <TextView
+                        style="@style/txt_14_dark"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:text="+3.0分"/>
+                        android:background="@drawable/pointpinkbg"
+                        android:text="-2.0分"/>
                     <TextView
+                        style="@style/txt_14_dark"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:text="+3.0分"/>
+                        android:background="@drawable/pointpinkbg"
+                        android:text="-2.5分"/>
                     <TextView
+                        style="@style/txt_14_dark"
                         android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:text="+3.0分"/>
+                        android:background="@drawable/pointpinkbg"
+                        android:text="-3.0分"/>
                 </LinearLayout>
             </LinearLayout>
 
         </RelativeLayout>
         <FrameLayout
-            android:background="@color/red"
+            android:background="@mipmap/test"
+            android:layout_margin="24dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 

@@ -65,6 +65,9 @@
     <color name="status_green">#65b907</color>
     <color name="status_red">#e06659</color>
 
+    <color name="point_pink_bg">#ffc9c9</color>
+    <color name="point_blue_bg">#b4f4f4</color>
+
 
     
     <color name="transparent">#00000000</color>

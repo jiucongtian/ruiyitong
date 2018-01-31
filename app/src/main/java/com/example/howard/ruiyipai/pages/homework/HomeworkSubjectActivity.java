@@ -65,6 +65,11 @@ public class HomeworkSubjectActivity extends BaseActivity implements LessonTools
         fragments.add(new HomeworkSubjectFragment());
         fragments.add(new HomeworkSubjectFragment());
         fragments.add(new HomeworkSubjectFragment());
+        fragments.add(new HomeworkSubjectFragment());
+        fragments.add(new HomeworkSubjectFragment());
+        fragments.add(new HomeworkSubjectFragment());
+        fragments.add(new HomeworkSubjectFragment());
+        fragments.add(new HomeworkSubjectFragment());
 
         HomeworkSubjectFragmentAdapter adapter = new HomeworkSubjectFragmentAdapter(getSupportFragmentManager(), fragments);
         mMainAreaVp.setAdapter(adapter);

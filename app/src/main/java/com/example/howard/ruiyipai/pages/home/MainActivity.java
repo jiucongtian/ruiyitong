@@ -136,12 +136,12 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
                 ivWork.setImageDrawable(tt);
                 Intent intent = new Intent(this, CheckHomeworkActivity.class);
                 startActivity(intent);
-                llwork.setBackgroundResource(R.mipmap.shadow_white);
-                Utils.setTVStyle(this, tvWorkCN, R.style.txt_22_dark);
-                Utils.setTVStyle(this, tvWorkEN, R.style.txt_14_dark);
-                tt = new IconicsDrawable(this).icon("fon_807")
-                        .color(Color.BLUE);
-                ivWork.setImageDrawable(tt);
+//                llwork.setBackgroundResource(R.mipmap.shadow_white);
+//                Utils.setTVStyle(this, tvWorkCN, R.style.txt_22_dark);
+//                Utils.setTVStyle(this, tvWorkEN, R.style.txt_14_dark);
+//                tt = new IconicsDrawable(this).icon("fon_807")
+//                        .color(Color.BLUE);
+//                ivWork.setImageDrawable(tt);
                 break;
             case R.id.ll_online:
                 llonline.setBackgroundResource(R.mipmap.shadow_green);

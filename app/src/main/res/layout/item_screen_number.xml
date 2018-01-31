@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="8dp"
     android:layout_width="36dp"
     android:layout_height="36dp">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@color/red"/>
+        app:ico_color="@color/light_blue_deep"
+        app:ico_icon="fon_83f"/>
     <TextView
         android:id="@+id/tv_screen_no"
-        style="@style/txt_18_white"
+        style="@style/txt_18_gray"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

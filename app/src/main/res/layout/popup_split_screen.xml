@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="448dp"
     android:layout_height="345dp"
@@ -28,13 +29,14 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/light_blue_deep"
+                        app:ico_icon="fon_859"/>
                     <TextView
                         style="@style/txt_12_dark"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1屏幕"/>
+                        android:text="1屏"/>
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="vertical"
@@ -45,13 +47,14 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/light_blue_deep"
+                        app:ico_icon="fon_85a"/>
                     <TextView
                         style="@style/txt_12_dark"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1屏幕"/>
+                        android:text="2屏竖"/>
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="vertical"
@@ -62,13 +65,14 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/light_blue_deep"
+                        app:ico_icon="fon_85b"/>
                     <TextView
                         style="@style/txt_12_dark"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1屏幕"/>
+                        android:text="2屏横"/>
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="vertical"
@@ -79,13 +83,14 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/light_blue_deep"
+                        app:ico_icon="fon_85c"/>
                     <TextView
                         style="@style/txt_12_dark"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1屏幕"/>
+                        android:text="3屏右分"/>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -102,13 +107,14 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/light_blue_deep"
+                        app:ico_icon="fon_85d"/>
                     <TextView
                         style="@style/txt_12_dark"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1屏幕"/>
+                        android:text="3屏左分"/>
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="vertical"
@@ -119,13 +125,14 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/light_blue_deep"
+                        app:ico_icon="fon_85e"/>
                     <TextView
                         style="@style/txt_12_dark"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1屏幕"/>
+                        android:text="4屏"/>
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="vertical"
@@ -136,13 +143,14 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/light_blue_deep"
+                        app:ico_icon="fon_85f"/>
                     <TextView
                         style="@style/txt_12_dark"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1屏幕"/>
+                        android:text="9屏"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -155,6 +163,7 @@
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:layout_gravity="center_horizontal"
-        android:src="@color/red"/>
+        app:ico_color="@color/white"
+        app:ico_icon="fon_820"/>
 
 </LinearLayout>

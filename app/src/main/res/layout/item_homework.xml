@@ -13,7 +13,7 @@
         android:layout_width="14dp"
         android:layout_height="14dp"
         app:ico_color="@color/bar_chart_red"
-        app:ico_icon="fon_849"/>
+        app:ico_icon="fon_808"/>
     <TextView
         style="@style/txt_18_dark"
         android:layout_toRightOf="@id/iv_homework_mark"

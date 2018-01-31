@@ -326,7 +326,8 @@
                     android:layout_height="28dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="24dp"
-                    android:src="@color/red"/>
+                    app:ico_color="@color/white"
+                    app:ico_icon="fon_825"/>
                 <TextView
                     style="@style/txt_16_white"
                     android:layout_gravity="center_vertical"

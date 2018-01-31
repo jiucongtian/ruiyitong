@@ -50,7 +50,8 @@
                     android:layout_marginTop="26dp"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
-                    android:src="@color/red"/>
+                    app:ico_color="@color/light_blue_deep"
+                    app:ico_icon="fon_84d"/>
                 <TextView
                     style="@style/txt_20_dark"
                     android:layout_gravity="center_horizontal"
@@ -114,7 +115,8 @@
                     android:layout_marginTop="26dp"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
-                    android:src="@color/red"/>
+                    app:ico_color="@color/light_blue_deep"
+                    app:ico_icon="fon_84e"/>
                 <TextView
                     style="@style/txt_20_dark"
                     android:layout_gravity="center_horizontal"
@@ -177,7 +179,8 @@
                     android:layout_marginTop="26dp"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
-                    android:src="@color/red"/>
+                    app:ico_color="@color/light_blue_deep"
+                    app:ico_icon="fon_84f"/>
                 <TextView
                     style="@style/txt_20_dark"
                     android:layout_gravity="center_horizontal"
@@ -212,11 +215,14 @@
                 android:background="@color/white">
 
                 <ImageView
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="26dp"
+                    android:id="@+id/imageView"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
-                    android:src="@color/red"/>
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="26dp"
+                    app:ico_color="@color/light_blue_deep"
+                    app:ico_icon="fon_850" />
+
                 <TextView
                     style="@style/txt_20_dark"
                     android:layout_gravity="center_horizontal"
@@ -259,7 +265,8 @@
                         android:layout_marginTop="26dp"
                         android:layout_width="28dp"
                         android:layout_height="28dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/light_blue_deep"
+                        app:ico_icon="fon_851"/>
                     <TextView
                         style="@style/txt_20_dark"
                         android:layout_gravity="center_horizontal"
@@ -291,7 +298,8 @@
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="66dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@color/red"/>
+                    app:ico_color="@color/light_blue_deep"
+                    app:ico_icon="fon_838"/>
             </RelativeLayout>
 
 
