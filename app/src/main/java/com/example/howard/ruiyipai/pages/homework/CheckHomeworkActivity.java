@@ -1,5 +1,6 @@
 package com.example.howard.ruiyipai.pages.homework;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.widget.DrawerLayout;
@@ -8,9 +9,14 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
+import com.example.howard.ruiyipai.common.Utils;
 import com.example.howard.ruiyipai.pages.homework.adapter.CheckHomeworkClassListAdapter;
 import com.example.howard.ruiyipai.pages.homework.adapter.HomeworkAdapter;
 import com.example.howard.ruiyipai.pages.lesson.adapter.SelectLessonsAdapter;
@@ -37,6 +43,12 @@ public class CheckHomeworkActivity extends BaseActivity implements HomeworkAdapt
 
     @BindView(R.id.rv_classes)
     RecyclerView mClassList;
+
+    @BindView(R.id.et_homework_search)
+    EditText searchView;
+
+    @BindView(R.id.tv_cancel)
+    TextView mSearchCancel;
 
     @Override
     public void initPages() {
@@ -73,6 +85,35 @@ public class CheckHomeworkActivity extends BaseActivity implements HomeworkAdapt
                 finish();
             }
         });
+
+        searchView.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    changeToSearchMode(true);
+                }
+            }
+        });
+    }
+
+    private void changeToSearchMode(boolean flag) {
+        if (flag) {
+            mSearchCancel.setVisibility(View.VISIBLE);
+            ViewGroup.LayoutParams lp = searchView.getLayoutParams();
+            lp.width = Utils.dip2px(this, 400);
+            searchView.setLayoutParams(lp);
+        } else {
+            mSearchCancel.setVisibility(View.GONE);
+            ViewGroup.LayoutParams lp = searchView.getLayoutParams();
+            lp.width = Utils.dip2px(this, 120);
+            searchView.setLayoutParams(lp);
+
+            InputMethodManager imm = (InputMethodManager)
+                    getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+            searchView.clearFocus();
+
+        }
     }
 
     @Override
@@ -80,12 +121,15 @@ public class CheckHomeworkActivity extends BaseActivity implements HomeworkAdapt
         return R.layout.activity_check_homework;
     }
 
-    @OnClick({R.id.fl_select_file})
+    @OnClick({R.id.fl_select_file, R.id.tv_cancel})
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
             case R.id.fl_select_file:
                 leftDrawer.openDrawer(Gravity.LEFT);
+                break;
+            case R.id.tv_cancel:
+                changeToSearchMode(false);
                 break;
         }
     }
