@@ -69,6 +69,10 @@
     <color name="point_blue_bg">#b4f4f4</color>
 
 
+    <color name="res_folder">#ffba2c</color>
+    <color name="res_word">#46b7ec</color>
+    <color name="res_ppt">#f07f4a</color>
+    <color name="res_video">#4483be</color>
     
     <color name="transparent">#00000000</color>
 

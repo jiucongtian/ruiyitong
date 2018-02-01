@@ -42,7 +42,7 @@ import butterknife.OnClick;
 
 import static com.example.howard.ruiyipai.pages.lesson.adapter.LessonThumbnailAdapter.ITEM_TYPE_PPT;
 import static com.example.howard.ruiyipai.pages.lesson.adapter.LessonThumbnailAdapter.ITEM_TYPE_WORD;
-
+import android.view.View.OnClickListener;
 
 public class LessonActivity extends BaseActivity implements LessonToolsAdapter.ToolsSelectListener {
 
@@ -410,20 +410,34 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         Intent intent = new Intent(this, QuestionsActivity.class);
         startActivity(intent);
     }
-
+    AlertDialog dlg;
     @Override
     public void switchSplideMode() {
 
-        AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
+        dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
         dlg.show();
         dlg.getWindow().setContentView(R.layout.popup_split_screen);
-        //View closeBtn = dlg.getWindow().findViewById(R.id.);
-        //closeBtn.setOnClickListener(new OnClickListener());
+        dlg.getWindow().findViewById(R.id.iv_close).setOnClickListener(onclick);
+        dlg.getWindow().findViewById(R.id.iv_screen1).setOnClickListener(onclick);
+        dlg.getWindow().findViewById(R.id.iv_screen2_h).setOnClickListener(onclick);
+        dlg.getWindow().findViewById(R.id.iv_screen2_v).setOnClickListener(onclick);
+        dlg.getWindow().findViewById(R.id.iv_screen3_l).setOnClickListener(onclick);
+        dlg.getWindow().findViewById(R.id.iv_screen3_r).setOnClickListener(onclick);
+        dlg.getWindow().findViewById(R.id.iv_screen4).setOnClickListener(onclick);
+        dlg.getWindow().findViewById(R.id.iv_screen9).setOnClickListener(onclick);
         
         splideMode = !splideMode;
         updateDrawerLayoutMode();
     }
 
+    OnClickListener onclick = new OnClickListener(){
+        @Override
+        public void onClick(View v) {
+//            finish();
+            if(null != dlg && dlg.isShowing())
+            dlg.dismiss();
+        }
+    };
     @Override
     public void stastic() {
         Intent intent = new Intent(this, StatisticActivity.class);

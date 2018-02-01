@@ -26,6 +26,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/iv_screen1"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
@@ -44,6 +45,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/iv_screen2_v"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
@@ -62,6 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/iv_screen2_h"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
@@ -79,12 +82,15 @@
                     android:layout_marginLeft="32dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
+
                     <ImageView
-                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/iv_screen3_r"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
+                        android:layout_gravity="center_horizontal"
                         app:ico_color="@color/light_blue_deep"
-                        app:ico_icon="fon_85c"/>
+                        app:ico_icon="fon_85c" />
+
                     <TextView
                         style="@style/txt_12_dark"
                         android:layout_gravity="center_horizontal"
@@ -104,6 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/iv_screen3_l"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
@@ -122,6 +129,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/iv_screen4"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
@@ -140,6 +148,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/iv_screen9"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
@@ -159,6 +168,7 @@
     </FrameLayout>
 
     <ImageView
+        android:id="@+id/iv_close"
         android:layout_marginTop="25dp"
         android:layout_width="52dp"
         android:layout_height="52dp"
