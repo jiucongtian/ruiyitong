@@ -79,8 +79,8 @@
         </android.support.v7.widget.Toolbar>
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/font_gray"/>
+            android:layout_height="2dp"
+            android:background="@color/font_gray_2"/>
     </LinearLayout>
 
     <LinearLayout

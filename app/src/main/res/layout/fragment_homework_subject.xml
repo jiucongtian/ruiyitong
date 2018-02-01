@@ -15,7 +15,7 @@
     <ImageView
         android:layout_width="1dp"
         android:layout_height="match_parent"
-        android:src="@color/font_gray"/>
+        android:src="@color/font_gray_2"/>
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
