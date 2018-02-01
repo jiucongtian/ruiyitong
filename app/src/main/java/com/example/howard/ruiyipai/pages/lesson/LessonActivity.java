@@ -417,7 +417,9 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
         dlg.show();
         dlg.getWindow().setContentView(R.layout.popup_split_screen);
-
+        //View closeBtn = dlg.getWindow().findViewById(R.id.);
+        //closeBtn.setOnClickListener(new OnClickListener());
+        
         splideMode = !splideMode;
         updateDrawerLayoutMode();
     }
