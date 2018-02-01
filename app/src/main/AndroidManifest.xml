@@ -37,6 +37,8 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".pages.resource.ResourceListActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".pages.calendar.CalendarActivity"
+            android:screenOrientation="landscape"/>
 
 
     </application>

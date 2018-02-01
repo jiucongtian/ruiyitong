@@ -20,6 +20,7 @@ import android.widget.ImageView;
 
 import com.example.howard.ruiyipai.common.Utils;
 import com.example.howard.ruiyipai.pages.TestActivity;
+import com.example.howard.ruiyipai.pages.calendar.CalendarActivity;
 import com.example.howard.ruiyipai.pages.homework.CheckHomeworkActivity;
 import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
 
@@ -167,6 +168,10 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
                 ivResource.setImageDrawable(iResource);
                 break;
             case R.id.ll_course:
+                Intent calendarIntent = new Intent(this, CalendarActivity.class);
+                startActivity(calendarIntent);
+
+
                 llcourse.setBackgroundResource(R.mipmap.shadow_yellow);
                 Utils.setTVStyle(this, tvCourseCN, R.style.txt_22_white);
                 Utils.setTVStyle(this, tvCourseEN, R.style.txt_14_white);
