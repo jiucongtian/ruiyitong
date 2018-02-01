@@ -36,7 +36,7 @@
                     android:layout_width="50dp"
                     android:layout_height="40dp"
                     app:ico_color="@color/status_green"
-                    app:ico_icon="fon_852"/>
+                    app:ico_icon="fon_855"/>
 
                 <ImageView
                     android:layout_marginLeft="30dp"
