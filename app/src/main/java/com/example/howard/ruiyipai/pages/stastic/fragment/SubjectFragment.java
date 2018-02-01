@@ -65,4 +65,16 @@ public class SubjectFragment extends BaseFragment implements SubjectAdapter.Subj
         allAnswerView.setVisibility(View.GONE);
         answerDetailView.setVisibility(View.VISIBLE);
     }
+
+
+    public boolean onBackClick() {
+        if (mode == MODE.MODE_DETAIL) {
+            mode = MODE.MODE_GRID;
+            allAnswerView.setVisibility(View.VISIBLE);
+            answerDetailView.setVisibility(View.GONE);
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

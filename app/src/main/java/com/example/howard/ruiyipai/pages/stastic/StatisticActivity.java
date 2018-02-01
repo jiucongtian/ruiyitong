@@ -51,6 +51,8 @@ public class StatisticActivity extends BaseActivity implements LessonToolsAdapte
 
     List<Fragment> fragments = new ArrayList<>();
 
+    StatisticFragmentAdapter adapter;
+
     @Override
     public void initPages() {
         initToolBar();
@@ -77,7 +79,7 @@ public class StatisticActivity extends BaseActivity implements LessonToolsAdapte
         fragments.add(new SubjectFragment());
         fragments.add(new SubjectFragment());
 
-        StatisticFragmentAdapter adapter = new StatisticFragmentAdapter(getSupportFragmentManager(), fragments);
+        adapter = new StatisticFragmentAdapter(getSupportFragmentManager(), fragments);
         mMainArea.setAdapter(adapter);
         mQuestionIndex.setupWithViewPager(mMainArea);
 
@@ -96,8 +98,15 @@ public class StatisticActivity extends BaseActivity implements LessonToolsAdapte
         mToolBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SubjectFragment subjectFragment = null;
+                if (adapter.getCurrentFragment() instanceof SubjectFragment) {
+                    subjectFragment = (SubjectFragment) adapter.getCurrentFragment();
+                }
 
-                finish();
+                if (subjectFragment == null || !subjectFragment.onBackClick()) {
+                    finish();
+                }
+
             }
         });
     }
