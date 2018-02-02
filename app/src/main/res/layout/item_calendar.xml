@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/red"/>
+                android:src="@color/calendar_red"/>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/icon_yellow"/>
+                android:src="@color/calendar_yellow"/>
         </LinearLayout>
         <LinearLayout
             android:layout_centerInParent="true"
@@ -59,12 +59,12 @@
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
         <ImageView
             android:layout_alignParentRight="true"
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
 
     </RelativeLayout>
     <RelativeLayout
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/red"/>
+                android:src="@color/calendar_red"/>
             <ImageView
                 android:visibility="gone"
                 android:layout_width="match_parent"
@@ -93,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/icon_yellow"/>
+                android:src="@color/calendar_yellow"/>
         </LinearLayout>
         <LinearLayout
             android:layout_centerInParent="true"
@@ -117,12 +117,12 @@
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
         <ImageView
             android:layout_alignParentRight="true"
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
 
     </RelativeLayout>
     <RelativeLayout
@@ -138,7 +138,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/red"/>
+                android:src="@color/calendar_red"/>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -148,7 +148,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/icon_yellow"/>
+                android:src="@color/calendar_yellow"/>
         </LinearLayout>
         <LinearLayout
             android:layout_centerInParent="true"
@@ -174,12 +174,12 @@
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
         <ImageView
             android:layout_alignParentRight="true"
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
 
     </RelativeLayout>
     <RelativeLayout
@@ -196,7 +196,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/red"/>
+                android:src="@color/calendar_red"/>
             <ImageView
                 android:visibility="gone"
                 android:layout_width="match_parent"
@@ -207,7 +207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/icon_yellow"/>
+                android:src="@color/calendar_yellow"/>
         </LinearLayout>
         <LinearLayout
             android:layout_centerInParent="true"
@@ -233,12 +233,12 @@
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
         <ImageView
             android:layout_alignParentRight="true"
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
 
     </RelativeLayout>
     <RelativeLayout
@@ -254,7 +254,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/red"/>
+                android:src="@color/calendar_red"/>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -264,7 +264,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/icon_yellow"/>
+                android:src="@color/calendar_yellow"/>
         </LinearLayout>
         <LinearLayout
             android:layout_centerInParent="true"
@@ -290,12 +290,12 @@
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
         <ImageView
             android:layout_alignParentRight="true"
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
 
     </RelativeLayout>
     <RelativeLayout
@@ -311,7 +311,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/red"/>
+                android:src="@color/calendar_red"/>
             <ImageView
                 android:visibility="gone"
                 android:layout_width="match_parent"
@@ -323,7 +323,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/icon_yellow"/>
+                android:src="@color/calendar_yellow"/>
         </LinearLayout>
         <LinearLayout
             android:layout_centerInParent="true"
@@ -349,12 +349,12 @@
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
         <ImageView
             android:layout_alignParentRight="true"
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
 
     </RelativeLayout>
     <RelativeLayout
@@ -370,7 +370,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/red"/>
+                android:src="@color/calendar_red"/>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -380,7 +380,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:src="@color/icon_yellow"/>
+                android:src="@color/calendar_yellow"/>
         </LinearLayout>
         <LinearLayout
             android:layout_centerInParent="true"
@@ -406,7 +406,7 @@
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
 
     </RelativeLayout>
 
