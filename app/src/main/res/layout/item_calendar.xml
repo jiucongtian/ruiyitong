@@ -11,6 +11,7 @@
         android:layout_height="60dp"
         android:text="1"/>
     <RelativeLayout
+        android:id="@+id/rl_monday"
         android:background="@color/white"
         android:layout_width="90dp"
         android:layout_height="60dp">
@@ -135,16 +136,19 @@
             android:layout_width="6dp"
             android:layout_height="match_parent">
             <ImageView
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:src="@color/calendar_red"/>
             <ImageView
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:src="@color/icon_blue_sky"/>
             <ImageView
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -159,14 +163,12 @@
                 android:layout_gravity="center_horizontal"
                 style="@style/txt_16_dark"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="高一（1）"/>
+                android:layout_height="wrap_content"/>
             <TextView
                 style="@style/txt_16_dark"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="401室"/>
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
         <!-- 分割线 -->
@@ -183,6 +185,7 @@
 
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/rl_thursday"
         android:background="@color/white"
         android:layout_width="90dp"
         android:layout_height="60dp">
@@ -251,6 +254,66 @@
             android:layout_width="6dp"
             android:layout_height="match_parent">
             <ImageView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@color/calendar_red"/>
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@color/icon_blue_sky"/>
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@color/calendar_yellow"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center_horizontal"
+                style="@style/txt_16_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                style="@style/txt_16_dark"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <ImageView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@color/font_gray_2"/>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:src="@color/font_gray_2"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_saturday"
+        android:background="@color/white"
+        android:layout_width="90dp"
+        android:layout_height="60dp">
+        <LinearLayout
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            android:layout_width="6dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -261,6 +324,7 @@
                 android:layout_weight="1"
                 android:src="@color/icon_blue_sky"/>
             <ImageView
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -308,6 +372,7 @@
             android:layout_width="6dp"
             android:layout_height="match_parent">
             <ImageView
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -334,71 +399,12 @@
                 android:layout_gravity="center_horizontal"
                 style="@style/txt_16_dark"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="高一（1）"/>
+                android:layout_height="wrap_content"/>
             <TextView
                 style="@style/txt_16_dark"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="401室"/>
-        </LinearLayout>
-
-        <!-- 分割线 -->
-        <ImageView
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:src="@color/font_gray_2"/>
-        <ImageView
-            android:layout_alignParentRight="true"
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:src="@color/font_gray_2"/>
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:background="@color/white"
-        android:layout_width="90dp"
-        android:layout_height="60dp">
-        <LinearLayout
-            android:layout_alignParentLeft="true"
-            android:orientation="vertical"
-            android:layout_width="6dp"
-            android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:src="@color/calendar_red"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:src="@color/icon_blue_sky"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:src="@color/calendar_yellow"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_centerInParent="true"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_gravity="center_horizontal"
-                style="@style/txt_16_dark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="高一（1）"/>
-            <TextView
-                style="@style/txt_16_dark"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="401室"/>
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
         <!-- 分割线 -->

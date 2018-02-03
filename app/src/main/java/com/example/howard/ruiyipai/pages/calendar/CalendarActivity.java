@@ -1,16 +1,28 @@
 package com.example.howard.ruiyipai.pages.calendar;
 
+import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.Window;
 
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
 import com.example.howard.ruiyipai.pages.calendar.adapter.CalendarAdapter;
 import com.example.howard.ruiyipai.pages.calendar.adapter.EventAdapter;
+import com.example.howard.ruiyipai.pages.calendar.adapter.PopupCalendarFragmentAdapter;
+import com.example.howard.ruiyipai.pages.calendar.fragment.CommentsFragment;
 import com.example.howard.ruiyipai.pages.lesson.adapter.SelectLessonsAdapter;
+import com.example.howard.ruiyipai.pages.stastic.adapter.StatisticFragmentAdapter;
 import com.mikepenz.iconics.IconicsDrawable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 
@@ -19,7 +31,7 @@ import butterknife.BindView;
  * Email 158988127@qq.com
  */
 
-public class CalendarActivity extends BaseActivity {
+public class CalendarActivity extends BaseActivity implements CalendarAdapter.CalendarListener {
 
     @BindView(R.id.tb_header)
     Toolbar mToolbar;
@@ -49,7 +61,7 @@ public class CalendarActivity extends BaseActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         calendarRv.setLayoutManager(layoutManager);
 
-        CalendarAdapter adapter = new CalendarAdapter();
+        CalendarAdapter adapter = new CalendarAdapter(this);
         calendarRv.setAdapter(adapter);
     }
 
@@ -59,6 +71,7 @@ public class CalendarActivity extends BaseActivity {
     }
 
     private void initToolBar() {
+
         IconicsDrawable iResource = new IconicsDrawable(this).icon("fon_816").sizeDp(30)
                 .colorRes(R.color.light_blue_deep);
 
@@ -69,6 +82,18 @@ public class CalendarActivity extends BaseActivity {
                 finish();
             }
         });
+
+    }
+
+    @Override
+    public void onClickCalendar(int weekday) {
+        popupCalendarDialog();
+    }
+
+    private void popupCalendarDialog() {
+
+        Intent intent = new Intent(this, CalendarDialogActivity.class);
+        startActivity(intent);
 
     }
 }
