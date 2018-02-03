@@ -15,7 +15,7 @@ import java.util.List;
 
 public class StatisticFragmentAdapter extends FragmentPagerAdapter {
 
-    private String [] title = {"第1题","第2题","第3题","第4题","第5题","第6题","第7题","第8题","第9题","第10题","第11题","第12题","第13题","第14题","第15题"};
+    private String [] title = {"全部", "第1题","第2题","第3题","第4题","第5题","第6题","第7题","第8题","第9题","第10题","第11题","第12题","第13题","第14题","第15题"};
     private List<Fragment> fragmentList;
 
     private Fragment mCurrentFragment;

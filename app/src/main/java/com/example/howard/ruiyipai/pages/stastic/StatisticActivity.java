@@ -17,6 +17,7 @@ import com.example.howard.ruiyipai.common.Utils;
 import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
 import com.example.howard.ruiyipai.pages.lesson.adapter.LessonToolsAdapter;
 import com.example.howard.ruiyipai.pages.stastic.adapter.StatisticFragmentAdapter;
+import com.example.howard.ruiyipai.pages.stastic.fragment.AllFragment;
 import com.example.howard.ruiyipai.pages.stastic.fragment.ObjectFragment;
 import com.example.howard.ruiyipai.pages.stastic.fragment.SubjectFragment;
 import com.mikepenz.iconics.IconicsDrawable;
@@ -64,6 +65,7 @@ public class StatisticActivity extends BaseActivity implements LessonToolsAdapte
 
     private void initFragments() {
 
+        fragments.add(new AllFragment());
         fragments.add(new ObjectFragment());
         fragments.add(new ObjectFragment());
         fragments.add(new SubjectFragment());
