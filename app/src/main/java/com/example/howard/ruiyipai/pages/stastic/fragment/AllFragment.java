@@ -72,6 +72,8 @@ public class AllFragment extends BaseFragment {
     @BindView(R.id.sv_container)
     ScrollView containerSv;
 
+    boolean isShowDetail = false;
+
     @Override
     protected void initPages() {
 
@@ -81,7 +83,6 @@ public class AllFragment extends BaseFragment {
         initRecyclerView(aboveAverageRv);
         initRecyclerView(belowAverageRv);
         initAnswersBarChart();
-        containerSv.smoothScrollTo(0,0);
 
     }
 
@@ -90,6 +91,12 @@ public class AllFragment extends BaseFragment {
         return R.layout.fragment_all;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        mAnswerBarCharts.setFocusable(false);
+        containerSv.smoothScrollTo(0,0);
+    }
 
     private void initRecyclerView(RecyclerView view) {
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 14, LinearLayoutManager.VERTICAL, false) {
@@ -269,7 +276,14 @@ public class AllFragment extends BaseFragment {
         int id = v.getId();
         switch (id) {
             case R.id.iv_show_detail_btn:
-                answerDetail.setVisibility(View.VISIBLE);
+                if (isShowDetail) {
+                    isShowDetail = !isShowDetail;
+                    answerDetail.setVisibility(View.GONE);
+                } else {
+                    isShowDetail = !isShowDetail;
+                    answerDetail.setVisibility(View.VISIBLE);
+                }
+
                 break;
         }
     }
