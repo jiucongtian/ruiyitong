@@ -5,13 +5,41 @@
     android:orientation="vertical">
 
 
-    <TextView
-        style="@style/txt_18_dark"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="12dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="客观题作答表"/>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/txt_18_dark"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="客观题作答表"/>
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/flag_gray"/>
+
+            <ImageView
+                android:layout_marginLeft="18dp"
+                android:layout_width="22dp"
+                android:layout_height="8dp"
+                android:background="@drawable/flag_blue"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
 
     <ScrollView
         android:layout_width="match_parent"
