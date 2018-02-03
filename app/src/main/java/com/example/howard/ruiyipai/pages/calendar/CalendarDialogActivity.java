@@ -73,37 +73,6 @@ public class CalendarDialogActivity extends BaseActivity {
                 TextView title = tab.getCustomView().findViewById(R.id.tv_title);
                 title.setText("实录");
             }
-//            TextView textView = (TextView) tab.getCustomView().findViewById(R.id.tab_text);
-//            textView.setText(titles[i]);//设置tab上的文字
-
-
-            header.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                @Override
-                public void onFocusChange(View v, boolean hasFocus) {
-                    int a = 0;
-                    a = 1;
-                }
-            });
-
-            header.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-                @Override
-                public void onTabSelected(TabLayout.Tab tab) {
-                    int a = 0;
-                    a = 1;
-                }
-
-                @Override
-                public void onTabUnselected(TabLayout.Tab tab) {
-                    int a = 0;
-                    a = 1;
-                }
-
-                @Override
-                public void onTabReselected(TabLayout.Tab tab) {
-
-                }
-            });
-
 
         }
 
