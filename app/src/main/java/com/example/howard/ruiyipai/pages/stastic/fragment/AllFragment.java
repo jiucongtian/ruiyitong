@@ -3,13 +3,16 @@ package com.example.howard.ruiyipai.pages.stastic.fragment;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ProviderInfo;
+import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseFragment;
@@ -29,6 +32,7 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.mikepenz.iconics.IconicsDrawable;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -71,6 +75,12 @@ public class AllFragment extends BaseFragment {
 
     @BindView(R.id.sv_container)
     ScrollView containerSv;
+
+    @BindView(R.id.tv_show_detail)
+    TextView tv_answerDetail;
+
+    @BindView(R.id.iv_show_detail_btn)
+    ImageView DetailBtn;
 
     boolean isShowDetail = false;
 
@@ -276,15 +286,23 @@ public class AllFragment extends BaseFragment {
         int id = v.getId();
         switch (id) {
             case R.id.iv_show_detail_btn:
+                IconicsDrawable tt;
                 if (isShowDetail) {
                     isShowDetail = !isShowDetail;
                     answerDetail.setVisibility(View.GONE);
+                    tv_answerDetail.setText("查看详情");
+                    tt =new IconicsDrawable(getContext()).icon("fon_86f").color(R.color.light_blue_deep);
+                    DetailBtn.setImageDrawable(tt);
                 } else {
                     isShowDetail = !isShowDetail;
                     answerDetail.setVisibility(View.VISIBLE);
+                    tv_answerDetail.setText("收起详情");
+                    tt =new IconicsDrawable(getContext()).icon("fon_86e").color(R.color.light_blue_deep);
+                    DetailBtn.setImageDrawable(tt);
                 }
 
                 break;
         }
     }
+
 }
