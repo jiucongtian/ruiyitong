@@ -119,7 +119,6 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
         classLv.setAdapter(mClassAdapter);
     }
 
-
     @OnClick({R.id.iv_home_menu, R.id.iv_camera, R.id.ll_course, R.id.ll_online, R.id.ll_resource, R.id.ll_work, R.id.bt_yunping, R.id.bt_zuoye, R.id.bt_xiaoyuan, R.id.bt_duofen})
     public void onClick(View v) {
         int id = v.getId();

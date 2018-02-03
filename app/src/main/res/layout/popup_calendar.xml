@@ -19,7 +19,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:src="@color/font_gray"/>
+            android:src="@color/font_gray_2"/>
         <android.support.v4.view.ViewPager
             android:id="@+id/vp_calendar_container"
             android:layout_width="match_parent"

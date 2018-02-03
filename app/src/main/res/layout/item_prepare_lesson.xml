@@ -13,7 +13,7 @@
             android:layout_gravity="center_vertical"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@color/red"/>
+            android:src="@mipmap/word232320"/>
         <TextView
             style="@style/txt_18_dark"
             android:layout_marginLeft="20dp"
@@ -36,7 +36,7 @@
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/font_gray"/>
+        android:background="@color/font_gray_2"/>
 
 
 
