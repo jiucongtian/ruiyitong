@@ -15,6 +15,7 @@ import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
 import com.example.howard.ruiyipai.common.Utils;
 import com.example.howard.ruiyipai.pages.homework.adapter.HomeworkSubjectFragmentAdapter;
+import com.example.howard.ruiyipai.pages.homework.adapter.HomeworkSubjectStudentsAdapter;
 import com.example.howard.ruiyipai.pages.homework.fragment.HomeworkSubjectFragment;
 import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
 import com.example.howard.ruiyipai.pages.lesson.adapter.LessonToolsAdapter;
@@ -47,6 +48,9 @@ public class HomeworkSubjectActivity extends BaseActivity implements LessonTools
     @BindView(R.id.rlv_tools)
     RecyclerView lessonTools;
 
+    @BindView(R.id.rv_students)
+    RecyclerView mStudents;
+
     List<Fragment> fragments = new ArrayList<>();
 
     static final int LINE_HEIGHT_DP = 90;
@@ -57,6 +61,7 @@ public class HomeworkSubjectActivity extends BaseActivity implements LessonTools
         initToolBar();
         initFragments();
         initLessonTools();
+        initStudents();
     }
 
     private void initFragments() {
@@ -74,6 +79,14 @@ public class HomeworkSubjectActivity extends BaseActivity implements LessonTools
         HomeworkSubjectFragmentAdapter adapter = new HomeworkSubjectFragmentAdapter(getSupportFragmentManager(), fragments);
         mMainAreaVp.setAdapter(adapter);
         mHomeworkIndex.setupWithViewPager(mMainAreaVp);
+    }
+
+    private void initStudents() {
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        mStudents.setLayoutManager(layoutManager);
+
+        HomeworkSubjectStudentsAdapter adapter = new HomeworkSubjectStudentsAdapter();
+        mStudents.setAdapter(adapter);
     }
 
     @Override

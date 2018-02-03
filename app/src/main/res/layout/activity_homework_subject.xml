@@ -55,12 +55,30 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_main_area"
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_below="@id/tb_header"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_students"
+            android:layout_width="197dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:src="@color/font_gray_2"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_main_area"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
 
 
 

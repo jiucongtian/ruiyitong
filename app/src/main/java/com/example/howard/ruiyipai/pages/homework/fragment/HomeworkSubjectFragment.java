@@ -17,16 +17,8 @@ import butterknife.BindView;
 
 public class HomeworkSubjectFragment extends BaseFragment {
 
-    @BindView(R.id.rv_students)
-    RecyclerView mStudents;
-
     @Override
     protected void initPages() {
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
-        mStudents.setLayoutManager(layoutManager);
-
-        HomeworkSubjectStudentsAdapter adapter = new HomeworkSubjectStudentsAdapter();
-        mStudents.setAdapter(adapter);
     }
 
     @Override
