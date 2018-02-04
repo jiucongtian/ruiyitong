@@ -525,6 +525,7 @@
 
     <!-- left drawer -->
     <RelativeLayout
+        android:clickable="true"
         android:layout_width="320dp"
         android:layout_height="match_parent"
         android:layout_gravity="left"
