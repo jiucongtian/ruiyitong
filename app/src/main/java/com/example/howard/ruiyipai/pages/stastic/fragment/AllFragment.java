@@ -291,13 +291,13 @@ public class AllFragment extends BaseFragment {
                     isShowDetail = !isShowDetail;
                     answerDetail.setVisibility(View.GONE);
                     tv_answerDetail.setText("查看详情");
-                    tt =new IconicsDrawable(getContext()).icon("fon_86f").color(R.color.light_blue_deep);
+                    tt =new IconicsDrawable(getContext()).icon("fon_86f").colorRes(R.color.light_blue_deep);
                     DetailBtn.setImageDrawable(tt);
                 } else {
                     isShowDetail = !isShowDetail;
                     answerDetail.setVisibility(View.VISIBLE);
                     tv_answerDetail.setText("收起详情");
-                    tt =new IconicsDrawable(getContext()).icon("fon_86e").color(R.color.light_blue_deep);
+                    tt =new IconicsDrawable(getContext()).icon("fon_86e").colorRes(R.color.light_blue_deep);
                     DetailBtn.setImageDrawable(tt);
                 }
 
