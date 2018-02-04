@@ -35,7 +35,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 
-public class MainActivity extends BaseActivity implements ClassAdapter.OnItemClickListener {
+public class MainActivity extends BaseActivity implements ClassAdapter.OnItemClickListener, View.OnTouchListener {
 
     @BindView(R.id.rlv_class)
     RecyclerView classLv;
@@ -117,7 +117,64 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
         mClassAdapter.setOnItemClickListener(this);
 
         classLv.setAdapter(mClassAdapter);
+
+        initBtn();
     }
+
+    private void initBtn() {
+        llwork.setOnTouchListener(this);
+        llonline.setOnTouchListener(this);
+        llresource.setOnTouchListener(this);
+        llcourse.setOnTouchListener(this);
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            if (v.equals(llwork)) {
+                btnClicked(true, llwork, ivWork, "fon_807", tvWorkCN, tvWorkEN, R.mipmap.shadow_blue, R.color.icon_blue);
+            } else if (v.equals(llonline)) {
+                btnClicked(true, llonline, ivOnline, "fon_805", tvOnlineCN, tvOnlineEN, R.mipmap.shadow_green, R.color.icon_green);
+
+            } else if (v.equals(llresource)) {
+                btnClicked(true, llresource, ivResource, "fon_806", tvResourceCN, tvResourceEN, R.mipmap.shadow_gray, R.color.icon_blue_dark);
+            } else if (v.equals(llcourse)) {
+                btnClicked(true, llcourse, ivCourse, "fon_802", tvCourseCN, tvCourseEN, R.mipmap.shadow_yellow, R.color.icon_yellow);
+            }
+        } else if (event.getAction() == MotionEvent.ACTION_UP) {
+            if (v.equals(llwork)) {
+                btnClicked(false, llwork, ivWork, "fon_807", tvWorkCN, tvWorkEN, R.mipmap.shadow_blue, R.color.icon_blue);
+            } else if (v.equals(llonline)) {
+                btnClicked(false, llonline, ivOnline, "fon_805", tvOnlineCN, tvOnlineEN, R.mipmap.shadow_green, R.color.icon_green);
+            } else if (v.equals(llresource)) {
+                btnClicked(false, llresource, ivResource, "fon_806", tvResourceCN, tvResourceEN, R.mipmap.shadow_gray, R.color.icon_blue_dark);
+            } else if (v.equals(llcourse)) {
+                btnClicked(false, llcourse, ivCourse, "fon_802", tvCourseCN, tvCourseEN, R.mipmap.shadow_yellow, R.color.icon_yellow);
+            }
+        }
+
+        return false;
+    }
+
+    private void btnClicked(boolean clicked, View container, ImageView icon, String iconName, TextView text1, TextView text2,
+                            int bgRes, int intColorRes) {
+        IconicsDrawable iconicsDrawable = new IconicsDrawable(this).icon(iconName);
+        if (clicked) {
+            container.setBackgroundResource(bgRes);
+            Utils.setTVStyle(this, text1, R.style.txt_22_white);
+            Utils.setTVStyle(this, text2, R.style.txt_14_white);
+            iconicsDrawable.colorRes(R.color.white);
+        } else {
+            container.setBackgroundResource(R.mipmap.shadow_white);
+            iconicsDrawable.colorRes(intColorRes);
+            Utils.setTVStyle(this, text1, R.style.txt_22_dark);
+            Utils.setTVStyle(this, text2, R.style.txt_14_dark);
+        }
+
+        icon.setImageDrawable(iconicsDrawable);
+    }
+
+
 
     @OnClick({R.id.iv_home_menu, R.id.iv_camera, R.id.ll_course, R.id.ll_online, R.id.ll_resource, R.id.ll_work, R.id.bt_yunping, R.id.bt_zuoye, R.id.bt_xiaoyuan, R.id.bt_duofen})
     public void onClick(View v) {
@@ -128,28 +185,10 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
                 dl.openDrawer(Gravity.LEFT);
                 break;
             case R.id.ll_work:
-                llwork.setBackgroundResource(R.mipmap.shadow_blue);
-                Utils.setTVStyle(this, tvWorkCN, R.style.txt_22_white);
-                Utils.setTVStyle(this, tvWorkEN, R.style.txt_14_white);
-                IconicsDrawable tt = new IconicsDrawable(this).icon("fon_807")
-                        .color(Color.WHITE);
-                ivWork.setImageDrawable(tt);
                 Intent intent = new Intent(this, CheckHomeworkActivity.class);
                 startActivity(intent);
-//                llwork.setBackgroundResource(R.mipmap.shadow_white);
-//                Utils.setTVStyle(this, tvWorkCN, R.style.txt_22_dark);
-//                Utils.setTVStyle(this, tvWorkEN, R.style.txt_14_dark);
-//                tt = new IconicsDrawable(this).icon("fon_807")
-//                        .color(Color.BLUE);
-//                ivWork.setImageDrawable(tt);
                 break;
             case R.id.ll_online:
-                llonline.setBackgroundResource(R.mipmap.shadow_green);
-                Utils.setTVStyle(this, tvOnlineCN, R.style.txt_22_white);
-                Utils.setTVStyle(this, tvOnlineEN, R.style.txt_14_white);
-                IconicsDrawable iOnline = new IconicsDrawable(this).icon("fon_805")
-                        .color(Color.WHITE);
-                ivOnline.setImageDrawable(iOnline);
                 break;
             case R.id.ll_resource:
 
@@ -158,25 +197,10 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
 //                this.startActivity(testIntent);
                 Intent resourceIntent = new Intent(this, ResourceListActivity.class);
                 startActivity(resourceIntent);
-
-                llresource.setBackgroundResource(R.mipmap.shadow_gray);
-                Utils.setTVStyle(this, tvResourceCN, R.style.txt_22_white);
-                Utils.setTVStyle(this, tvResourceEN, R.style.txt_14_white);
-                IconicsDrawable iResource = new IconicsDrawable(this).icon("fon_806")
-                        .color(Color.WHITE);
-                ivResource.setImageDrawable(iResource);
                 break;
             case R.id.ll_course:
                 Intent calendarIntent = new Intent(this, CalendarActivity.class);
                 startActivity(calendarIntent);
-
-
-                llcourse.setBackgroundResource(R.mipmap.shadow_yellow);
-                Utils.setTVStyle(this, tvCourseCN, R.style.txt_22_white);
-                Utils.setTVStyle(this, tvCourseEN, R.style.txt_14_white);
-                IconicsDrawable iCourse = new IconicsDrawable(this).icon("fon_802")
-                        .color(Color.WHITE);
-                ivCourse.setImageDrawable(iCourse);
                 break;
             case R.id.bt_yunping:
                 btYunping.setBackground(getDrawable(R.drawable.home_btn1_click));
@@ -223,4 +247,6 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
         Intent intent = new Intent(this, LessonActivity.class);
         this.startActivity(intent);
     }
+
+
 }
