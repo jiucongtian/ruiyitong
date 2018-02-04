@@ -79,6 +79,9 @@
     <color name="calendar_red">#ff7681</color>
     <color name="calendar_yellow">#ffca3d</color>
 
+    <color name="background_gray">#f9f9f9</color>
+    <color name="font_bg_gray">#808183</color>
+
     <color name="transparent">#00000000</color>
 
 </resources>

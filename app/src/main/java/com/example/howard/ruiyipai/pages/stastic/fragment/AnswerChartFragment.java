@@ -71,6 +71,9 @@ public class AnswerChartFragment extends BaseFragment {
     BarChart answerBarChart;
 
     FragmentManager fm;
+
+
+
     public AnswerChartFragment(FragmentManager fragmentManager ) {
         fm = fragmentManager;
     }
