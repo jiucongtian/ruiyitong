@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="450dp"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:background="@mipmap/shadow_white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@color/red"/>
+            <TextView
+                android:layout_marginTop="13dp"
+                android:layout_gravity="center_horizontal"
+                style="@style/txt_16_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="广播静态照片"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@color/red"/>
+            <TextView
+                android:layout_marginTop="13dp"
+                android:layout_gravity="center_horizontal"
+                style="@style/txt_16_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="广播静态照片"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@color/red"/>
+            <TextView
+                android:layout_marginTop="13dp"
+                android:layout_gravity="center_horizontal"
+                style="@style/txt_16_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="广播静态照片"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        app:ico_color="@color/white"
+        app:ico_icon="fon_820"/>
+
+</LinearLayout>

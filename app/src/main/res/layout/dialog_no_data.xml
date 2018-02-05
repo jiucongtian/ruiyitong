@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="450dp"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:background="@mipmap/shadow_white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                android:layout_marginLeft="24dp"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@color/red"/>
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="center_vertical"
+                style="@style/txt_24_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发现新版本"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@color/font_gray"/>
+        <RelativeLayout
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="26dp"
+                style="@style/txt_18_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="增加功能增加功能\n增加功能增加功能增\n加功能增加功能增加功能增加功能\n增加功能增加功能增\n"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        app:ico_color="@color/white"
+        app:ico_icon="fon_820"/>
+
+</LinearLayout>

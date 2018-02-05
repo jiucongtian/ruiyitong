@@ -1,7 +1,6 @@
 package com.example.howard.ruiyipai.pages.home;
 
-import android.graphics.Color;
-import android.os.Build;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
@@ -14,13 +13,14 @@ import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
 
 import android.support.v7.widget.RecyclerView;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.howard.ruiyipai.common.Utils;
-import com.example.howard.ruiyipai.pages.TestActivity;
 import com.example.howard.ruiyipai.pages.calendar.CalendarActivity;
 import com.example.howard.ruiyipai.pages.homework.CheckHomeworkActivity;
 import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
@@ -206,10 +206,12 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
                 startActivity(calendarIntent);
                 break;
             case R.id.bt_yunping:
+                showNoDataDialog();
                 btYunping.setBackground(getDrawable(R.drawable.home_btn1_click));
                 Utils.setBTStyle(this, btYunping, R.style.txt_22_white);
                 break;
             case R.id.bt_zuoye:
+                showSwitchDialog();
                 btZuoye.setBackground(getDrawable(R.drawable.home_btn3_click));
                 Utils.setBTStyle(this, btZuoye, R.style.txt_22_white);
                 break;
@@ -247,6 +249,25 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
         AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
         dlg.show();
         dlg.getWindow().setContentView(R.layout.dialog_check_version);
+    }
+
+    private void showNoDataDialog() {
+        AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
+        dlg.show();
+        dlg.getWindow().setContentView(R.layout.dialog_no_data);
+    }
+
+//    private void showCreateFolderDialog() {
+//        AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
+//        dlg.show();
+//        dlg.getWindow().setContentView(R.layout.dialog_create_folder);
+//
+//    }
+
+    private void showSwitchDialog() {
+        AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
+        dlg.show();
+        dlg.getWindow().setContentView(R.layout.dialog_switch);
     }
 
     @Override

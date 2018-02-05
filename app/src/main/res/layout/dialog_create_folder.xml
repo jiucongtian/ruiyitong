@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="450dp"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/shadow_white">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="24dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@color/red"/>
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"
+            style="@style/txt_24_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发现新版本"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/font_gray"/>
+    <RelativeLayout
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_version"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="17dp"
+
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/et_text"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/font_gray_1"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/txt_18_dark"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="以后再说"/>
+        <TextView
+            style="@style/txt_18_white"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/flag_blue"
+            android:text="立即安装"/>
+    </LinearLayout>
+
+</LinearLayout>
