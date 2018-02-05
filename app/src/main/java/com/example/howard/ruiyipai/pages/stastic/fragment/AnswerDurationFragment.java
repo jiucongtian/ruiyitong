@@ -1,5 +1,6 @@
 package com.example.howard.ruiyipai.pages.stastic.fragment;
 
+import android.annotation.SuppressLint;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
@@ -35,6 +36,7 @@ import butterknife.BindView;
  * Email 158988127@qq.com
  */
 
+@SuppressLint("ValidFragment")
 public class AnswerDurationFragment extends BaseFragment {
 
     static final int LINE_HEIGHT_DP = 50;

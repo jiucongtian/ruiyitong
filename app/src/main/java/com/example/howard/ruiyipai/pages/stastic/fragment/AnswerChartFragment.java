@@ -1,5 +1,6 @@
 package com.example.howard.ruiyipai.pages.stastic.fragment;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.support.v4.app.FragmentManager;
@@ -41,6 +42,7 @@ import butterknife.BindView;
  * Email 158988127@qq.com
  */
 
+@SuppressLint("ValidFragment")
 public class AnswerChartFragment extends BaseFragment {
 
 
@@ -73,6 +75,7 @@ public class AnswerChartFragment extends BaseFragment {
     FragmentManager fm;
 
 
+    public AnswerChartFragment() {}
 
     public AnswerChartFragment(FragmentManager fragmentManager ) {
         fm = fragmentManager;

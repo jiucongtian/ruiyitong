@@ -668,7 +668,7 @@
                     app:ico_icon="fon_80e"/>
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/tv_check_version"
                     style="@style/txt_20_dark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -176,7 +177,9 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
 
 
 
-    @OnClick({R.id.iv_home_menu, R.id.iv_camera, R.id.ll_course, R.id.ll_online, R.id.ll_resource, R.id.ll_work, R.id.bt_yunping, R.id.bt_zuoye, R.id.bt_xiaoyuan, R.id.bt_duofen})
+    @OnClick({R.id.iv_home_menu, R.id.iv_camera, R.id.ll_course, R.id.ll_online, R.id.ll_resource, 
+            R.id.ll_work, R.id.bt_yunping, R.id.bt_zuoye, R.id.bt_xiaoyuan, R.id.bt_duofen, 
+            R.id.tv_check_version})
     public void onClick(View v) {
         int id = v.getId();
 
@@ -233,7 +236,17 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
                 }
 
                 break;
+            case R.id.tv_check_version:
+                showVersionDialog();
+                break;
         }
+    }
+
+    private void showVersionDialog() {
+
+        AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
+        dlg.show();
+        dlg.getWindow().setContentView(R.layout.dialog_check_version);
     }
 
     @Override

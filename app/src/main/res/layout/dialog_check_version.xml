@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="450dp"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/shadow_white">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="24dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@color/red"/>
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"
+            style="@style/txt_24_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发现新版本"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/font_gray"/>
+    <RelativeLayout
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_version"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="17dp"
+
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/txt_18_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最新版本:"/>
+            <TextView
+                style="@style/txt_18_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="V1010"/>
+            <TextView
+                android:layout_marginLeft="10dp"
+                style="@style/txt_18_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新版本大小:"/>
+            <TextView
+                style="@style/txt_18_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20.1M"/>
+        </LinearLayout>
+
+        <TextView
+
+            android:layout_below="@id/ll_version"
+            style="@style/txt_18_dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="增加功能增加功能\n增加功能增加功能增\n加功能增加功能增加功能增加功能\n增加功能增加功能增\n"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/txt_18_dark"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="以后再说"/>
+        <TextView
+            style="@style/txt_18_white"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/flag_blue"
+            android:text="立即安装"/>
+    </LinearLayout>
+
+</LinearLayout>

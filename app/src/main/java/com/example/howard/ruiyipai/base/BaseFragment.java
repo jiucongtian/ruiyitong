@@ -17,6 +17,8 @@ import butterknife.ButterKnife;
 
 public abstract class BaseFragment extends Fragment {
 
+    public BaseFragment() {}
+
 
     @Nullable
     @Override
