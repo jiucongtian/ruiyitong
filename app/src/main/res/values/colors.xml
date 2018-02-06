@@ -44,6 +44,9 @@
 
     <color name="color_213636">#213636</color>
     <color name="color_bdfbfa">#bdfbfa</color>
+    <color name="color_dcdcdc">#dcdcdc</color>
+    <color name="color_efefef">#efefef</color>
+    <color name="color_d6d6d6">#d6d6d6</color>
 
 
     <color name="line_chart_fill_red">#ffd4d4</color>

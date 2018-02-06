@@ -29,6 +29,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.howard.ruiyipai.pages.resource.ResourceListActivity;
+import com.example.howard.ruiyipai.pages.setting.SettingActivity;
 import com.example.howard.ruiyipai.recyclerAdapter.ClassAdapter;
 import com.mikepenz.iconics.IconicsDrawable;
 
@@ -179,7 +180,7 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
 
     @OnClick({R.id.iv_home_menu, R.id.iv_camera, R.id.ll_course, R.id.ll_online, R.id.ll_resource, 
             R.id.ll_work, R.id.bt_yunping, R.id.bt_zuoye, R.id.bt_xiaoyuan, R.id.bt_duofen, 
-            R.id.tv_check_version})
+            R.id.tv_check_version, R.id.ll_settings})
     public void onClick(View v) {
         int id = v.getId();
 
@@ -240,6 +241,10 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
                 break;
             case R.id.tv_check_version:
                 showVersionDialog();
+                break;
+            case R.id.ll_settings:
+                Intent settingIntent = new Intent(this, SettingActivity.class);
+                startActivity(settingIntent);
                 break;
         }
     }
