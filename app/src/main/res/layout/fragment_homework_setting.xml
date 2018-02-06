@@ -26,4 +26,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="设置批改作业时红笔的默认粗细程度，值越大越粗，越小越细"/>
+
+    <LinearLayout
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
 </LinearLayout>
