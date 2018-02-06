@@ -50,6 +50,7 @@
                     android:text="（设置基本信息）"/>
             </LinearLayout>
             <LinearLayout
+                android:background="@drawable/setting_btn_bg"
                 android:id="@+id/ll_login_setting"
                 android:layout_width="match_parent"
                 android:layout_height="80dp">
@@ -68,6 +69,8 @@
                     android:text="登录设置"/>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/ll_homework_setting"
+                android:background="@drawable/setting_btn_bg"
                 android:layout_width="match_parent"
                 android:layout_height="80dp">
                 <ImageView
@@ -85,6 +88,7 @@
                     android:text="作业批改设置"/>
             </LinearLayout>
             <LinearLayout
+                android:background="@drawable/setting_btn_bg"
                 android:layout_width="match_parent"
                 android:layout_height="80dp">
                 <ImageView
@@ -127,6 +131,7 @@
                     android:text="（设置基本信息）"/>
             </LinearLayout>
             <LinearLayout
+                android:background="@drawable/setting_btn_bg"
                 android:layout_width="match_parent"
                 android:layout_height="80dp">
                 <ImageView
@@ -144,6 +149,7 @@
                     android:text="录微课设置"/>
             </LinearLayout>
             <LinearLayout
+                android:background="@drawable/setting_btn_bg"
                 android:layout_width="match_parent"
                 android:layout_height="80dp">
                 <ImageView
@@ -161,6 +167,7 @@
                     android:text="录微课设置"/>
             </LinearLayout>
             <LinearLayout
+                android:background="@drawable/setting_btn_bg"
                 android:layout_width="match_parent"
                 android:layout_height="80dp">
                 <ImageView

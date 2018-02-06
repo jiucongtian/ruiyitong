@@ -3,12 +3,15 @@ package com.example.howard.ruiyipai.pages.setting;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
+import com.example.howard.ruiyipai.pages.setting.fragment.HomeworkSettingFragment;
 import com.example.howard.ruiyipai.pages.setting.fragment.LoginSettingFragment;
 import com.mikepenz.iconics.IconicsDrawable;
 
@@ -30,14 +33,21 @@ public class SettingActivity extends BaseActivity {
 
 
     LoginSettingFragment loginSetting;
+    HomeworkSettingFragment homeworkSetting;
 
     Fragment currentFragment = null;
 
+    @BindView(R.id.ll_login_setting)
+    View mLogin;
+
+    @BindView(R.id.ll_homework_setting)
+    View mHomework;
 
     @Override
     public void initPages() {
         initToolBar();
         showLoginSetting();
+        clickBtn(mLogin);
     }
 
     @Override
@@ -46,16 +56,26 @@ public class SettingActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.ll_login_setting})
+    @OnClick({R.id.ll_login_setting, R.id.ll_homework_setting})
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
             case R.id.ll_login_setting:
                 showLoginSetting();
+                clickBtn(mLogin);
+                break;
+            case R.id.ll_homework_setting:
+                showHomeworkSetting();
+                clickBtn(mHomework);
                 break;
         }
     }
 
+    private void clickBtn(View v) {
+        mLogin.setSelected(false);
+        mHomework.setSelected(false);
+        v.setSelected(true);
+    }
 
 
     private void initToolBar() {
@@ -78,6 +98,13 @@ public class SettingActivity extends BaseActivity {
             loginSetting = new LoginSettingFragment();
         }
         changeFragment(loginSetting);
+    }
+
+    private void showHomeworkSetting() {
+        if (homeworkSetting == null) {
+            homeworkSetting = new HomeworkSettingFragment();
+        }
+        changeFragment(homeworkSetting);
     }
 
     private void changeFragment(Fragment toFragment) {
