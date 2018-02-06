@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="450dp"
     android:layout_height="wrap_content"
@@ -15,7 +16,8 @@
             android:layout_marginLeft="24dp"
             android:layout_width="26dp"
             android:layout_height="26dp"
-            android:src="@color/red"/>
+            app:ico_color="@color/res_folder"
+            app:ico_icon="fon_871"/>
         <TextView
             android:layout_marginLeft="16dp"
             android:layout_gravity="center_vertical"

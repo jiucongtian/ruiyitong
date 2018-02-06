@@ -165,4 +165,9 @@ public class HomeworkSubjectActivity extends BaseActivity implements LessonTools
     public void switchThumbnail() {
 
     }
+
+    @Override
+    public void switchBroadcast() {
+
+    }
 }

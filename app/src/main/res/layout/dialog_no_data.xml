@@ -22,14 +22,15 @@
                 android:layout_marginLeft="24dp"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:src="@color/red"/>
+                app:ico_color="@color/bar_chart_red"
+                app:ico_icon="fon_872"/>
             <TextView
                 android:layout_marginLeft="16dp"
                 android:layout_gravity="center_vertical"
                 style="@style/txt_24_dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="发现新版本"/>
+                android:text="没有数据"/>
         </LinearLayout>
         <ImageView
             android:layout_width="match_parent"
@@ -47,7 +48,8 @@
                 style="@style/txt_18_dark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="增加功能增加功能\n增加功能增加功能增\n加功能增加功能增加功能增加功能\n增加功能增加功能增\n"/>
+                android:layout_marginBottom="26dp"
+                android:text="当前系统中没有发现今天的课！"/>
 
         </RelativeLayout>
     </LinearLayout>

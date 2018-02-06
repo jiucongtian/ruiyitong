@@ -175,4 +175,8 @@ public class StatisticActivity extends BaseActivity implements LessonToolsAdapte
     public void switchThumbnail() {
 
     }
+    @Override
+    public void switchBroadcast() {
+
+    }
 }

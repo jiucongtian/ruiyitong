@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="450dp"
     android:layout_height="wrap_content"
@@ -15,14 +16,15 @@
             android:layout_marginLeft="24dp"
             android:layout_width="26dp"
             android:layout_height="26dp"
-            android:src="@color/red"/>
+            app:ico_color="@color/res_folder"
+            app:ico_icon="fon_870"/>
         <TextView
             android:layout_marginLeft="16dp"
             android:layout_gravity="center_vertical"
             style="@style/txt_24_dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="发现新版本"/>
+            android:text="新建目录"/>
     </LinearLayout>
     <ImageView
         android:layout_width="match_parent"
@@ -62,7 +64,7 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:text="以后再说"/>
+            android:text="取消"/>
         <TextView
             style="@style/txt_18_white"
             android:gravity="center"
@@ -70,7 +72,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="@drawable/flag_blue"
-            android:text="立即安装"/>
+            android:text="确定"/>
     </LinearLayout>
 
 </LinearLayout>

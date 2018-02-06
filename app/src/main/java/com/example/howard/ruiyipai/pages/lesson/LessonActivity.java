@@ -449,6 +449,13 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         thumbnail = !thumbnail;
         updatethumbnail();
     }
+    @Override
+    public void switchBroadcast() {
+        AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
+        dlg.show();
+        dlg.getWindow().setContentView(R.layout.dialog_switch);
+    }
+
 
     private void updatethumbnail(){
         if(thumbnail)
