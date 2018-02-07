@@ -27,16 +27,114 @@
         android:layout_height="wrap_content"
         android:text="设置批改作业时红笔的默认粗细程度，值越大越粗，越小越细"/>
 
+    <ImageView
+        android:layout_marginTop="54dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@color/red"/>
+
+    <TextView
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center_horizontal"
+        style="@style/txt_30_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6"/>
+
     <LinearLayout
-        android:layout_marginLeft="36dp"
-        android:layout_marginRight="36dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <SeekBar
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
             android:id="@+id/seekBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:progressDrawable="@drawable/seekbar_drawable"
+            android:minHeight="4dp"
+            android:maxHeight="4dp"
+
+            />
+        <LinearLayout
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/txt_18_dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1"/>
+            <TextView
+                style="@style/txt_18_dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2"/>
+            <TextView
+                style="@style/txt_18_dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3"/>
+            <TextView
+                style="@style/txt_18_dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="4"/>
+            <TextView
+                style="@style/txt_18_dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="5"/>
+            <TextView
+                style="@style/txt_18_dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="6"/>
+            <TextView
+                style="@style/txt_18_dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="7"/>
+            <TextView
+                style="@style/txt_18_dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="8"/>
+            <TextView
+                style="@style/txt_18_dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="9"/>
+            <TextView
+                style="@style/txt_18_dark"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="10"/>
+        </LinearLayout>
 
     </LinearLayout>
 
