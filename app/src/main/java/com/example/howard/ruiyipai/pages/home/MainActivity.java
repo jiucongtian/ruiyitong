@@ -217,6 +217,7 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
                 Utils.setBTStyle(this, btZuoye, R.style.txt_22_white);
                 break;
             case R.id.bt_xiaoyuan:
+                showCreateFolderDialog();
                 btXiaoyuan.setBackground(getDrawable(R.drawable.home_btn2_click));
                 Utils.setBTStyle(this, btXiaoyuan, R.style.txt_22_white);
                 break;
@@ -262,12 +263,19 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
         dlg.getWindow().setContentView(R.layout.dialog_no_data);
     }
 
-//    private void showCreateFolderDialog() {
-//        AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
-//        dlg.show();
-//        dlg.getWindow().setContentView(R.layout.dialog_create_folder);
-//
-//    }
+    private void showCreateFolderDialog() {
+        AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
+        dlg.show();
+        dlg.getWindow().setContentView(R.layout.dialog_create_folder);
+
+
+
+
+        dlg.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
+        dlg.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE |
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
+    }
 
     private void showSwitchDialog() {
         AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
