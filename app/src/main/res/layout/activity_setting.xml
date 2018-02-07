@@ -131,6 +131,7 @@
                     android:text="（设置基本信息）"/>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/ll_tools_setting"
                 android:background="@drawable/setting_btn_bg"
                 android:layout_width="match_parent"
                 android:layout_height="80dp">
@@ -146,7 +147,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="录微课设置"/>
+                    android:text="工具栏图标设置"/>
             </LinearLayout>
             <LinearLayout
                 android:background="@drawable/setting_btn_bg"

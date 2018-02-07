@@ -13,6 +13,7 @@ import com.example.howard.ruiyipai.R;
 import com.example.howard.ruiyipai.base.BaseActivity;
 import com.example.howard.ruiyipai.pages.setting.fragment.HomeworkSettingFragment;
 import com.example.howard.ruiyipai.pages.setting.fragment.LoginSettingFragment;
+import com.example.howard.ruiyipai.pages.setting.fragment.ToolsSettingFragment;
 import com.mikepenz.iconics.IconicsDrawable;
 
 import butterknife.BindView;
@@ -34,6 +35,7 @@ public class SettingActivity extends BaseActivity {
 
     LoginSettingFragment loginSetting;
     HomeworkSettingFragment homeworkSetting;
+    ToolsSettingFragment toolsSetting;
 
     Fragment currentFragment = null;
 
@@ -42,6 +44,9 @@ public class SettingActivity extends BaseActivity {
 
     @BindView(R.id.ll_homework_setting)
     View mHomework;
+
+    @BindView(R.id.ll_tools_setting)
+    View mTools;
 
     @Override
     public void initPages() {
@@ -56,7 +61,7 @@ public class SettingActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.ll_login_setting, R.id.ll_homework_setting})
+    @OnClick({R.id.ll_login_setting, R.id.ll_homework_setting, R.id.ll_tools_setting})
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
@@ -68,12 +73,17 @@ public class SettingActivity extends BaseActivity {
                 showHomeworkSetting();
                 clickBtn(mHomework);
                 break;
+            case R.id.ll_tools_setting:
+                showToolsSetting();
+                clickBtn(mTools);
+                break;
         }
     }
 
     private void clickBtn(View v) {
         mLogin.setSelected(false);
         mHomework.setSelected(false);
+        mTools.setSelected(false);
         v.setSelected(true);
     }
 
@@ -105,6 +115,13 @@ public class SettingActivity extends BaseActivity {
             homeworkSetting = new HomeworkSettingFragment();
         }
         changeFragment(homeworkSetting);
+    }
+
+    private void showToolsSetting() {
+        if (toolsSetting == null) {
+            toolsSetting = new ToolsSettingFragment();
+        }
+        changeFragment(toolsSetting);
     }
 
     private void changeFragment(Fragment toFragment) {
