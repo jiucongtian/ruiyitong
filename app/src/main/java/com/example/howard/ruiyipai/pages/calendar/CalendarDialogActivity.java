@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.howard.ruiyipai.R;
-import com.example.howard.ruiyipai.base.BaseActivity;
+import com.example.baselibrary.base.BaseActivity;
 import com.example.howard.ruiyipai.pages.calendar.adapter.PopupCalendarFragmentAdapter;
 import com.example.howard.ruiyipai.pages.calendar.fragment.CommentsFragment;
 import com.example.howard.ruiyipai.pages.calendar.fragment.PrepareLessonFragment;

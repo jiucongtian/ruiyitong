@@ -9,8 +9,8 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.example.baselibrary.base.BaseActivity;
 import com.example.howard.ruiyipai.R;
-import com.example.howard.ruiyipai.base.BaseActivity;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.WindowManager;

@@ -4,7 +4,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.howard.ruiyipai.R;
-import com.example.howard.ruiyipai.base.BaseFragment;
+import com.example.baselibrary.base.BaseFragment;
 import com.example.howard.ruiyipai.pages.lesson.adapter.ResourceListAdapter;
 import com.example.howard.ruiyipai.pages.lesson.adapter.SplideListMainAdapter;
 

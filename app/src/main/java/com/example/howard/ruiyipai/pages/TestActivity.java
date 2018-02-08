@@ -3,7 +3,7 @@ package com.example.howard.ruiyipai.pages;
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import com.example.howard.ruiyipai.R;
-import com.example.howard.ruiyipai.base.BaseActivity;
+import com.example.baselibrary.base.BaseActivity;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;

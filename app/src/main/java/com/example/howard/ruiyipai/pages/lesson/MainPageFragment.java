@@ -1,7 +1,7 @@
 package com.example.howard.ruiyipai.pages.lesson;
 
 import com.example.howard.ruiyipai.R;
-import com.example.howard.ruiyipai.base.BaseFragment;
+import com.example.baselibrary.base.BaseFragment;
 
 /**
  * Created by howard on 2018/1/18.

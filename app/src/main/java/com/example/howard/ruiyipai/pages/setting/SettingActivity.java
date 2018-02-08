@@ -10,7 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.example.howard.ruiyipai.R;
-import com.example.howard.ruiyipai.base.BaseActivity;
+import com.example.baselibrary.base.BaseActivity;
 import com.example.howard.ruiyipai.pages.setting.fragment.HomeworkSettingFragment;
 import com.example.howard.ruiyipai.pages.setting.fragment.LoginSettingFragment;
 import com.example.howard.ruiyipai.pages.setting.fragment.ToolsSettingFragment;

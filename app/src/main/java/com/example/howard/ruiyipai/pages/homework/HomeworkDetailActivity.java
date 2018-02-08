@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.howard.ruiyipai.R;
-import com.example.howard.ruiyipai.base.BaseActivity;
+import com.example.baselibrary.base.BaseActivity;
 import com.example.howard.ruiyipai.pages.homework.adapter.CheckHomeworkClassListAdapter;
 import com.example.howard.ruiyipai.pages.homework.adapter.HomeworkStudentsAdapter;
 import com.github.mikephil.charting.animation.Easing;

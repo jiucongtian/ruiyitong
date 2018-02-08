@@ -3,8 +3,9 @@ package com.example.howard.ruiyipai.pages.homework.fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.baselibrary.base.BaseFragment;
 import com.example.howard.ruiyipai.R;
-import com.example.howard.ruiyipai.base.BaseFragment;
+//import com.example.baselibrary.base.BaseFragment;
 import com.example.howard.ruiyipai.pages.homework.adapter.CheckHomeworkClassListAdapter;
 import com.example.howard.ruiyipai.pages.homework.adapter.HomeworkSubjectStudentsAdapter;
 
