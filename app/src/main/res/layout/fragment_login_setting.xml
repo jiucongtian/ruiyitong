@@ -40,6 +40,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="36dp"
+            android:theme="@style/switch_setting"
             android:shadowColor="@color/answer_green" />
         <ImageView
             android:layout_marginLeft="36dp"
@@ -76,6 +77,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="36dp"
+            android:theme="@style/switch_setting"
             android:shadowColor="@color/answer_green" />
         <ImageView
             android:layout_marginLeft="36dp"
