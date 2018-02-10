@@ -225,4 +225,19 @@
         <!--<item name="android:textSize">22sp</item>-->
         <!--<item name="android:textColor">@color/light_pink</item>-->
     <!--</style>-->
+    <style name="switch_setting" parent="Theme.AppCompat.Light">
+        <!-- colorPrimary is used for the default action bar background
+            用于默认操作栏的背景-->
+        <!--<item name="colorPrimary">@color/font_gray_3</item>-->
+
+        <!-- colorPrimaryDark is used for the status bar 主要用于状态栏-->
+        <!--<item name="colorPrimaryDark">@color/red</item>-->
+
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets 用于色彩控制器的默认值，用来给小部件着色-->
+        <item name="colorAccent">@color/light_blue_deep</item>
+
+        <!-- You can also set colorControlNormal, colorControlActivated
+             colorControlHighlight, and colorSwitchThumbNormal. -->
+    </style>
 </resources>
