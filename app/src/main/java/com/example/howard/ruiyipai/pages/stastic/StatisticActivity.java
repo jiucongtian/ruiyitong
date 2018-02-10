@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 
 import com.example.howard.ruiyipai.R;
 import com.example.baselibrary.base.BaseActivity;
-import com.example.howard.ruiyipai.common.Utils;
+import com.example.baselibrary.common.Utils;
 import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
 import com.example.howard.ruiyipai.pages.lesson.adapter.LessonToolsAdapter;
 import com.example.howard.ruiyipai.pages.stastic.adapter.StatisticFragmentAdapter;

@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.example.howard.ruiyipai.R;
 import com.example.baselibrary.base.BaseActivity;
-import com.example.howard.ruiyipai.common.Utils;
+import com.example.baselibrary.common.Utils;
 import com.example.howard.ruiyipai.pages.homework.adapter.CheckHomeworkClassListAdapter;
 import com.example.howard.ruiyipai.pages.homework.adapter.HomeworkAdapter;
 import com.example.howard.ruiyipai.pages.homework.adapter.HomeworkSubjectStudentsAdapter;

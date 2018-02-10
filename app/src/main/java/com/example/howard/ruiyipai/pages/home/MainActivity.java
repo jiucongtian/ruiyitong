@@ -20,7 +20,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.howard.ruiyipai.common.Utils;
+//import com.example.baselibrary.common.Utils;
+import com.example.baselibrary.common.Utils;
 import com.example.howard.ruiyipai.pages.calendar.CalendarActivity;
 import com.example.howard.ruiyipai.pages.homework.CheckHomeworkActivity;
 import com.example.howard.ruiyipai.pages.lesson.LessonActivity;
@@ -178,7 +179,7 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
 
 
 
-    @OnClick({R.id.iv_home_menu, R.id.iv_camera, R.id.ll_course, R.id.ll_online, R.id.ll_resource, 
+    @OnClick({R.id.iv_home_menu, /*R.id.iv_camera, */R.id.ll_course, R.id.ll_online, R.id.ll_resource,
             R.id.ll_work, R.id.bt_yunping, R.id.bt_zuoye, R.id.bt_xiaoyuan, R.id.bt_duofen, 
             R.id.tv_check_version, R.id.ll_settings})
     public void onClick(View v) {
@@ -227,17 +228,17 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
                 break;
             case R.id.iv_camera:
 
-                if (openStatus) {
-                    Animation anim = AnimationUtils.loadAnimation(this, R.anim.camera_reverse);
-                    anim.setFillAfter(true);
-                    popLayout.startAnimation(anim);
-                    openStatus = false;
-                } else {
-                    Animation anim = AnimationUtils.loadAnimation(this, R.anim.camera);
-                    anim.setFillAfter(true);
-                    popLayout.startAnimation(anim);
-                    openStatus = true;
-                }
+//                if (openStatus) {
+//                    Animation anim = AnimationUtils.loadAnimation(this, R.anim.camera_reverse);
+//                    anim.setFillAfter(true);
+//                    popLayout.startAnimation(anim);
+//                    openStatus = false;
+//                } else {
+//                    Animation anim = AnimationUtils.loadAnimation(this, R.anim.camera);
+//                    anim.setFillAfter(true);
+//                    popLayout.startAnimation(anim);
+//                    openStatus = true;
+//                }
 
                 break;
             case R.id.tv_check_version:

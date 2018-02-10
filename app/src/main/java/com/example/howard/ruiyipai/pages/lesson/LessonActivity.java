@@ -25,7 +25,7 @@ import android.widget.TextView;
 
 import com.example.howard.ruiyipai.R;
 import com.example.baselibrary.base.BaseActivity;
-import com.example.howard.ruiyipai.common.Utils;
+import com.example.baselibrary.common.Utils;
 import com.example.howard.ruiyipai.pages.lesson.adapter.FragmentAdapter;
 import com.example.howard.ruiyipai.pages.lesson.adapter.LessonThumbnailAdapter;
 import com.example.howard.ruiyipai.pages.lesson.adapter.LessonToolsAdapter;

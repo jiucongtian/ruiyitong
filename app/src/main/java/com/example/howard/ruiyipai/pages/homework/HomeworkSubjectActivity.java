@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 
 import com.example.howard.ruiyipai.R;
 import com.example.baselibrary.base.BaseActivity;
-import com.example.howard.ruiyipai.common.Utils;
+import com.example.baselibrary.common.Utils;
 import com.example.howard.ruiyipai.pages.homework.adapter.HomeworkSubjectFragmentAdapter;
 import com.example.howard.ruiyipai.pages.homework.adapter.HomeworkSubjectStudentsAdapter;
 import com.example.howard.ruiyipai.pages.homework.fragment.HomeworkSubjectFragment;

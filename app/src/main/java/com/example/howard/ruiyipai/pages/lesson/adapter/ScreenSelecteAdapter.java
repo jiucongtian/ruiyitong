@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.howard.ruiyipai.R;
-import com.example.howard.ruiyipai.common.Utils;
+import com.example.baselibrary.common.Utils;
 
 import java.util.List;
 

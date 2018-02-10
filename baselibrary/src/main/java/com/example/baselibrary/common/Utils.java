@@ -1,4 +1,4 @@
-package com.example.howard.ruiyipai.common;
+package com.example.baselibrary.common;
 
 import android.content.Context;
 import android.os.Build;

@@ -2,7 +2,8 @@ package com.example.howard.ruiyipai;
 
 import android.app.Application;
 
-import com.example.howard.ruiyipai.common.CustomFont;
+//import com.example.howard.ruiyipai.common.CustomFont;
+import com.example.baselibrary.common.CustomFont;
 import com.mikepenz.iconics.Iconics;
 
 /**

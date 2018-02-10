@@ -18,7 +18,7 @@ import android.view.ViewGroup;
 
 import com.example.howard.ruiyipai.R;
 import com.example.baselibrary.base.BaseActivity;
-import com.example.howard.ruiyipai.common.Utils;
+import com.example.baselibrary.common.Utils;
 import com.example.howard.ruiyipai.pages.questions.bean.StudentSelectionBean;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.weigan.loopview.LoopView;
