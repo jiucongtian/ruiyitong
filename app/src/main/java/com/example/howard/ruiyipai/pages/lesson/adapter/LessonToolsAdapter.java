@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -217,7 +218,23 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
         }
 
         // 绑定点击事件
-        View itemView = ((ViewGroup) holder.itemView).getChildAt(0);
+        final View itemView = ((ViewGroup) holder.itemView).getChildAt(0);
+
+        itemView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    IconicsDrawable iconicsDrawable = new IconicsDrawable(mContext).icon("fon_808");
+                    iconicsDrawable.colorRes(R.color.light_blue_deep);
+                    holder.background.setImageDrawable(iconicsDrawable);
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    IconicsDrawable iconicsDrawable = new IconicsDrawable(mContext).icon("fon_808");
+                    iconicsDrawable.colorRes(R.color.white);
+                    holder.background.setImageDrawable(iconicsDrawable);
+                }
+                return false;
+            }
+        });
 
         if (mToolsSelectListener != null) {
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -262,6 +279,9 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
 
         @BindView(R.id.tv_tool_name)
         TextView toolName;
+
+        @BindView(R.id.iv_background)
+        ImageView background;
 
         public ViewHolder(View itemView) {
             super(itemView);
