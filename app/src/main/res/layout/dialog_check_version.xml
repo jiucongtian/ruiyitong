@@ -81,20 +81,26 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TextView
-            style="@style/txt_18_dark"
+        <Button
+            android:id="@+id/btn1"
+            android:textSize="18sp"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:background="@drawable/dialog_btn"
+            android:textColor="@drawable/dialog_text_color"
             android:text="以后再说"/>
-        <TextView
-            style="@style/txt_18_white"
+        <Button
+            android:layout_marginLeft="5dp"
+            android:id="@+id/btn2"
+            android:textSize="18sp"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@drawable/flag_blue"
+            android:background="@drawable/dialog_btn"
+            android:textColor="@drawable/dialog_text_color"
             android:text="立即安装"/>
     </LinearLayout>
 
