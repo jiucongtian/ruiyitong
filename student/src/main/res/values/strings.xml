@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">Student</string>
+    <string name="app_name">RuiYiPai</string>
+    <string name="icons">&#xe903;</string>
+    <string name="conduct_class_cn">上课</string>
+    <string name="conduct_class_en">Conduct a class</string>
+    <string name="work_correction_cn">作业批改</string>
+    <string name="work_correction_en">Work correction</string>
+    <string name="online_answer_cn">在线答疑</string>
+    <string name="online_answer_en">Online answer</string>
+    <string name="resource_library_cn">资源库</string>
+    <string name="resource_library_en">Resource library</string>
+    <string name="course_list_cn">课程表</string>
+    <string name="course_list_en">Course list</string>
+    <string name="ruiyi_comment">睿易云评</string>
+    <string name="ruiyi_work">睿易作业</string>
+    <string name="digital_campus">数字校园</string>
+    <string name="good_marks">多分系统</string>
+    <string name="wifi_info">WIFI信息</string>
+    <string name="setting">基础设置</string>
+    <string name="class_setting">上课设置</string>
+    <string name="check_updates">检查新版本</string>
+    <string name="exit">退出</string>
+    <string name="mute">静音</string>
+    <string name="tag">打标签</string>
+    <string name="screen">大屏幕</string>
+    <string name="seat_order">学生座次</string>
+    <string name="camera">照相机</string>
+    <string name="blackboard">黑白板</string>
+    <string name="add_resource">添加资源</string>
 </resources>

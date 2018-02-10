@@ -1,13 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="com.example.student.HomeActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.example.student.HomeActivity"
+    tools:ignore="MissingPrefix">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Hello World!" app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/iv_home_menu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginLeft="36dp"
+            tools:background="@color/icon_blue_sky"
+            app:ico_color="@color/icon_blue_sky"
+            app:ico_icon="fon_800"/>
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView"
+            style="@style/txt_30_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邵老师"
+            android:layout_toRightOf="@id/iv_home_menu"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp" />
+
+        <TextView
+            android:id="@+id/tv_home_time"
+            style="@style/txt_30_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="36dp"
+            android:text="16:45" />
+
+        <TextView
+            android:id="@+id/tv_home_date"
+            android:layout_toLeftOf="@id/tv_home_time"
+            style="@style/txt_30_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="2017.03.25" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

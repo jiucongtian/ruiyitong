@@ -2,5 +2,91 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#ff4081</color>
+
+    <color name="black">#000000</color>
+    <color name="red">#ff4081</color>
+    <color name="red_1">#ff0000</color>
+    <color name="white">#ffffff</color>
+    <color name="black_translucence">#73000000</color>
+    <color name="black_translucence_20">#33000000</color>
+    <color name="white_translucence">#B3FFFFFF</color>
+    <color name="white_translucence_90">#E6FFFFFF</color>
+
+
+    <color name="icon_blue_sky">#15cbc9</color>
+    <color name="icon_blue">#6d84e9</color>
+    <color name="icon_blue_dark">#5a6a7d</color>
+    <color name="icon_green">#27d939</color>
+    <color name="icon_yellow">#ffba41</color>
+
+
+    <color name="light_blue">#b8efef</color>
+
+    <color name="light_blue_deep">#15cbc9</color>
+    <color name="light_blue_deep1">#00ede8</color>
+    <color name="light_blue_2">#bef4c3</color>
+    <color name="light_blue_2_deep">#27d939</color>
+    <color name="light_blue_3">#d3daf8</color>
+    <color name="light_blue_3_deep">#6d84e9</color>
+    <color name="light_blue_4">#ddfcfc</color>
+    <color name="light_blue_5">#c8f4f4</color>
+    <color name="light_pink">#ffeac6</color>
+    <color name="light_pink_deep">#ffba41</color>
+
+    <color name="font_dark">#23283f</color>
+    <color name="font_gray">#808183</color>
+    <color name="font_gray_1">#efefef</color>
+    <color name="font_gray_2">#cccccc</color>
+    <color name="font_gray_3">#dadada</color>
+    <color name="color_475361">#475361</color>
+    <color name="font_white">#ffffff</color>
+
+    <color name="color_213636">#213636</color>
+    <color name="color_bdfbfa">#bdfbfa</color>
+    <color name="color_dcdcdc">#dcdcdc</color>
+    <color name="color_efefef">#efefef</color>
+    <color name="color_d6d6d6">#d6d6d6</color>
+
+
+    <color name="line_chart_fill_red">#ffd4d4</color>
+    <color name="line_chart_point_red">#ff6666</color>
+    <color name="line_chart_fill_blue">#bcf3f3</color>
+    <color name="line_chart_point_blue">#15cbc9</color>
+    <color name="line_chart_fill_yellow">#ffe0b1</color>
+    <color name="line_chart_point_yellow">#ff9a00</color>
+    <color name="line_chart_grid_line">#dadada</color>
+
+
+
+    <color name="bar_chart_red">#e06659</color>
+    <color name="bar_chart_blue">#15cbc9</color>
+
+
+
+    <color name="answer_green">#00a655</color>
+    <color name="status_green">#65b907</color>
+    <color name="status_red">#e06659</color>
+
+    <color name="point_pink_bg">#ffc9c9</color>
+    <color name="point_blue_bg">#b4f4f4</color>
+
+
+    <color name="res_folder">#ffba2c</color>
+    <color name="res_word">#46b7ec</color>
+    <color name="res_ppt">#f07f4a</color>
+    <color name="res_video">#4483be</color>
+
+
+    <color name="calendar_gray">#f3f9f9</color>
+    <color name="calendar_red">#ff7681</color>
+    <color name="calendar_yellow">#ffca3d</color>
+
+    <color name="background_gray">#f9f9f9</color>
+    <color name="font_bg_gray">#808183</color>
+
+    <color name="setting_orange">#e9752a</color>
+
+    <color name="transparent">#00000000</color>
+
 </resources>

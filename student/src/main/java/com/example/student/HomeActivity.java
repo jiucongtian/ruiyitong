@@ -3,11 +3,22 @@ package com.example.student;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class HomeActivity extends AppCompatActivity {
+import com.example.baselibrary.base.BaseActivity;
+
+public class HomeActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+    }
+
+    @Override
+    public void initPages() {
+
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_home;
     }
 }
