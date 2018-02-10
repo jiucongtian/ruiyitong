@@ -89,7 +89,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="@drawable/dialog_btn"
-            android:textColor="@drawable/dialog_text_color"
+            android:textColor="@drawable/text_click_selector"
             android:text="以后再说"/>
         <Button
             android:layout_marginLeft="5dp"
@@ -100,7 +100,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="@drawable/dialog_btn"
-            android:textColor="@drawable/dialog_text_color"
+            android:textColor="@drawable/text_click_selector"
             android:text="立即安装"/>
     </LinearLayout>
 

@@ -62,7 +62,7 @@
             android:id="@+id/btn1"
             android:textSize="18sp"
             android:background="@drawable/dialog_btn"
-            android:textColor="@drawable/dialog_text_color"
+            android:textColor="@drawable/text_click_selector"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="50dp"
@@ -77,7 +77,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="@drawable/dialog_btn"
-            android:textColor="@drawable/dialog_text_color"
+            android:textColor="@drawable/text_click_selector"
             android:text="确定"/>
     </LinearLayout>
 

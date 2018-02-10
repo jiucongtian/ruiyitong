@@ -209,22 +209,22 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
                 break;
             case R.id.bt_yunping:
                 showNoDataDialog();
-                btYunping.setBackground(getDrawable(R.drawable.home_btn1_click));
-                Utils.setBTStyle(this, btYunping, R.style.txt_22_white);
+//                btYunping.setBackground(getDrawable(R.drawable.home_btn1_click));
+//                Utils.setBTStyle(this, btYunping, R.style.txt_22_white);
                 break;
             case R.id.bt_zuoye:
                 showSwitchDialog();
-                btZuoye.setBackground(getDrawable(R.drawable.home_btn3_click));
-                Utils.setBTStyle(this, btZuoye, R.style.txt_22_white);
+//                btZuoye.setBackground(getDrawable(R.drawable.home_btn3_click));
+//                Utils.setBTStyle(this, btZuoye, R.style.txt_22_white);
                 break;
             case R.id.bt_xiaoyuan:
                 showCreateFolderDialog();
-                btXiaoyuan.setBackground(getDrawable(R.drawable.home_btn2_click));
-                Utils.setBTStyle(this, btXiaoyuan, R.style.txt_22_white);
+//                btXiaoyuan.setBackground(getDrawable(R.drawable.home_btn2_click));
+//                Utils.setBTStyle(this, btXiaoyuan, R.style.txt_22_white);
                 break;
             case R.id.bt_duofen:
-                btDuofen.setBackground(getDrawable(R.drawable.home_btn4_click));
-                Utils.setBTStyle(this, btDuofen, R.style.txt_22_white);
+//                btDuofen.setBackground(getDrawable(R.drawable.home_btn4_click));
+//                Utils.setBTStyle(this, btDuofen, R.style.txt_22_white);
                 break;
             case R.id.iv_camera:
 

@@ -353,41 +353,45 @@
 
                 <Button
                     android:id="@+id/bt_yunping"
-                    style="@style/txt_22_dark"
                     android:layout_width="150dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/home_btn1"
+                    android:textSize="22sp"
+                    android:background="@drawable/selector_home_btn1"
+                    android:textColor="@drawable/text_click_selector"
                     android:text="@string/ruiyi_comment" />
 
                 <Button
                     android:id="@+id/bt_zuoye"
-                    style="@style/txt_22_dark"
+                    android:textSize="22sp"
+                    android:background="@drawable/selector_home_btn3"
+                    android:textColor="@drawable/text_click_selector"
                     android:layout_width="150dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="43dp"
-                    android:background="@drawable/home_btn3"
                     android:text="@string/ruiyi_work" />
 
                 <Button
                     android:id="@+id/bt_xiaoyuan"
-                    style="@style/txt_22_dark"
+                    android:textSize="22sp"
+                    android:background="@drawable/selector_home_btn2"
+                    android:textColor="@drawable/text_click_selector"
                     android:layout_width="150dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="43dp"
-                    android:background="@drawable/home_btn2"
                     android:text="@string/digital_campus" />
 
                 <Button
                     android:id="@+id/bt_duofen"
-                    style="@style/txt_22_dark"
+                    android:textSize="22sp"
+                    android:background="@drawable/selector_home_btn4"
+                    android:textColor="@drawable/text_click_selector"
                     android:layout_width="150dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="43dp"
-                    android:background="@drawable/home_btn4"
                     android:text="@string/good_marks" />
             </LinearLayout>
 
