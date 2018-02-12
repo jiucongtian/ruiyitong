@@ -448,7 +448,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="120dp"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -485,11 +485,15 @@
             </RelativeLayout>
 
             <LinearLayout
+                android:id="@+id/ll_wifi"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp">
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp">
                 <ImageView
+                    android:layout_gravity="center_vertical"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:layout_marginLeft="53dp"
@@ -507,12 +511,15 @@
             </LinearLayout>
 
             <LinearLayout
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 android:id="@+id/ll_settings"
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp">
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp">
                 <ImageView
+                    android:layout_gravity="center_vertical"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:layout_marginLeft="53dp"
@@ -530,11 +537,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp">
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp">
                 <ImageView
+                    android:layout_gravity="center_vertical"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:layout_marginLeft="53dp"
@@ -552,11 +562,15 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_check_version"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp">
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp">
                 <ImageView
+                    android:layout_gravity="center_vertical"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:layout_marginLeft="53dp"
@@ -569,13 +583,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="3dp"
                     android:layout_marginLeft="29dp"
                     android:text="@string/check_updates" />
                 <RelativeLayout
+                    android:layout_gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="60dp">
 
                     <TextView
@@ -589,6 +602,7 @@
                         android:text="3"/>
                 </RelativeLayout>
                 <RelativeLayout
+                    android:layout_gravity="center_vertical"
                     android:layout_width="27dp"
                     android:layout_height="27dp"
                     android:layout_marginLeft="60dp"
@@ -608,11 +622,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp">
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp">
                 <ImageView
+                    android:layout_gravity="center_vertical"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:layout_marginLeft="53dp"

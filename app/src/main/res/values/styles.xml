@@ -8,6 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="windowNoTitle">true</item>
     </style>
+    
+    <style name="WhiteRipple" parent="AppTheme">
+        <item name="colorControlHighlight">@color/color_dcdcdc</item>
+    </style>
 
 
     <style name="AlertDialogStyle" parent="Theme.AppCompat.Dialog.Alert">
