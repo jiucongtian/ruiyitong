@@ -270,7 +270,7 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
         dlg.show();
         dlg.getWindow().setContentView(R.layout.dialog_create_folder);
 
-        dlg.getWindow().findViewById(R.id.btn2).setSelected(true);
+        //dlg.getWindow().findViewById(R.id.btn2).setSelected(true);
 
 
         dlg.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);

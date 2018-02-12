@@ -22,6 +22,7 @@
         <RelativeLayout
             android:id="@+id/rl_lesson_tools"
             android:layout_width="match_parent"
+            android:background="@drawable/setting_list_bg"
             android:layout_height="80dp">
             <LinearLayout
                 android:layout_centerVertical="true"
@@ -52,6 +53,7 @@
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/rl_big_screen_tools"
+            android:background="@drawable/setting_list_bg"
             android:layout_width="match_parent"
             android:layout_height="80dp">
             <LinearLayout
