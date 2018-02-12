@@ -1,60 +1,346 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context="com.example.student.HomeActivity"
     tools:ignore="MissingPrefix">
-    <RelativeLayout
+
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="120dp">
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
 
-        <ImageView
-            android:id="@+id/iv_home_menu"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginTop="42dp"
-            android:layout_marginLeft="36dp"
-            tools:background="@color/icon_blue_sky"
-            app:ico_color="@color/icon_blue_sky"
-            app:ico_icon="fon_800"/>
+            <ImageView
+                android:id="@+id/iv_home_menu"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="42dp"
+                android:layout_marginLeft="36dp"
+                tools:background="@color/icon_blue_sky"
+                app:ico_color="@color/icon_blue_sky"
+                app:ico_icon="fon_800"/>
 
-        <TextView
-            android:id="@+id/textView"
-            style="@style/txt_30_dark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="邵老师"
-            android:layout_toRightOf="@id/iv_home_menu"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="32dp" />
+            <TextView
+                android:id="@+id/textView"
+                style="@style/txt_30_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邵老师"
+                android:layout_toRightOf="@id/iv_home_menu"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="32dp" />
 
-        <TextView
-            android:id="@+id/tv_home_time"
-            style="@style/txt_30_dark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="36dp"
-            android:text="16:45" />
 
-        <TextView
-            android:id="@+id/tv_home_date"
-            android:layout_toLeftOf="@id/tv_home_time"
-            style="@style/txt_30_dark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="20dp"
-            android:text="2017.03.25" />
+            <TextView
+                android:id="@+id/time"
+                style="@style/txt_48_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="9:00" />
 
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/txt_30_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="36dp"
+                android:text="2017.03.25" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/rl_homework_container"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="324dp">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_calendar"
+                android:orientation="vertical"
+                android:layout_below="@id/rl_homework_container"
+                android:layout_width="match_parent"
+                android:layout_height="132dp">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@id/ll_calendar"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </LinearLayout>
+
+
+
+            <com.example.baselibrary.common.FloatingButton
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="71dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+    <!-- left drawer -->
+    <RelativeLayout
+        android:clickable="true"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/icon_blue_sky"/>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="-37dp"
+                app:ico_color="@color/font_gray_1"
+                app:ico_icon="fon_808"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="120dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/left_usr_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="42dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentLeft="true"
+                    app:ico_color="@color/font_dark"
+                    app:ico_icon="fon_809"/>
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/left_usr_icon"
+                    android:layout_marginLeft="60dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/txt_24_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邵老师"/>
+                    <TextView
+                        style="@style/txt_18_gray"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="某某学校"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_wifi"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="53dp"
+                    app:ico_color="@color/font_dark"
+                    app:ico_icon="fon_80c"/>
+                <TextView
+                    style="@style/txt_20_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/wifi_info"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/ll_settings"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="53dp"
+                    app:ico_color="@color/font_dark"
+                    app:ico_icon="fon_80d"/>
+                <TextView
+                    style="@style/txt_20_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/setting"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="53dp"
+                    app:ico_color="@color/font_dark"
+                    app:ico_icon="fon_804"/>
+                <TextView
+                    style="@style/txt_20_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/class_setting"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_check_version"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="53dp"
+                    app:ico_color="@color/font_dark"
+                    app:ico_icon="fon_80e"/>
+
+                <TextView
+                    android:id="@+id/tv_check_version"
+                    style="@style/txt_20_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="29dp"
+                    android:text="@string/check_updates" />
+                <RelativeLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp">
+
+                    <TextView
+                        style="@style/txt_14_white"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/my_red_point"
+                        android:text="3"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_marginLeft="60dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                    app:layout_constraintLeft_toLeftOf="@+id/textView3">
+                    <TextView
+                        style="@style/txt_14_white"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/my_red_point"
+                        android:text="30"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="53dp"
+                    app:ico_color="@color/font_dark"
+                    app:ico_icon="fon_80b"/>
+                <TextView
+                    style="@style/txt_20_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/exit"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </RelativeLayout>
 
 
-</LinearLayout>
+</android.support.v4.widget.DrawerLayout>
+
