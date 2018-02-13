@@ -123,6 +123,8 @@
                 android:gravity="center"
                 android:layout_width="63dp"
                 android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 android:text="未批改"/>
             <TextView
                 android:id="@+id/tv_subject_2"
