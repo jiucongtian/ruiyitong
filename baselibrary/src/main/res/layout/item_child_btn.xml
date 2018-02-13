@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_marginLeft="12dp"
+    android:layout_gravity="center_vertical">
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:ico_color="@color/white"
+        app:ico_icon="fon_808"/>
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_gravity="center"
+        app:ico_color="@color/color_475361"
+        app:ico_icon="fon_810"/>
+</FrameLayout>

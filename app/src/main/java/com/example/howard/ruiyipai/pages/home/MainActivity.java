@@ -10,6 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.example.baselibrary.base.BaseActivity;
+import com.example.baselibrary.common.FloatingButton;
 import com.example.howard.ruiyipai.R;
 
 import android.support.v7.widget.RecyclerView;
@@ -107,12 +108,17 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
     @BindView(R.id.bt_duofen)
     Button btDuofen;
 
+    @BindView(R.id.fb_home_floating_btn)
+    FloatingButton homeFloatingBtn;
+
     boolean openStatus = false;
 
     ClassAdapter mClassAdapter = null;
 
     @Override
     public void initPages() {
+        initFloatingBtn();
+
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         classLv.setLayoutManager(layoutManager);
 
@@ -122,6 +128,14 @@ public class MainActivity extends BaseActivity implements ClassAdapter.OnItemCli
         classLv.setAdapter(mClassAdapter);
 
         initBtn();
+    }
+
+    private void initFloatingBtn() {
+        homeFloatingBtn.addMainIcon("fon_80f", R.color.white).
+                addBtn("fon_810", R.color.color_475361).
+                addBtn("fon_811", R.color.color_475361).
+                addBtn("fon_812", R.color.color_475361).
+                addBtn("fon_813", R.color.color_475361);
     }
 
     private void initBtn() {

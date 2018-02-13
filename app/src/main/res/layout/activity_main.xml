@@ -405,6 +405,7 @@
                 <!--android:layout_height="wrap_content"/>-->
 
             <com.example.baselibrary.common.FloatingButton
+                android:id="@+id/fb_home_floating_btn"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="71dp"
                 android:layout_centerVertical="true"

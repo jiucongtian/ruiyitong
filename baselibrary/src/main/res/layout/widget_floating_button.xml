@@ -24,83 +24,6 @@
                 android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/home_pop_bg">
-
-                <FrameLayout
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_gravity="center_vertical">
-                    <ImageView
-                        android:layout_gravity="center"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        app:ico_color="@color/white"
-                        app:ico_icon="fon_808"/>
-                    <ImageView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_gravity="center"
-                        app:ico_color="@color/color_475361"
-                        app:ico_icon="fon_810"/>
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_gravity="center_vertical">
-                    <ImageView
-                        android:layout_gravity="center"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        app:ico_color="@color/white"
-                        app:ico_icon="fon_808"/>
-                    <ImageView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_gravity="center"
-                        app:ico_color="@color/color_475361"
-                        app:ico_icon="fon_811"/>
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_gravity="center_vertical">
-                    <ImageView
-                        android:layout_gravity="center"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        app:ico_color="@color/white"
-                        app:ico_icon="fon_808"/>
-                    <ImageView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_gravity="center"
-                        app:ico_color="@color/color_475361"
-                        app:ico_icon="fon_812"/>
-                </FrameLayout>
-
-                <!--<FrameLayout-->
-                    <!--android:layout_width="40dp"-->
-                    <!--android:layout_height="40dp"-->
-                    <!--android:layout_marginLeft="20dp"-->
-                    <!--android:layout_gravity="center_vertical">-->
-                    <!--<ImageView-->
-                        <!--android:layout_gravity="center"-->
-                        <!--android:layout_width="40dp"-->
-                        <!--android:layout_height="40dp"-->
-                        <!--app:ico_color="@color/white"-->
-                        <!--app:ico_icon="fon_808"/>-->
-                    <!--<ImageView-->
-                        <!--android:layout_width="26dp"-->
-                        <!--android:layout_height="26dp"-->
-                        <!--android:layout_gravity="center"-->
-                        <!--app:ico_color="@color/color_475361"-->
-                        <!--app:ico_icon="fon_813"/>-->
-                <!--</FrameLayout>-->
-
             </LinearLayout>
 
         </RelativeLayout>
@@ -114,6 +37,7 @@
             android:layout_alignParentRight="true"/>
 
         <ImageView
+            android:id="@+id/iv_main_icon"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginRight="37dp"
@@ -121,12 +45,5 @@
             android:layout_alignParentRight="true"
             app:ico_color="@color/white"
             app:ico_icon="fon_80f"/>
-
-
-
-
-
-
-
 
 </RelativeLayout>
