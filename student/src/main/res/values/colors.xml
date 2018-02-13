@@ -47,6 +47,8 @@
     <color name="color_dcdcdc">#dcdcdc</color>
     <color name="color_efefef">#efefef</color>
     <color name="color_d6d6d6">#d6d6d6</color>
+    <color name="color_ebebeb">#ebebeb</color>
+    <color name="color_ecf4f2">#ecf4f2</color>
 
 
     <color name="line_chart_fill_red">#ffd4d4</color>
@@ -88,5 +90,7 @@
     <color name="setting_orange">#e9752a</color>
 
     <color name="transparent">#00000000</color>
+
+
 
 </resources>
