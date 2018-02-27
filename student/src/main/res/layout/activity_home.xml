@@ -103,6 +103,7 @@
                                 android:text="今日作业"/>
                         </LinearLayout>
                         <TextView
+                            android:id="@+id/homework_more_tv"
                             style="@style/txt_18_dark"
                             android:layout_marginRight="24dp"
                             android:layout_alignParentRight="true"

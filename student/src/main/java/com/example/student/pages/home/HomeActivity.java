@@ -1,5 +1,6 @@
 package com.example.student.pages.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,6 +14,7 @@ import com.example.student.R;
 import com.example.student.pages.home.adapter.CalendarAdapter;
 import com.example.student.pages.home.adapter.HomeworkAdapter;
 import com.example.student.pages.home.adapter.QaAdapter;
+import com.example.student.pages.homework.HomeworkListActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -86,12 +88,16 @@ public class HomeActivity extends BaseActivity {
         return R.layout.activity_home;
     }
 
-    @OnClick({R.id.iv_home_menu})
+    @OnClick({R.id.iv_home_menu, R.id.homework_more_tv})
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
             case R.id.iv_home_menu:
                 dl.openDrawer(Gravity.LEFT);
+                break;
+            case R.id.homework_more_tv:
+                Intent homeworkListActivity = new Intent(this, HomeworkListActivity.class);
+                startActivity(homeworkListActivity);
                 break;
         }
 
