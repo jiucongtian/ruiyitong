@@ -1,5 +1,6 @@
 package com.example.student.pages.homework;
 
+import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -27,10 +28,42 @@ public class HomeworkListActivity extends BaseActivity {
     @BindView(R.id.homework_list_rv)
     RecyclerView mHomeworkList;
 
+    @BindView(R.id.tl_question_index)
+    TabLayout mSubjectTabLayout;
+
     @Override
     public void initPages() {
         initToolBar();
+        initTabLayout();
         initHomeworkList();
+    }
+
+    private void initTabLayout() {
+        mSubjectTabLayout.addTab(mSubjectTabLayout.newTab());
+        mSubjectTabLayout.addTab(mSubjectTabLayout.newTab());
+        mSubjectTabLayout.addTab(mSubjectTabLayout.newTab());
+        mSubjectTabLayout.addTab(mSubjectTabLayout.newTab());
+        mSubjectTabLayout.addTab(mSubjectTabLayout.newTab());
+        mSubjectTabLayout.addTab(mSubjectTabLayout.newTab());
+        mSubjectTabLayout.addTab(mSubjectTabLayout.newTab());
+        mSubjectTabLayout.addTab(mSubjectTabLayout.newTab());
+        mSubjectTabLayout.addTab(mSubjectTabLayout.newTab());
+        mSubjectTabLayout.addTab(mSubjectTabLayout.newTab());
+
+        int count = mSubjectTabLayout.getTabCount();
+
+
+        for (int i = 0; i < count; i++) {
+            TabLayout.Tab tab = mSubjectTabLayout.getTabAt(i);//获得每一个tab
+            tab.setCustomView(R.layout.item_homework_tab);//给每一个tab设置view
+//            if (i == 0) {
+//                // 设置第一个tab的TextView是被选择的样式
+//                tab.getCustomView().findViewById(R.id.tab_text).setSelected(true);//第一个tab被选中
+//            }
+//            TextView textView = (TextView) tab.getCustomView().findViewById(R.id.tab_text);
+//            textView.setText(titles[i]);//设置tab上的文字
+        }
+
     }
 
     private void initHomeworkList() {
