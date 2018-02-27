@@ -91,6 +91,11 @@
 
     <color name="transparent">#00000000</color>
 
+    <color name="home_student_work">#6b85e9</color>
+    <color name="home_student_online">#2ad939</color>
+    <color name="home_student_reward">#ffbb42</color>
+    <color name="home_student_res">#586b73</color>
+
 
 
 </resources>
