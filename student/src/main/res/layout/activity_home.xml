@@ -78,29 +78,42 @@
                     android:orientation="vertical"
                     android:layout_width="540dp"
                     android:layout_height="match_parent">
-                    <LinearLayout
-                        android:layout_marginTop="13dp"
-                        android:layout_marginBottom="13dp"
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        <ImageView
-                            android:layout_marginLeft="24dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@color/red"/>
+                        <LinearLayout
+                            android:layout_marginTop="13dp"
+                            android:layout_marginBottom="13dp"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginLeft="24dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@color/red"/>
+                            <TextView
+                                style="@style/txt_20_dark"
+                                android:layout_marginLeft="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今日作业"/>
+                        </LinearLayout>
                         <TextView
-                            style="@style/txt_20_dark"
-                            android:layout_marginLeft="12dp"
-                            android:layout_gravity="center_vertical"
+                            style="@style/txt_18_dark"
+                            android:layout_marginRight="24dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="今日作业"/>
-                    </LinearLayout>
+                            android:text="more"/>
+                    </RelativeLayout>
+
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="2dp"
                         android:src="@color/color_ebebeb"/>
                     <android.support.v7.widget.RecyclerView
                         android:id="@+id/sv_today_homework"
@@ -114,30 +127,43 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                    <LinearLayout
-                        android:layout_marginTop="13dp"
-                        android:layout_marginBottom="13dp"
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        <ImageView
-                            android:layout_marginLeft="24dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@color/red"/>
+                        <LinearLayout
+                            android:layout_marginTop="13dp"
+                            android:layout_marginBottom="13dp"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginLeft="24dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@color/red"/>
+                            <TextView
+                                style="@style/txt_20_dark"
+                                android:layout_marginLeft="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="在线答疑"/>
+                        </LinearLayout>
                         <TextView
-                            style="@style/txt_20_dark"
-                            android:layout_marginLeft="12dp"
-                            android:layout_gravity="center_vertical"
+                            style="@style/txt_18_dark"
+                            android:layout_marginRight="24dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="在线答疑"/>
-                    </LinearLayout>
+                            android:text="more"/>
+                    </RelativeLayout>
+
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="2dp"
                         android:src="@color/color_ebebeb"/>
                     <android.support.v7.widget.RecyclerView
                         android:id="@+id/sv_qa"
