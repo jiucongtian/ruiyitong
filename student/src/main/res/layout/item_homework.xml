@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+    <ImageView
+        android:id="@+id/subject_tv"
+        android:layout_centerVertical="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@color/red"/>
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/subject_tv"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/txt_18_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017年12月29日 课后练习题"/>
+        <TextView
+            style="@style/txt_14_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2个尚未阅读，2个题目尚未作答"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@color/red"/>
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/color_ebebeb"/>
+</RelativeLayout>
