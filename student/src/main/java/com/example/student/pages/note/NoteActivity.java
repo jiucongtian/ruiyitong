@@ -1,7 +1,9 @@
-package com.example.student.pages.homework;
+package com.example.student.pages.note;
 
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
 
 import com.example.baselibrary.base.BaseActivity;
@@ -16,16 +18,16 @@ import butterknife.OnClick;
  * Email 158988127@qq.com
  */
 
-public class HomeworkActivity extends BaseActivity {
+public class NoteActivity extends BaseActivity {
 
     @BindView(R.id.tb_header)
     Toolbar mToolbar;
 
-    @BindView(R.id.homework_more_container)
-    View mMoreContainer;
+    @BindView(R.id.note_switch_container)
+    View mSwitchContainer;
 
-    @BindView(R.id.homework_res_container)
-    View mResContainer;
+    @BindView(R.id.left_drawer)
+    DrawerLayout leftDrawer;
 
     @Override
     public void initPages() {
@@ -34,7 +36,7 @@ public class HomeworkActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_homework;
+        return R.layout.activity_note;
     }
 
     private void initToolBar() {
@@ -50,24 +52,19 @@ public class HomeworkActivity extends BaseActivity {
         });
     }
 
-    @OnClick({R.id.homework_show_res_iv, R.id.homework_show_more})
+    @OnClick({R.id.note_show_switch, R.id.fl_select_file})
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
-            case R.id.homework_show_res_iv:
-                if (View.VISIBLE == mResContainer.getVisibility()) {
-                    mResContainer.setVisibility(View.GONE);
+            case R.id.note_show_switch:
+                if (View.VISIBLE == mSwitchContainer.getVisibility()) {
+                    mSwitchContainer.setVisibility(View.GONE);
                 } else {
-                    mResContainer.setVisibility(View.VISIBLE);
+                    mSwitchContainer.setVisibility(View.VISIBLE);
                 }
-
                 break;
-            case R.id.homework_show_more:
-                if (View.VISIBLE == mMoreContainer.getVisibility()) {
-                    mMoreContainer.setVisibility(View.GONE);
-                } else {
-                    mMoreContainer.setVisibility(View.VISIBLE);
-                }
+            case R.id.fl_select_file:
+                leftDrawer.openDrawer(Gravity.LEFT);
                 break;
         }
     }

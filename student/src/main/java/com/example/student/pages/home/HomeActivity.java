@@ -15,6 +15,7 @@ import com.example.student.pages.home.adapter.CalendarAdapter;
 import com.example.student.pages.home.adapter.HomeworkAdapter;
 import com.example.student.pages.home.adapter.QaAdapter;
 import com.example.student.pages.homework.HomeworkListActivity;
+import com.example.student.pages.note.NoteActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -88,7 +89,7 @@ public class HomeActivity extends BaseActivity {
         return R.layout.activity_home;
     }
 
-    @OnClick({R.id.iv_home_menu, R.id.homework_more_tv})
+    @OnClick({R.id.iv_home_menu, R.id.homework_more_tv, R.id.home_note_btn})
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
@@ -98,6 +99,10 @@ public class HomeActivity extends BaseActivity {
             case R.id.homework_more_tv:
                 Intent homeworkListActivity = new Intent(this, HomeworkListActivity.class);
                 startActivity(homeworkListActivity);
+                break;
+            case R.id.home_note_btn:
+                Intent noteIntent = new Intent(this, NoteActivity.class);
+                startActivity(noteIntent);
                 break;
         }
 

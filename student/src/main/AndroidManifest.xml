@@ -21,6 +21,8 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".pages.homework.HomeworkActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".pages.note.NoteActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
