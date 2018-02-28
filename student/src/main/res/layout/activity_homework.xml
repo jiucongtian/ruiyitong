@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:id="@+id/ll_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_header"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentTop="true"
+            app:title="物理课后试题"
+            app:titleTextAppearance="@style/txt_24_dark">
+
+
+
+            <LinearLayout
+                android:id="@+id/srarch_container"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="36dp"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/res_searchbg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_res_search"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        app:ico_color="@color/color_747682"
+                        app:ico_icon="fon_84a" />
+
+                    <EditText
+                        android:id="@+id/et_res_search"
+                        style="@style/txt_16_dark"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@color/transparent"
+                        android:hint="搜索内容"
+                        android:textAppearance="@style/txt_16_blue"
+                        android:textColorHint="@color/color_747682" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    style="@style/txt_20_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="取消"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="left">
+
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tl_question_index"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    app:tabMaxWidth="80dp"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/light_blue_deep"
+                    app:tabTextAppearance="@style/txt_16_dark"
+                    app:tabIndicatorColor="@color/light_blue_deep"
+                    app:tabTextColor="@color/font_dark"
+                    app:tabIndicatorHeight="0dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:src="@color/font_gray_2" />
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/homework_list_rv"
+        android:layout_below="@id/ll_header_container"
+        android:layout_marginLeft="74dp"
+        android:layout_marginRight="74dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
+
+
+
+

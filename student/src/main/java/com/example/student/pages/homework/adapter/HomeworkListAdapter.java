@@ -17,8 +17,14 @@ public class HomeworkListAdapter extends RecyclerView.Adapter<HomeworkListAdapte
     static final int ITEM_TYPE_DATE = 0x1;
     static final int ITEM_TYPE_ITEM = 0x2;
 
+    HomeworkCallback mListener;
 
-    public HomeworkListAdapter() {
+    public interface HomeworkCallback {
+        void onHomeworkClicked();
+    }
+
+    public HomeworkListAdapter(HomeworkCallback listener) {
+        mListener = listener;
     }
 
     @Override
@@ -34,6 +40,14 @@ public class HomeworkListAdapter extends RecyclerView.Adapter<HomeworkListAdapte
 
         // 实例化展示的view
         View v = LayoutInflater.from(parent.getContext()).inflate(resourceId, parent, false);
+
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.onHomeworkClicked();
+            }
+        });
+
         // 实例化viewholder
         ViewHolder viewHolder = new ViewHolder(v);
         return viewHolder;

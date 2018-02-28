@@ -1,5 +1,6 @@
 package com.example.student.pages.homework;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,7 +21,7 @@ import butterknife.BindView;
  * Email 158988127@qq.com
  */
 
-public class HomeworkListActivity extends BaseActivity {
+public class HomeworkListActivity extends BaseActivity implements HomeworkListAdapter.HomeworkCallback {
 
     @BindView(R.id.tb_header)
     Toolbar mToolbar;
@@ -70,7 +71,7 @@ public class HomeworkListActivity extends BaseActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mHomeworkList.setLayoutManager(layoutManager);
 
-        HomeworkListAdapter adapter = new HomeworkListAdapter();
+        HomeworkListAdapter adapter = new HomeworkListAdapter(this);
         mHomeworkList.setAdapter(adapter);
     }
 
@@ -90,5 +91,11 @@ public class HomeworkListActivity extends BaseActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onHomeworkClicked() {
+        Intent intent = new Intent(this, HomeworkActivity.class);
+        startActivity(intent);
     }
 }
