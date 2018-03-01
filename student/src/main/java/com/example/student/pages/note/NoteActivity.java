@@ -2,6 +2,7 @@ package com.example.student.pages.note;
 
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -88,7 +89,8 @@ public class NoteActivity extends BaseActivity {
         });
     }
 
-    @OnClick({R.id.note_show_switch, R.id.fl_select_file, R.id.good_question_book, R.id.question_book})
+    @OnClick({R.id.note_show_switch, R.id.fl_select_file, R.id.good_question_book, R.id.question_book,
+                R.id.note_label_filter_container})
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
@@ -114,6 +116,18 @@ public class NoteActivity extends BaseActivity {
                 mGoodQuestionBook.setBackgroundResource(R.color.color_efefef);
                 mGoodQuestionBook.setTextColor(ContextCompat.getColor(this, R.color.black));
                 break;
+            case R.id.note_label_filter_container:
+                showVersionDialog();
+                break;
         }
+    }
+
+
+    private void showVersionDialog() {
+
+        AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
+        dlg.show();
+        dlg.getWindow().setContentView(R.layout.dialog_label_filter);
+        dlg.getWindow().findViewById(R.id.btn2).setSelected(true);
     }
 }
