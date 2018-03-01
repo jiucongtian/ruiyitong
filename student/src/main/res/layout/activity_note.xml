@@ -37,7 +37,8 @@
                     android:layout_gravity="left"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@color/red"/>
+                    app:ico_color="@color/homework_backlog"
+                    app:ico_icon="fon_88b"/>
 
                 <LinearLayout
                     android:layout_gravity="right"
@@ -54,7 +55,8 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:src="@color/red"/>
+                            app:ico_color="@color/homework_backlog"
+                            app:ico_icon="fon_880"/>
                         <TextView
                             android:layout_marginLeft="5dp"
                             style="@style/txt_14_gray"

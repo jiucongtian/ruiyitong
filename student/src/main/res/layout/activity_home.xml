@@ -330,7 +330,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:ico_color="@color/home_student_work"
-                        app:ico_icon="fon_816"/>
+                        app:ico_icon="fon_894"/>
                     <LinearLayout
                         android:layout_marginLeft="12dp"
                         android:layout_gravity="center_vertical"

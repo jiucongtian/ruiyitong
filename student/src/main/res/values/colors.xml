@@ -97,6 +97,21 @@
     <color name="home_student_reward">#ffbb42</color>
     <color name="home_student_res">#586b73</color>
 
+    <color name="homework_english">#4b9f50</color>
+    <color name="homework_math">#6b8ce6</color>
+    <color name="homework_chinese">#ea6349</color>
+    <color name="homework_physical">#f28e3f</color>
+    <color name="homework_chemistry">#58c5c6</color>
+    <color name="homework_geography">#f8c451</color>
+    <color name="homework_biology">#82c115</color>
+    <color name="homework_history">#855f40</color>
+    <color name="homework_politics">#be4a3f</color>
+    <color name="homework_psychology">#eb697f</color>
+    <color name="homework_art">#996ad2</color>
+    <color name="homework_music">#65c3fc</color>
+    <color name="homework_backlog">#747682</color>
+
+
 
 
 </resources>

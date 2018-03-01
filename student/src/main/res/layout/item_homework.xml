@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="?android:attr/selectableItemBackground"
     android:clickable="true"
     android:layout_width="match_parent"
     android:layout_height="70dp">
-    <ImageView
+    <TextView
         android:id="@+id/subject_tv"
         android:layout_centerVertical="true"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@color/red"/>
+        android:background="@drawable/item_math_bg"
+        android:textAlignment="center"
+        style="@style/txt_18_white"
+        android:text="数"/>
     <LinearLayout
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@id/subject_tv"
@@ -34,7 +38,8 @@
         android:layout_centerVertical="true"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@color/red"/>
+        app:ico_color="@color/status_red"
+        app:ico_icon="fon_871"/>
     <ImageView
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
