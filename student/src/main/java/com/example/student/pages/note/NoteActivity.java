@@ -2,12 +2,18 @@ package com.example.student.pages.note;
 
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.baselibrary.base.BaseActivity;
 import com.example.student.R;
+import com.example.student.pages.home.adapter.QaAdapter;
+import com.example.student.pages.note.adapter.CategoryAdapter;
+import com.example.student.pages.note.adapter.NoteAdapter;
 import com.mikepenz.iconics.IconicsDrawable;
 
 import butterknife.BindView;
@@ -29,9 +35,39 @@ public class NoteActivity extends BaseActivity {
     @BindView(R.id.left_drawer)
     DrawerLayout leftDrawer;
 
+    @BindView(R.id.rv_homework_list)
+    RecyclerView mNoteList;
+
+    @BindView(R.id.good_question_book)
+    TextView mGoodQuestionBook;
+
+    @BindView(R.id.question_book)
+    TextView mQuestionBook;
+
+    @BindView(R.id.rv_category)
+    RecyclerView mCategory;
+
     @Override
     public void initPages() {
         initToolBar();
+        initNoteList();
+        initCategory();
+    }
+
+    private void initCategory() {
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        mCategory.setLayoutManager(layoutManager);
+
+        CategoryAdapter adapter = new CategoryAdapter();
+        mCategory.setAdapter(adapter);
+    }
+
+    private void initNoteList() {
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        mNoteList.setLayoutManager(layoutManager);
+
+        NoteAdapter adapter = new NoteAdapter();
+        mNoteList.setAdapter(adapter);
     }
 
     @Override
@@ -52,7 +88,7 @@ public class NoteActivity extends BaseActivity {
         });
     }
 
-    @OnClick({R.id.note_show_switch, R.id.fl_select_file})
+    @OnClick({R.id.note_show_switch, R.id.fl_select_file, R.id.good_question_book, R.id.question_book})
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
@@ -65,6 +101,18 @@ public class NoteActivity extends BaseActivity {
                 break;
             case R.id.fl_select_file:
                 leftDrawer.openDrawer(Gravity.LEFT);
+                break;
+            case R.id.good_question_book:
+                mGoodQuestionBook.setBackgroundResource(R.color.line_chart_point_blue);
+                mGoodQuestionBook.setTextColor(ContextCompat.getColor(this, R.color.white));
+                mQuestionBook.setBackgroundResource(R.color.color_efefef);
+                mQuestionBook.setTextColor(ContextCompat.getColor(this, R.color.black));
+                break;
+            case R.id.question_book:
+                mQuestionBook.setBackgroundResource(R.color.line_chart_point_blue);
+                mQuestionBook.setTextColor(ContextCompat.getColor(this, R.color.white));
+                mGoodQuestionBook.setBackgroundResource(R.color.color_efefef);
+                mGoodQuestionBook.setTextColor(ContextCompat.getColor(this, R.color.black));
                 break;
         }
     }
