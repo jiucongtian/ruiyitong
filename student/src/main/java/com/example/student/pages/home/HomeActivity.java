@@ -11,6 +11,7 @@ import android.view.View;
 import com.example.baselibrary.base.BaseActivity;
 import com.example.baselibrary.common.FloatingButton;
 import com.example.student.R;
+import com.example.student.pages.answer.AnswerActivity;
 import com.example.student.pages.home.adapter.CalendarAdapter;
 import com.example.student.pages.home.adapter.HomeworkAdapter;
 import com.example.student.pages.home.adapter.QaAdapter;
@@ -89,7 +90,7 @@ public class HomeActivity extends BaseActivity {
         return R.layout.activity_home;
     }
 
-    @OnClick({R.id.iv_home_menu, R.id.homework_more_tv, R.id.home_note_btn})
+    @OnClick({R.id.iv_home_menu, R.id.homework_more_tv, R.id.home_note_btn, R.id.time})
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
@@ -103,6 +104,10 @@ public class HomeActivity extends BaseActivity {
             case R.id.home_note_btn:
                 Intent noteIntent = new Intent(this, NoteActivity.class);
                 startActivity(noteIntent);
+                break;
+            case R.id.time:
+                Intent answerIntent = new Intent(this, AnswerActivity.class);
+                startActivity(answerIntent);
                 break;
         }
 

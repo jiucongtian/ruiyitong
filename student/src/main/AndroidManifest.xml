@@ -23,6 +23,8 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".pages.note.NoteActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".pages.answer.AnswerActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

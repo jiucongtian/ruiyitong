@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_213636"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/answer_title"
+        style="@style/txt_24_white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="教师提问:"/>
+    <ImageView
+        android:layout_below="@id/answer_title"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/white"/>
+
+    <!-- 答题卡 -->
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_translucence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+            <TextView
+                android:id="@+id/answer_submit"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                style="@style/txt_18_gray"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:background="@drawable/round_corner_blue"
+                android:text="交卷"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/question_rv"
+                android:layout_marginRight="12dp"
+                android:layout_toLeftOf="@id/answer_submit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:background="@color/light_blue_5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    style="@style/txt_18_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="单选题"/>
+
+                <TextView
+                    android:background="@color/bar_chart_blue"
+                    android:gravity="center"
+                    style="@style/txt_18_white"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="A"/>
+
+                <TextView
+                    android:gravity="center"
+                    style="@style/txt_18_gray"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="B"/>
+
+                <TextView
+                    android:gravity="center"
+                    style="@style/txt_18_gray"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="C"/>
+
+                <TextView
+                    android:gravity="center"
+                    style="@style/txt_18_gray"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="D"/>
+
+                <TextView
+                    android:gravity="center"
+                    style="@style/txt_18_gray"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="E"/>
+
+                <TextView
+                    android:gravity="center"
+                    style="@style/txt_18_gray"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="F"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+
