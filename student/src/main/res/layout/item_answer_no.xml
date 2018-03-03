@@ -3,7 +3,9 @@
     android:id="@+id/tab_background"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:layout_marginRight="22dp">
+    android:layout_marginRight="22dp"
+    android:background="@drawable/selector_question_tab_bg"
+    android:clickable="true"  >
 
     <LinearLayout
         android:id="@+id/item_bg"
@@ -12,8 +14,9 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        android:background="@drawable/round_corner_white">
+        android:background="@drawable/selector_question_content_bg">
         <TextView
+            android:id="@+id/item_no"
             android:layout_gravity="center_vertical"
             style="@style/txt_24_dark"
             android:layout_width="wrap_content"
@@ -21,9 +24,10 @@
             android:text="1."/>
         <TextView
             android:layout_gravity="center_vertical"
-            style="@style/txt_24_dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@drawable/selector_question_answer_color"
+            android:textSize="24sp"
             android:text="B"/>
     </LinearLayout>
 

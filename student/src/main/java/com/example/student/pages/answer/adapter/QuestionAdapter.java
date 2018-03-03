@@ -1,9 +1,13 @@
 package com.example.student.pages.answer.adapter;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.student.R;
 
@@ -13,6 +17,8 @@ import com.example.student.R;
  */
 
 public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHolder> {
+
+    private int currentIndex = 0;
 
     public QuestionAdapter() {
     }
@@ -28,10 +34,24 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
 
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
-        if (position == 3) {
-            holder.tabBg.setBackgroundResource(R.drawable.answer_tab_bg);
-            holder.itemBg.setBackground(null);
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
+        Log.e("zzzzzzz", "currentIndex: " + String.valueOf(currentIndex));
+        Log.e("zzzzzzz", "position: " + String.valueOf(position));
+
+        holder.questionNo.setText("" + (position + 1) + ".");
+
+        View itemView = ((FrameLayout) holder.itemView).getChildAt(0);
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentIndex = position;
+                QuestionAdapter.this.notifyDataSetChanged();
+            }
+        });
+        if (position == currentIndex) {
+            holder.container.setSelected(true);
+        } else {
+            holder.container.setSelected(false);
         }
     }
 
@@ -43,14 +63,13 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        View tabBg;
-        View itemBg;
+        TextView questionNo;
+        View container;
 
         public ViewHolder(View itemView) {
             super(itemView);
-
-            tabBg = itemView.findViewById(R.id.tab_background);
-            itemBg = itemView.findViewById(R.id.item_bg);
+            container = itemView.findViewById(R.id.tab_background);
+            questionNo = itemView.findViewById(R.id.item_no);
         }
     }
 }
