@@ -1,8 +1,13 @@
 package com.example.student.pages.homework;
 
+import android.animation.ValueAnimator;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
+import android.widget.ImageView;
 
 import com.example.baselibrary.base.BaseActivity;
 import com.example.student.R;
@@ -26,6 +31,11 @@ public class HomeworkActivity extends BaseActivity {
 
     @BindView(R.id.homework_res_container)
     View mResContainer;
+
+    @BindView(R.id.homework_show_more)
+    ImageView mShowMoreBtn;
+
+    private boolean isShowMore = false;
 
     @Override
     public void initPages() {
@@ -63,12 +73,51 @@ public class HomeworkActivity extends BaseActivity {
 
                 break;
             case R.id.homework_show_more:
-                if (View.VISIBLE == mMoreContainer.getVisibility()) {
-                    mMoreContainer.setVisibility(View.GONE);
-                } else {
-                    mMoreContainer.setVisibility(View.VISIBLE);
-                }
+//                if (View.VISIBLE == mMoreContainer.getVisibility()) {
+//                    mMoreContainer.setVisibility(View.GONE);
+//                } else {
+//                    mMoreContainer.setVisibility(View.VISIBLE);
+//                }
+                switchMore();
                 break;
         }
+    }
+
+    private void switchMore() {
+        if (isShowMore) {
+            mMoreContainer.setVisibility(View.GONE);
+            mShowMoreBtn.setRotation(0);
+            ValueAnimator anim = ValueAnimator.ofInt(45, 0);
+            anim.setDuration(300);
+
+            anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                @Override
+                public void onAnimationUpdate(ValueAnimator animation) {
+                    int currentValue = (Integer) animation.getAnimatedValue();
+                    mShowMoreBtn.setRotation(currentValue);
+                    mShowMoreBtn.requestLayout();
+                }
+            });
+
+            anim.start();
+        } else {
+            mMoreContainer.setVisibility(View.VISIBLE);
+
+            ValueAnimator anim = ValueAnimator.ofInt(0, 45);
+            anim.setDuration(300);
+
+            anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                @Override
+                public void onAnimationUpdate(ValueAnimator animation) {
+                    int currentValue = (Integer) animation.getAnimatedValue();
+                    mShowMoreBtn.setRotation(currentValue);
+                    mShowMoreBtn.requestLayout();
+                }
+            });
+
+            anim.start();
+        }
+
+        isShowMore = !isShowMore;
     }
 }
