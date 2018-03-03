@@ -25,6 +25,11 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".pages.answer.AnswerActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".pages.calendar.CalendarActivity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".pages.calendar.CalendarDialogActivity"
+            android:theme="@style/DialogActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

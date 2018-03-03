@@ -12,6 +12,7 @@ import com.example.baselibrary.base.BaseActivity;
 import com.example.baselibrary.common.FloatingButton;
 import com.example.student.R;
 import com.example.student.pages.answer.AnswerActivity;
+import com.example.student.pages.calendar.CalendarActivity;
 import com.example.student.pages.home.adapter.CalendarAdapter;
 import com.example.student.pages.home.adapter.HomeworkAdapter;
 import com.example.student.pages.home.adapter.QaAdapter;
@@ -90,7 +91,7 @@ public class HomeActivity extends BaseActivity {
         return R.layout.activity_home;
     }
 
-    @OnClick({R.id.iv_home_menu, R.id.homework_more_tv, R.id.home_note_btn, R.id.time})
+    @OnClick({R.id.iv_home_menu, R.id.homework_more_tv, R.id.home_note_btn, R.id.time, R.id.ll_calendar})
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
@@ -108,6 +109,10 @@ public class HomeActivity extends BaseActivity {
             case R.id.time:
                 Intent answerIntent = new Intent(this, AnswerActivity.class);
                 startActivity(answerIntent);
+                break;
+            case R.id.ll_calendar:
+                Intent calendarIntent = new Intent(this, CalendarActivity.class);
+                startActivity(calendarIntent);
                 break;
         }
 
