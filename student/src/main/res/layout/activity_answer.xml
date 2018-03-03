@@ -63,14 +63,17 @@
             android:layout_marginRight="36dp"
             android:background="@color/light_blue_5">
 
+            <!-- 单选题 -->
             <LinearLayout
+                android:id="@+id/single_select_container"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
-                    style="@style/txt_18_gray"
+                    style="@style/txt_18_dark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -118,6 +121,204 @@
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:text="F"/>
+            </LinearLayout>
+
+            <!-- 多选题 -->
+            <LinearLayout
+                android:id="@+id/multi_select_container"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    style="@style/txt_18_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="多选题"/>
+
+                <TextView
+                    android:background="@color/bar_chart_blue"
+                    android:gravity="center"
+                    style="@style/txt_18_white"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="A"/>
+
+                <TextView
+                    android:gravity="center"
+                    style="@style/txt_18_gray"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="B"/>
+
+                <TextView
+                    android:gravity="center"
+                    style="@style/txt_18_gray"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="C"/>
+
+                <TextView
+                    android:gravity="center"
+                    style="@style/txt_18_gray"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="D"/>
+
+                <TextView
+                    android:gravity="center"
+                    style="@style/txt_18_gray"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="E"/>
+
+                <TextView
+                    android:gravity="center"
+                    style="@style/txt_18_gray"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="F"/>
+            </LinearLayout>
+
+            <!-- 判断题 -->
+            <LinearLayout
+                android:id="@+id/judge_container"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    style="@style/txt_18_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="判断题"/>
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="44dp"
+                    android:background="@color/bar_chart_blue">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@color/red"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="44dp">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@color/red"/>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!-- 主观题 -->
+            <LinearLayout
+                android:id="@+id/subject_container"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    style="@style/txt_18_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="主观题"/>
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="44dp"
+                    android:background="@color/bar_chart_blue">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@color/red"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="44dp">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@color/red"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="44dp">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@color/red"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="44dp">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@color/red"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="44dp">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@color/red"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="44dp">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@color/red"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="44dp">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@color/red"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="44dp">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@color/red"/>
+                </FrameLayout>
+
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>

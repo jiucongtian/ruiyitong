@@ -23,12 +23,20 @@
             android:layout_height="wrap_content"
             android:text="1."/>
         <TextView
+            android:id="@+id/item_select_answer"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@drawable/selector_question_answer_color"
             android:textSize="24sp"
-            android:text="B"/>
+            android:text=""/>
+        <ImageView
+            android:id="@+id/item_judge"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@color/red"/>
     </LinearLayout>
 
 </FrameLayout>

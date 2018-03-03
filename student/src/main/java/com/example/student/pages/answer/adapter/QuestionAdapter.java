@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -18,9 +19,22 @@ import com.example.student.R;
 
 public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHolder> {
 
-    private int currentIndex = 0;
+    public enum QuestionType {
+        SINGLE_SELECT,
+        MULTI_SELECT,
+        JUDGE,
+        SUBJECT
+    }
 
-    public QuestionAdapter() {
+    public interface QuestionCallback {
+        void ChangeQuestionType(QuestionType type);
+    }
+
+    private int currentIndex = 0;
+    private QuestionCallback mCallback;
+
+    public QuestionAdapter(QuestionCallback callback) {
+        mCallback = callback;
     }
 
     @Override
@@ -35,9 +49,6 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        Log.e("zzzzzzz", "currentIndex: " + String.valueOf(currentIndex));
-        Log.e("zzzzzzz", "position: " + String.valueOf(position));
-
         holder.questionNo.setText("" + (position + 1) + ".");
 
         View itemView = ((FrameLayout) holder.itemView).getChildAt(0);
@@ -50,8 +61,33 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
         });
         if (position == currentIndex) {
             holder.container.setSelected(true);
+
+            //设置测试数据
+            if (position == 2) {
+                mCallback.ChangeQuestionType(QuestionType.MULTI_SELECT);
+            } else if (position == 3 || position == 4) {
+                mCallback.ChangeQuestionType(QuestionType.JUDGE);
+            } else if (position == 5) {
+                mCallback.ChangeQuestionType(QuestionType.SUBJECT);
+            } else {
+                mCallback.ChangeQuestionType(QuestionType.SINGLE_SELECT);
+            }
         } else {
             holder.container.setSelected(false);
+        }
+
+
+
+        //设置测试数据
+        if (position == 2) {
+            holder.selectAnswer.setText("ABCDEF");
+            holder.judgeAnswer.setVisibility(View.GONE);
+        } else if (position == 3 || position == 4) {
+            holder.selectAnswer.setText("");
+            holder.judgeAnswer.setVisibility(View.VISIBLE);
+        } else {
+            holder.selectAnswer.setText("A");
+            holder.judgeAnswer.setVisibility(View.GONE);
         }
     }
 
@@ -64,12 +100,16 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView questionNo;
+        TextView selectAnswer;
+        ImageView judgeAnswer;
         View container;
 
         public ViewHolder(View itemView) {
             super(itemView);
             container = itemView.findViewById(R.id.tab_background);
             questionNo = itemView.findViewById(R.id.item_no);
+            selectAnswer = itemView.findViewById(R.id.item_select_answer);
+            judgeAnswer = itemView.findViewById(R.id.item_judge);
         }
     }
 }
