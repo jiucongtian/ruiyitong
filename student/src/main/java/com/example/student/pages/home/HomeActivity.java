@@ -18,6 +18,7 @@ import com.example.student.pages.home.adapter.HomeworkAdapter;
 import com.example.student.pages.home.adapter.QaAdapter;
 import com.example.student.pages.homework.HomeworkListActivity;
 import com.example.student.pages.note.NoteActivity;
+import com.example.student.pages.resource.ResourceListActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -91,7 +92,8 @@ public class HomeActivity extends BaseActivity {
         return R.layout.activity_home;
     }
 
-    @OnClick({R.id.iv_home_menu, R.id.homework_more_tv, R.id.home_note_btn, R.id.time, R.id.ll_calendar})
+    @OnClick({R.id.iv_home_menu, R.id.homework_more_tv, R.id.home_note_btn, R.id.time,
+            R.id.ll_calendar, R.id.home_resource_btn})
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
@@ -113,6 +115,10 @@ public class HomeActivity extends BaseActivity {
             case R.id.ll_calendar:
                 Intent calendarIntent = new Intent(this, CalendarActivity.class);
                 startActivity(calendarIntent);
+                break;
+            case R.id.home_resource_btn:
+                Intent resourceIntent = new Intent(this, ResourceListActivity.class);
+                startActivity(resourceIntent);
                 break;
         }
 

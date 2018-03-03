@@ -30,6 +30,8 @@
         <activity android:name=".pages.calendar.CalendarDialogActivity"
             android:theme="@style/DialogActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".pages.resource.ResourceListActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

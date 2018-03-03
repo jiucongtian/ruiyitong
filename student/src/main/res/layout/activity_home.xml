@@ -285,6 +285,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/home_resource_btn"
                     android:background="@mipmap/shadow_white"
                     android:layout_marginRight="40dp"
                     android:layout_gravity="center_vertical"
