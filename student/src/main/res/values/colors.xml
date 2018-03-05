@@ -113,6 +113,9 @@
     <color name="note_tag">#c8f4f4</color>
     <color name="font_blue_deep">#348189</color>
 
+    <color name="answer_true">#56b86a</color>
+    <color name="answer_false">#ef6256</color>
+
 
 
 

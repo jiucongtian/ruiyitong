@@ -207,7 +207,8 @@
                         android:layout_gravity="center"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/answer_true"
+                        app:ico_icon="fon_838"/>
                 </FrameLayout>
 
                 <FrameLayout
@@ -217,7 +218,8 @@
                         android:layout_gravity="center"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/answer_false"
+                        app:ico_icon="fon_837"/>
                 </FrameLayout>
 
             </LinearLayout>
@@ -246,7 +248,8 @@
                         android:layout_gravity="center"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/white"
+                        app:ico_icon="fon_839"/>
                 </FrameLayout>
 
                 <FrameLayout
@@ -256,7 +259,8 @@
                         android:layout_gravity="center"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/font_dark"
+                        app:ico_icon="fon_897"/>
                 </FrameLayout>
 
                 <FrameLayout
@@ -266,7 +270,8 @@
                         android:layout_gravity="center"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/font_dark"
+                        app:ico_icon="fon_87e"/>
                 </FrameLayout>
 
                 <FrameLayout
@@ -276,7 +281,8 @@
                         android:layout_gravity="center"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/font_dark"
+                        app:ico_icon="fon_834"/>
                 </FrameLayout>
 
                 <FrameLayout
@@ -286,7 +292,8 @@
                         android:layout_gravity="center"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/font_dark"
+                        app:ico_icon="fon_835"/>
                 </FrameLayout>
 
                 <FrameLayout
@@ -296,7 +303,8 @@
                         android:layout_gravity="center"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/font_dark"
+                        app:ico_icon="fon_896"/>
                 </FrameLayout>
 
                 <FrameLayout
@@ -306,7 +314,8 @@
                         android:layout_gravity="center"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/font_dark"
+                        app:ico_icon="fon_813"/>
                 </FrameLayout>
 
                 <FrameLayout
@@ -316,7 +325,8 @@
                         android:layout_gravity="center"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@color/red"/>
+                        app:ico_color="@color/font_dark"
+                        app:ico_icon="fon_898"/>
                 </FrameLayout>
 
             </LinearLayout>
