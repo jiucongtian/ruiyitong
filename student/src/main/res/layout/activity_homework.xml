@@ -184,7 +184,7 @@
             android:visibility="gone"
             android:id="@+id/homework_more_container"
             android:layout_alignParentBottom="true"
-            android:background="@color/black_translucence_20"
+            android:background="@color/black_translucence"
             android:layout_width="match_parent"
             android:layout_height="80dp">
             <LinearLayout

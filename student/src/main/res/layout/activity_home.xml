@@ -104,6 +104,8 @@
                         </LinearLayout>
                         <TextView
                             android:id="@+id/homework_more_tv"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"
                             style="@style/txt_18_dark"
                             android:layout_marginRight="24dp"
                             android:layout_alignParentRight="true"
@@ -155,6 +157,8 @@
                         </LinearLayout>
                         <TextView
                             style="@style/txt_18_dark"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"
                             android:layout_marginRight="24dp"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
