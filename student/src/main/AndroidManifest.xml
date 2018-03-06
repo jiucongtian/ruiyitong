@@ -32,6 +32,8 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".pages.resource.ResourceListActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".pages.note.EditNoteActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

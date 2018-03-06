@@ -1,5 +1,6 @@
 package com.example.student.pages.note;
 
+import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
@@ -25,7 +26,7 @@ import butterknife.OnClick;
  * Email 158988127@qq.com
  */
 
-public class NoteActivity extends BaseActivity {
+public class NoteActivity extends BaseActivity implements NoteAdapter.NoteClickListener {
 
     @BindView(R.id.tb_header)
     Toolbar mToolbar;
@@ -67,7 +68,7 @@ public class NoteActivity extends BaseActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mNoteList.setLayoutManager(layoutManager);
 
-        NoteAdapter adapter = new NoteAdapter();
+        NoteAdapter adapter = new NoteAdapter(this);
         mNoteList.setAdapter(adapter);
     }
 
@@ -129,5 +130,11 @@ public class NoteActivity extends BaseActivity {
         dlg.show();
         dlg.getWindow().setContentView(R.layout.dialog_label_filter);
         dlg.getWindow().findViewById(R.id.btn2).setSelected(true);
+    }
+
+    @Override
+    public void onNoteClicked() {
+        Intent intent = new Intent(this, EditNoteActivity.class);
+        startActivity(intent);
     }
 }

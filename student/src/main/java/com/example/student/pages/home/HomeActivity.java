@@ -22,6 +22,7 @@ import com.example.student.pages.resource.ResourceListActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import butterknife.OnTouch;
 
 public class HomeActivity extends BaseActivity {
 

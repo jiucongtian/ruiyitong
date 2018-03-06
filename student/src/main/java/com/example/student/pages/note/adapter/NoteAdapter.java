@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import com.example.student.R;
 
@@ -14,15 +15,31 @@ import com.example.student.R;
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
 
-    public NoteAdapter() {
+    public interface NoteClickListener {
+        public void onNoteClicked();
+    }
+
+    private NoteClickListener mListener;
+
+    public NoteAdapter(NoteClickListener listener) {
+        mListener = listener;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // 实例化展示的view
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_note, parent, false);
+
         // 实例化viewholder
         ViewHolder viewHolder = new ViewHolder(v);
+
+        View itemView = ((RelativeLayout) viewHolder.itemView).getChildAt(0);
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.onNoteClicked();
+            }
+        });
         return viewHolder;
     }
 

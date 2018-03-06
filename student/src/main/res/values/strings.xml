@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RuiYiPai</string>
+    <string name="app_name">RuiYiPai-student</string>
     <string name="icons">&#xe903;</string>
     <string name="conduct_class_cn">上课</string>
     <string name="conduct_class_en">Conduct a class</string>
