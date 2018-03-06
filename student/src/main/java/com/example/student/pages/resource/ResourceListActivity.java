@@ -1,7 +1,9 @@
 package com.example.student.pages.resource;
 
+import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -11,6 +13,7 @@ import android.view.View;
 import com.example.baselibrary.base.BaseActivity;
 import com.example.student.R;
 import com.example.student.pages.resource.adapter.MyResourceListAdapter;
+import com.example.student.pages.resource.adapter.RecordsAdapter;
 import com.mikepenz.iconics.IconicsDrawable;
 
 import butterknife.BindView;
@@ -35,10 +38,32 @@ public class ResourceListActivity extends BaseActivity {
     @BindView(R.id.rv_my_resource_list)
     RecyclerView mResourceList;
 
+    @BindView(R.id.resource_list_container)
+    View mResourceListContainer;
+
+    @BindView(R.id.class_record_container)
+    View mClassRecordContainer;
+
+    @BindView(R.id.class_record_rv)
+    RecyclerView mRecordRv;
+
+    private boolean isShowRecord = false;
+
     @Override
     public void initPages() {
         initToolBar();
         initResourceList();
+        initClassRecord();
+    }
+
+    private void initClassRecord() {
+
+        GridLayoutManager mgr = new GridLayoutManager(this, 4);
+        mRecordRv.setLayoutManager(mgr);
+
+        RecordsAdapter adapter = new RecordsAdapter();
+        mRecordRv.setAdapter(adapter);
+
     }
 
     private void initResourceList() {
@@ -55,12 +80,22 @@ public class ResourceListActivity extends BaseActivity {
         return R.layout.activity_resource_list;
     }
 
-    @OnClick({R.id.fl_select_file})
+    @OnClick({R.id.fl_select_file, R.id.class_record})
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
             case R.id.fl_select_file:
                 leftDrawer.openDrawer(Gravity.LEFT);
+                break;
+            case R.id.class_record:
+                if (!isShowRecord) {
+                    isShowRecord = true;
+                    mResourceListContainer.setVisibility(View.GONE);
+                    mClassRecordContainer.setVisibility(View.VISIBLE);
+
+                }
+//                Intent intent = new Intent(this, ClassRecordActivity.class);
+//                startActivity(intent);
                 break;
         }
     }

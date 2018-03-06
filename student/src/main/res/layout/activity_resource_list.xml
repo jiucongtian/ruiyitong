@@ -137,20 +137,23 @@
                 android:src="@color/font_gray_2"/>
         </LinearLayout>
 
+        <!-- 资源列表 -->
         <LinearLayout
+            android:id="@+id/resource_list_container"
             android:orientation="vertical"
-            android:layout_marginLeft="74dp"
-            android:layout_marginRight="74dp"
             android:layout_below="@id/ll_header_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
+                android:layout_marginLeft="74dp"
                 style="@style/txt_20_dark"
                 android:gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
                 android:text="我的资源"/>
             <android.support.v7.widget.RecyclerView
+                android:layout_marginLeft="74dp"
+                android:layout_marginRight="74dp"
                 android:id="@+id/rv_my_resource_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -158,6 +161,52 @@
             </android.support.v7.widget.RecyclerView>
 
         </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/class_record_container"
+            android:orientation="vertical"
+            android:layout_below="@id/ll_header_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginLeft="76dp"
+                    android:layout_gravity="center_vertical"
+                    style="@style/txt_20_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="录课筛选"/>
+                <TextView
+                    android:layout_marginLeft="24dp"
+                    android:layout_gravity="center_vertical"
+                    style="@style/txt_20_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="录课筛选"/>
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:id="@+id/class_record_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
 
         <!-- 工具条 -->
         <RelativeLayout
@@ -418,6 +467,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/class_record"
                 android:layout_marginLeft="24dp"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
@@ -434,7 +484,7 @@
                     style="@style/txt_20_dark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="我的资源"/>
+                    android:text="课堂实录"/>
             </LinearLayout>
 
 
