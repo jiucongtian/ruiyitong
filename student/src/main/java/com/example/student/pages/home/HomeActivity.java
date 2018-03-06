@@ -19,6 +19,7 @@ import com.example.student.pages.home.adapter.QaAdapter;
 import com.example.student.pages.homework.HomeworkListActivity;
 import com.example.student.pages.note.NoteActivity;
 import com.example.student.pages.resource.ResourceListActivity;
+import com.example.student.pages.wrongtopic.WrongTopicActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -94,7 +95,7 @@ public class HomeActivity extends BaseActivity {
     }
 
     @OnClick({R.id.iv_home_menu, R.id.homework_more_tv, R.id.home_note_btn, R.id.time,
-            R.id.ll_calendar, R.id.home_resource_btn})
+            R.id.ll_calendar, R.id.home_resource_btn, R.id.home_wrong_topic_btn})
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
@@ -108,6 +109,10 @@ public class HomeActivity extends BaseActivity {
             case R.id.home_note_btn:
                 Intent noteIntent = new Intent(this, NoteActivity.class);
                 startActivity(noteIntent);
+                break;
+            case R.id.home_wrong_topic_btn:
+                Intent wrongTopicIntent = new Intent(this, WrongTopicActivity.class);
+                startActivity(wrongTopicIntent);
                 break;
             case R.id.time:
                 Intent answerIntent = new Intent(this, AnswerActivity.class);
