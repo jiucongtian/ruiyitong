@@ -2,19 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="60dp">
+    android:layout_height="70dp">
     <TextView
         android:background="@color/calendar_gray"
         style="@style/txt_18_dark"
         android:gravity="center"
         android:layout_width="46dp"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:text="1"/>
     <RelativeLayout
         android:id="@+id/rl_monday"
         android:background="@color/white"
         android:layout_width="90dp"
-        android:layout_height="60dp">
+        android:layout_height="70dp">
         <LinearLayout
             android:layout_alignParentLeft="true"
             android:orientation="vertical"
@@ -39,16 +39,23 @@
         <LinearLayout
             android:layout_centerInParent="true"
             android:orientation="vertical"
+            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
                 android:layout_gravity="center_horizontal"
-                style="@style/txt_16_dark"
+                style="@style/txt_18_dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="高一（1）"/>
+                android:text="语文"/>
             <TextView
-                style="@style/txt_16_dark"
+                style="@style/txt_13_dark"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="王老师"/>
+            <TextView
+                style="@style/txt_13_dark"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,7 +78,7 @@
     <RelativeLayout
         android:background="@color/white"
         android:layout_width="90dp"
-        android:layout_height="60dp">
+        android:layout_height="70dp">
         <LinearLayout
             android:layout_alignParentLeft="true"
             android:orientation="vertical"
@@ -129,7 +136,7 @@
     <RelativeLayout
         android:background="@color/white"
         android:layout_width="90dp"
-        android:layout_height="60dp">
+        android:layout_height="70dp">
         <LinearLayout
             android:layout_alignParentLeft="true"
             android:orientation="vertical"
@@ -186,9 +193,9 @@
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/rl_thursday"
-        android:background="@color/white"
+        android:background="@color/calendar_bc"
         android:layout_width="90dp"
-        android:layout_height="60dp">
+        android:layout_height="70dp">
         <LinearLayout
             android:layout_alignParentLeft="true"
             android:orientation="vertical"
@@ -219,12 +226,18 @@
             android:layout_height="wrap_content">
             <TextView
                 android:layout_gravity="center_horizontal"
-                style="@style/txt_16_dark"
+                style="@style/txt_18_dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="高一（1）"/>
+                android:text="数学"/>
             <TextView
-                style="@style/txt_16_dark"
+                style="@style/txt_13_dark"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="李老师"/>
+            <TextView
+                style="@style/txt_13_dark"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -247,7 +260,7 @@
     <RelativeLayout
         android:background="@color/white"
         android:layout_width="90dp"
-        android:layout_height="60dp">
+        android:layout_height="70dp">
         <LinearLayout
             android:layout_alignParentLeft="true"
             android:orientation="vertical"
@@ -306,7 +319,7 @@
         android:id="@+id/rl_saturday"
         android:background="@color/white"
         android:layout_width="90dp"
-        android:layout_height="60dp">
+        android:layout_height="70dp">
         <LinearLayout
             android:layout_alignParentLeft="true"
             android:orientation="vertical"
@@ -337,12 +350,18 @@
             android:layout_height="wrap_content">
             <TextView
                 android:layout_gravity="center_horizontal"
-                style="@style/txt_16_dark"
+                style="@style/txt_18_dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="高一（1）"/>
+                android:text="英语"/>
             <TextView
-                style="@style/txt_16_dark"
+                style="@style/txt_13_dark"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="刘老师"/>
+            <TextView
+                style="@style/txt_13_dark"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -365,7 +384,7 @@
     <RelativeLayout
         android:background="@color/white"
         android:layout_width="90dp"
-        android:layout_height="60dp">
+        android:layout_height="70dp">
         <LinearLayout
             android:layout_alignParentLeft="true"
             android:orientation="vertical"

@@ -65,7 +65,7 @@ public class CalendarDialogActivity extends BaseActivity {
             } else if (i == 1) {
                 tab.getCustomView().findViewById(R.id.iv_flag).setBackgroundResource(R.drawable.flag_red);
                 TextView title = tab.getCustomView().findViewById(R.id.tv_title);
-                title.setText("备课");
+                title.setText("作业");
             } else if (i == 2) {
                 tab.getCustomView().findViewById(R.id.iv_flag).setBackgroundResource(R.drawable.flag_blue);
                 TextView title = tab.getCustomView().findViewById(R.id.tv_title);

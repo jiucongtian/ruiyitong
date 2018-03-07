@@ -103,7 +103,7 @@
                         style="@style/txt_16_dark"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="备课"/>
+                        android:text="作业"/>
                     <ImageView
                         android:layout_marginLeft="20dp"
                         android:layout_gravity="center_vertical"
@@ -200,6 +200,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="vertical"
+                    android:background="@color/calendar_title_bc"
                     android:layout_width="90dp"
                     android:layout_height="60dp">
                     <TextView

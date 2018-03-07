@@ -81,6 +81,10 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/font_blue_deep</item>
     </style>
+    <style name="txt_13_dark">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/font_dark</item>
+    </style>
 
     <style name="txt_14_gray">
         <item name="android:textSize">14sp</item>
