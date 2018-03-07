@@ -26,12 +26,12 @@
             style="@style/txt_24_dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="编辑云笔记"/>
+            android:text="编辑错题本"/>
     </LinearLayout>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:src="@color/font_gray"/>
+        android:src="@color/font_gray_2"/>
 
     <LinearLayout
         android:layout_marginLeft="24dp"
@@ -57,7 +57,7 @@
         android:layout_marginRight="24dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:src="@color/font_gray"/>
+        android:src="@color/font_gray_2"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -75,13 +75,15 @@
             style="@style/txt_18_dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="上课笔记本"/>
+            android:text="重要通知"/>
         <ImageView
             android:layout_marginLeft="20dp"
             android:layout_gravity="center_vertical"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:src="@color/red"/>
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="17dp"
+            app:ico_color="@color/icon_blue"
+            app:ico_icon="fon_88a"/>
     </LinearLayout>
 
     <LinearLayout
@@ -105,36 +107,36 @@
                 android:layout_height="50dp"
                 android:orientation="horizontal">
                 <TextView
-                    android:background="@color/light_blue_deep"
+                    android:background="@color/note_tag_wrong"
                     android:gravity="center"
-                    style="@style/txt_16_deep_blue"
+                    style="@style/txt_16_icon_blue"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:text="计算出错"/>
                 <TextView
                     android:layout_marginLeft="10dp"
-                    android:background="@color/light_blue_deep"
+                    android:background="@color/note_tag_wrong"
                     android:gravity="center"
-                    style="@style/txt_16_deep_blue"
+                    style="@style/txt_16_icon_blue"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:text="计算出错"/>
                 <TextView
                     android:layout_marginLeft="10dp"
-                    android:background="@color/light_blue_deep"
+                    android:background="@color/note_tag_wrong"
                     android:gravity="center"
-                    style="@style/txt_16_deep_blue"
+                    style="@style/txt_16_icon_blue"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:text="计算出错"/>
                 <TextView
                     android:layout_marginLeft="10dp"
-                    android:background="@color/light_blue_deep"
+                    android:background="@color/note_tag_wrong"
                     android:gravity="center"
-                    style="@style/txt_16_deep_blue"
+                    style="@style/txt_16_icon_blue"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:padding="10dp"
@@ -146,9 +148,9 @@
                 android:layout_height="50dp"
                 android:orientation="horizontal">
                 <TextView
-                    android:background="@color/light_blue_deep"
+                    android:background="@color/note_tag_wrong"
                     android:gravity="center"
-                    style="@style/txt_16_deep_blue"
+                    style="@style/txt_16_icon_blue"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:padding="10dp"
@@ -160,9 +162,11 @@
                     android:background="@color/background_gray">
                     <ImageView
                         android:layout_gravity="center"
-                        android:layout_width="10dp"
-                        android:layout_height="10dp"
-                        android:src="@color/red"/>
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="10dp"
+                        app:ico_color="@color/icon_blue"
+                        app:ico_icon="fon_87a"/>
                 </FrameLayout>
             </LinearLayout>
         </LinearLayout>
@@ -194,7 +198,7 @@
         <Button
             android:id="@+id/btn1"
             android:textSize="18sp"
-            android:background="@drawable/dialog_btn"
+            android:background="@drawable/dialog_btn_wrong"
             android:textColor="@drawable/text_click_selector"
             android:gravity="center"
             android:layout_width="0dp"
@@ -209,7 +213,7 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@drawable/dialog_btn"
+            android:background="@drawable/dialog_btn_wrong"
             android:textColor="@drawable/text_click_selector"
             android:text="确定"/>
     </LinearLayout>

@@ -54,8 +54,8 @@
                 android:text="计算出错"/>
             <TextView
                 android:layout_marginLeft="10dp"
-                android:background="@color/light_blue_5"
-                style="@style/txt_16_dark"
+                android:background="@color/note_tag_wrong"
+                style="@style/txt_16_icon_blue"
                 android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,8 +84,8 @@
                 android:text="计算出错"/>
             <TextView
                 android:layout_marginLeft="10dp"
-                android:background="@color/light_blue_5"
-                style="@style/txt_16_dark"
+                android:background="@color/note_tag_wrong"
+                style="@style/txt_16_icon_blue"
                 android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -114,8 +114,8 @@
                 android:text="计算出错"/>
             <TextView
                 android:layout_marginLeft="10dp"
-                android:background="@color/light_blue_5"
-                style="@style/txt_16_dark"
+                android:background="@color/note_tag_wrong"
+                style="@style/txt_16_icon_blue"
                 android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -143,7 +143,7 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@drawable/dialog_btn"
+            android:background="@drawable/dialog_btn_wrong"
             android:textColor="@drawable/text_click_selector"
             android:text="取消"/>
         <Button
@@ -154,7 +154,7 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@drawable/dialog_btn"
+            android:background="@drawable/dialog_btn_wrong"
             android:textColor="@drawable/text_click_selector"
             android:text="确定"/>
     </LinearLayout>

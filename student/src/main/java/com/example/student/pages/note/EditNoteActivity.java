@@ -35,7 +35,7 @@ public class EditNoteActivity extends BaseActivity {
 
     private void initToolBar() {
         IconicsDrawable iResource = new IconicsDrawable(this).icon("fon_816").sizeDp(30)
-                .color(ContextCompat.getColor(this, R.color.icon_blue_sky));
+                .color(ContextCompat.getColor(this, R.color.white));
 
         mToolbar.setNavigationIcon(iResource);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {

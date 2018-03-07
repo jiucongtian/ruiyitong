@@ -20,9 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:layout_alignParentTop="true"
-            android:background="@color/white"
+            android:background="@color/light_blue_deep"
             app:title="我的云笔记"
-            app:titleTextAppearance="@style/txt_24_dark" />
+            app:titleTextAppearance="@style/txt_24_white" />
 
         <View
             android:layout_width="match_parent"
@@ -31,10 +31,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_below="@id/header_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
 
         <RelativeLayout
             android:background="@color/white"
@@ -70,28 +71,29 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:background="@color/homework_history"
                         style="@style/txt_14_white"
+                        android:background="@drawable/item_chinese_bg"
                         android:gravity="center"
                         android:layout_width="56dp"
                         android:layout_height="24dp"
                         android:text="语文"/>
                     <TextView
+                        style="@style/txt_14_blue"
+                        android:background="@drawable/item_tag_bg"
                         android:layout_marginLeft="4dp"
-                        android:background="@color/homework_history"
-                        style="@style/txt_14_white"
                         android:gravity="center"
                         android:layout_width="56dp"
                         android:layout_height="24dp"
-                        android:text="语文"/>
+                        android:text="收藏的"/>
                     <TextView
+                        style="@style/txt_14_blue"
+                        android:background="@drawable/item_tag_bg"
                         android:layout_marginLeft="4dp"
-                        android:background="@color/homework_history"
-                        style="@style/txt_14_white"
                         android:gravity="center"
                         android:layout_width="56dp"
                         android:layout_height="24dp"
-                        android:text="语文"/>
+                        android:text="收藏的"/>
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -106,10 +108,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@color/red"/>
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="5dp"
+                            app:ico_color="@color/font_gray_1"
+                            app:ico_icon="fon_808"/>
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="3dp"
+                            app:ico_color="@color/font_dark"
+                            app:ico_icon="fon_87d"/>
+                    </FrameLayout>
                     <TextView
                         android:layout_gravity="center_horizontal"
                         style="@style/txt_14_dark"
@@ -122,10 +137,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@color/red"/>
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="5dp"
+                            app:ico_color="@color/font_gray_1"
+                            app:ico_icon="fon_808"/>
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="3dp"
+                            app:ico_color="@color/font_dark"
+                            app:ico_icon="fon_881"/>
+                    </FrameLayout>
                     <TextView
                         android:layout_gravity="center_horizontal"
                         style="@style/txt_14_dark"
@@ -138,10 +166,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@color/red"/>
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="5dp"
+                            app:ico_color="@color/font_gray_1"
+                            app:ico_icon="fon_808"/>
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="3dp"
+                            app:ico_color="@color/font_dark"
+                            app:ico_icon="fon_866"/>
+                    </FrameLayout>
                     <TextView
                         android:layout_gravity="center_horizontal"
                         style="@style/txt_14_dark"
@@ -155,10 +196,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@color/red"/>
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="5dp"
+                            app:ico_color="@color/font_gray_1"
+                            app:ico_icon="fon_808"/>
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="3dp"
+                            app:ico_color="@color/font_dark"
+                            app:ico_icon="fon_884"/>
+                    </FrameLayout>
                     <TextView
                         android:layout_gravity="center_horizontal"
                         style="@style/txt_14_dark"

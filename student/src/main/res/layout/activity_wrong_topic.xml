@@ -26,9 +26,9 @@
                 android:id="@+id/tb_header"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
-                android:background="@color/white"
+                android:background="@color/icon_blue"
                 android:layout_alignParentTop="true"
-                app:titleTextAppearance="@style/txt_24_dark"
+                app:titleTextAppearance="@style/txt_24_white"
                 app:title="错题本">
 
 
@@ -48,11 +48,11 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            app:ico_color="@color/homework_backlog"
+                            app:ico_color="@color/white"
                             app:ico_icon="fon_880"/>
                         <TextView
                             android:layout_marginLeft="5dp"
-                            style="@style/txt_14_gray"
+                            style="@style/txt_14_white"
                             android:layout_gravity="center_vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
 
                         <ImageView
                             android:id="@+id/iv_search"
-                            app:ico_color="@color/font_gray"
+                            app:ico_color="@color/icon_blue"
                             app:ico_icon="fon_84a"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
@@ -80,7 +80,7 @@
                             android:layout_height="24dp" />
 
                         <EditText
-                            style="@style/txt_16_dark"
+                            style="@style/txt_16_icon_blue"
                             android:id="@+id/et_homework_search"
                             android:background="@color/transparent"
                             android:layout_toRightOf="@id/iv_search"
@@ -89,7 +89,7 @@
                             android:layout_height="30dp"
                             android:hint="搜索内容"
                             android:textAppearance="@style/txt_16_dark"
-                            android:textColorHint="@color/font_gray"/>
+                            android:textColorHint="@color/icon_blue"/>
 
                     </RelativeLayout>
 
@@ -200,7 +200,7 @@
                         style="@style/txt_12_white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="拍照"/>
+                        android:text="已掌握"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginLeft="40dp"
@@ -230,7 +230,7 @@
                         style="@style/txt_12_white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="拍照"/>
+                        android:text="删除"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginLeft="40dp"
@@ -260,7 +260,7 @@
                         style="@style/txt_12_white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="拍照"/>
+                        android:text="编辑"/>
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>
@@ -275,14 +275,16 @@
             <ImageView
                 android:layout_width="23dp"
                 android:layout_height="46dp"
-                android:background="@mipmap/half_circle"/>
+                android:background="@mipmap/half_circle_wrong"/>
+
             <ImageView
-                android:layout_gravity="center_vertical"
+                android:id="@+id/imageView2"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
-                tools:src="@color/black"
+                android:layout_gravity="center_vertical"
                 app:ico_color="@color/white"
-                app:ico_icon="fon_81b"/>
+                app:ico_icon="fon_81b"
+                tools:src="@color/black" />
         </FrameLayout>
 
     </RelativeLayout>
@@ -309,7 +311,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:background="@color/light_blue_deep">
+                android:background="@color/icon_blue">
                     <TextView
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"

@@ -112,7 +112,9 @@
     <color name="homework_music">#65c3fc</color>
     <color name="homework_backlog">#747682</color>
     <color name="note_tag">#92f0f0</color>
+    <color name="note_tag_wrong">#bec8f5</color>
     <color name="font_blue_deep">#02848b</color>
+    <color name="font_blue_deep_wrong">#003399</color>
 
     <color name="answer_true">#56b86a</color>
     <color name="answer_false">#ef6256</color>
