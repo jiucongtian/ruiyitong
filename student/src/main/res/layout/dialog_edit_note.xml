@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:layout_width="520dp"
+    android:layout_width="540dp"
     android:layout_height="wrap_content"
     android:background="@mipmap/shadow_white"
     tools:ignore="MissingPrefix">
@@ -70,11 +70,13 @@
             android:layout_height="wrap_content"
             android:text="云笔记:"/>
         <TextView
+            android:id="@+id/notes_switch"
+            android:gravity="center_vertical"
             android:layout_marginLeft="5dp"
             android:layout_gravity="center_vertical"
             style="@style/txt_18_dark"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="上课笔记本"/>
         <ImageView
             android:layout_marginLeft="20dp"
@@ -100,11 +102,13 @@
             android:layout_height="wrap_content"
             android:text="科目:"/>
         <TextView
+            android:id="@+id/notifications_tv"
+            android:gravity="center_vertical"
             android:layout_marginLeft="5dp"
             android:layout_gravity="center_vertical"
             style="@style/txt_18_dark"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="重要通知"/>
         <ImageView
             android:layout_marginLeft="5dp"

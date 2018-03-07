@@ -1,10 +1,15 @@
 package com.example.student.pages.wrongtopic;
 
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import com.example.baselibrary.base.BaseActivity;
 import com.example.student.R;
@@ -62,12 +67,30 @@ public class EditWrongTopicActivity extends BaseActivity {
         dlg.show();
         dlg.getWindow().setContentView(R.layout.dialog_edit_wrong_topic);
 
-        //dlg.getWindow().findViewById(R.id.btn2).setSelected(true);
+        final TextView informationTv = dlg.getWindow().findViewById(R.id.inform_tv);
+
+        informationTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View contentView = LayoutInflater.from(EditWrongTopicActivity.this).inflate(R.layout.spinner_notification, null, false);
+                PopupWindow window = new PopupWindow(contentView, informationTv.getWidth(), ViewGroup.LayoutParams.WRAP_CONTENT, true);
+                window.setOutsideTouchable(true);
+                window.setBackgroundDrawable(new BitmapDrawable());
+                window.showAsDropDown(informationTv);
+            }
+        });
+
+
+
+
+
 
 
         dlg.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
         dlg.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE |
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
+//        dlg.getWindow().
 
     }
 }

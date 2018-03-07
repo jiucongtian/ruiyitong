@@ -1,13 +1,19 @@
 package com.example.student.pages.note;
 
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import com.example.baselibrary.base.BaseActivity;
 import com.example.student.R;
+import com.example.student.pages.wrongtopic.EditWrongTopicActivity;
 import com.mikepenz.iconics.IconicsDrawable;
 
 import butterknife.BindView;
@@ -60,9 +66,35 @@ public class EditNoteActivity extends BaseActivity {
     private void showEditNoteDialog() {
         AlertDialog dlg = new AlertDialog.Builder(this, R.style.AlertDialogStyle).create();
         dlg.show();
+
+
         dlg.getWindow().setContentView(R.layout.dialog_edit_note);
 
-        //dlg.getWindow().findViewById(R.id.btn2).setSelected(true);
+
+        final TextView notesSwitch = dlg.getWindow().findViewById(R.id.notes_switch);
+
+        notesSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View contentView = LayoutInflater.from(EditNoteActivity.this).inflate(R.layout.spinner_notes, null, false);
+                PopupWindow window = new PopupWindow(contentView, notesSwitch.getWidth(), ViewGroup.LayoutParams.WRAP_CONTENT, true);
+                window.setOutsideTouchable(true);
+                window.setBackgroundDrawable(new BitmapDrawable());
+                window.showAsDropDown(notesSwitch);
+            }
+        });
+        final TextView notificationsSpinner = dlg.getWindow().findViewById(R.id.notifications_tv);
+
+        notificationsSpinner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View contentView = LayoutInflater.from(EditNoteActivity.this).inflate(R.layout.spinner_note_notifications, null, false);
+                PopupWindow window = new PopupWindow(contentView, notificationsSpinner.getWidth(), ViewGroup.LayoutParams.WRAP_CONTENT, true);
+                window.setOutsideTouchable(true);
+                window.setBackgroundDrawable(new BitmapDrawable());
+                window.showAsDropDown(notificationsSpinner);
+            }
+        });
 
 
         dlg.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
