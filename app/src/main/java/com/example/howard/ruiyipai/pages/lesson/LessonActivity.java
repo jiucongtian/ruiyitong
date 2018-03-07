@@ -456,6 +456,11 @@ public class LessonActivity extends BaseActivity implements LessonToolsAdapter.T
         dlg.getWindow().setContentView(R.layout.dialog_switch);
     }
 
+    @Override
+    public void rewords() {
+
+    }
+
 
     private void updatethumbnail(){
         if(thumbnail)

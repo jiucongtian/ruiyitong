@@ -128,4 +128,9 @@ public class ToolsSettingFragment extends BaseFragment implements LessonToolsAda
     public void switchBroadcast() {
 
     }
+
+    @Override
+    public void rewords() {
+
+    }
 }

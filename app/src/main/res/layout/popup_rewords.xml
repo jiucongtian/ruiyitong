@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="800dp"
+    android:layout_height="600dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:ignore="MissingPrefix">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/txt_24_white"
+        android:id="@+id/tb_header"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/light_pink_deep"
+        android:layout_alignParentTop="true"
+        app:titleTextAppearance="@style/txt_24_white"
+        app:title="奖励"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/name_rv"
+            android:layout_width="236dp"
+            android:layout_height="match_parent"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_d1d1d1"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:padding="2dp"
+                android:id="@+id/btn_container"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn1"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/dialog_btn2"
+                    android:textColor="@drawable/text_click_selector"
+                    android:text="取消"/>
+                <Button
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/btn2"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/dialog_btn2"
+                    android:textColor="@drawable/text_click_selector"
+                    android:text="确定"/>
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rewords_rv"
+                android:layout_above="@id/btn_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

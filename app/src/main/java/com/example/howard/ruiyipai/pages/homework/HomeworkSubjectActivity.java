@@ -170,4 +170,9 @@ public class HomeworkSubjectActivity extends BaseActivity implements LessonTools
     public void switchBroadcast() {
 
     }
+
+    @Override
+    public void rewords() {
+
+    }
 }

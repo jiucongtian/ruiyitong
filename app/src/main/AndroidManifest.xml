@@ -44,7 +44,9 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".pages.setting.SettingActivity"
             android:screenOrientation="landscape"/>
-
+        <activity android:name=".pages.stastic.RewordsPopupActivity"
+            android:theme="@style/DialogActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

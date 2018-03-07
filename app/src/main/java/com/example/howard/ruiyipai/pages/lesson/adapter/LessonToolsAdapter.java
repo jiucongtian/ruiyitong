@@ -40,6 +40,7 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
         void stastic();
         void switchThumbnail();
         void switchBroadcast();
+        void rewords();
     }
 
     private List<LessonActivity.TOOL_TYPE> mData;
@@ -258,6 +259,9 @@ public class LessonToolsAdapter extends RecyclerView.Adapter<LessonToolsAdapter.
                             break;
                         case TOOL_BROADCAST:
                             mToolsSelectListener.switchBroadcast();
+                            break;
+                        case TOOL_REWARD:
+                            mToolsSelectListener.rewords();
                             break;
                     }
 

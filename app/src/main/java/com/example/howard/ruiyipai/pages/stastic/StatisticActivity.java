@@ -1,5 +1,6 @@
 package com.example.howard.ruiyipai.pages.stastic;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -134,6 +135,7 @@ public class StatisticActivity extends BaseActivity implements LessonToolsAdapte
 
     private void initToolsData() {
         //TODO: 临时添加工具数据
+        tools.add(LessonActivity.TOOL_TYPE.TOOL_REWARD);
         tools.add(LessonActivity.TOOL_TYPE.TOOL_THUMBNAIL);
         tools.add(LessonActivity.TOOL_TYPE.TOOL_EXAM);
         tools.add(LessonActivity.TOOL_TYPE.TOOL_SPLIT);
@@ -151,7 +153,6 @@ public class StatisticActivity extends BaseActivity implements LessonToolsAdapte
         tools.add(LessonActivity.TOOL_TYPE.TOOL_COLOR);
         tools.add(LessonActivity.TOOL_TYPE.TOOL_MUTE);
         tools.add(LessonActivity.TOOL_TYPE.TOOL_CLOSE);
-        tools.add(LessonActivity.TOOL_TYPE.TOOL_REWARD);
         tools.add(LessonActivity.TOOL_TYPE.TOOL_COLLECTION);
         tools.add(LessonActivity.TOOL_TYPE.TOOL_DESKTOP);
     }
@@ -178,5 +179,11 @@ public class StatisticActivity extends BaseActivity implements LessonToolsAdapte
     @Override
     public void switchBroadcast() {
 
+    }
+
+    @Override
+    public void rewords() {
+        Intent rewordDialog = new Intent(this, RewordsPopupActivity.class);
+        startActivity(rewordDialog);
     }
 }
