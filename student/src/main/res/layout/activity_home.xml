@@ -357,6 +357,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/rewords_btn"
                     android:background="@mipmap/shadow_white"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"

@@ -38,6 +38,8 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".pages.wrongtopic.EditWrongTopicActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".pages.reword.RewordsActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

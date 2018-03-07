@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:ignore="MissingPrefix"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_header"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/icon_blue"
+            app:title="奖励"
+            app:titleTextAppearance="@style/txt_24_white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/font_gray_2" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/color_efefef">
+        <TextView
+            android:layout_marginLeft="76dp"
+            style="@style/txt_18_gray"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下面列出了您当前收到的奖励，点击可以选择放到桌面或者收到仓库里"/>
+    </FrameLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rewords_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>
+
+
+
+
