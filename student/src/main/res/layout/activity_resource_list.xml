@@ -193,9 +193,12 @@
                     android:layout_height="match_parent"
                     android:text="全部科目"/>
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@color/red"/>
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="17dp"
+                    app:ico_color="@color/light_blue_deep"
+                    app:ico_icon="fon_88a"/>
                 <TextView
                     android:id="@+id/duration_spinner"
                     android:layout_marginLeft="24dp"
@@ -206,9 +209,12 @@
                     android:layout_height="match_parent"
                     android:text="一星期内"/>
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@color/red"/>
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="17dp"
+                    app:ico_color="@color/light_blue_deep"
+                    app:ico_icon="fon_88a"/>
                 <TextView
                     android:id="@+id/teachers_spinner"
                     android:layout_marginLeft="24dp"
@@ -219,9 +225,12 @@
                     android:layout_height="match_parent"
                     android:text="全部教师"/>
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@color/red"/>
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="17dp"
+                    app:ico_color="@color/light_blue_deep"
+                    app:ico_icon="fon_88a"/>
             </LinearLayout>
             <android.support.v7.widget.RecyclerView
                 android:layout_marginLeft="36dp"

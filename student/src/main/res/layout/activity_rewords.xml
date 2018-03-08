@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:layout_alignParentTop="true"
-            android:background="@color/icon_blue"
+            android:background="@color/rewords_bc"
             app:title="奖励"
             app:titleTextAppearance="@style/txt_24_white" />
 
