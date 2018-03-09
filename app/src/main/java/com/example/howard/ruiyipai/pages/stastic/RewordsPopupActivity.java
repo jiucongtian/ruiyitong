@@ -83,7 +83,7 @@ public class RewordsPopupActivity extends BaseActivity {
     }
 
     private void initToolBar() {
-        IconicsDrawable iResource = new IconicsDrawable(this).icon("fon_816").sizeDp(30)
+        IconicsDrawable iResource = new IconicsDrawable(this).icon("fon_828").sizeDp(30)
                 .color(ContextCompat.getColor(this, R.color.white));
 
         mToolbar.setNavigationIcon(iResource);

@@ -10,9 +10,10 @@
         android:id="@+id/iv_mark"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="76dp"
+        android:background="@color/light_blue_bc"
         android:layout_width="26dp"
         android:layout_height="26dp"
-        app:ico_color="@color/font_dark"
+        app:ico_color="@color/light_blue_deep"
         app:ico_icon="fon_845"/>
 
     <TextView
